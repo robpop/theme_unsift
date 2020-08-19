@@ -14,7 +14,18 @@ $(() => {
 
     let manageProductUploadLogoAreaInput = document.getElementById("manageProductUploadLogoAreaInput");
     let manageProductUploadLogoAreaPreview = document.getElementById("manageProductUploadLogoAreaPreview");
+    let manageProductUploadLogoAreaWrapper = document.getElementById("manageProductUploadLogoAreaWrapper");    
     let current_logo = $(manageProductUploadLogoAreaPreview).attr('data-current-logo');
+
+    let manageProductTagSearch = document.getElementById("manageProductTagSearch");
+    let manageProductTagSearchLabel = document.getElementById("manageProductTagSearchLabel");
+    let manageProductTagList = document.getElementById("manageProductTagList");
+    let manageProductTagCount = document.getElementById("manageProductTagCount");
+    let current_tags = $(manageProductTagList).attr("data-current-tags");
+
+    let tags = $(manageProductTagSearch).attr("data-tags");
+    let max_tag_length = 3;
+    let num_tag = 0;
 
     /* Chart dates start X days ago from number of entries in dataSeries */
     let ts2 = Date.now()-(dataSeries.length*86400000);
@@ -116,11 +127,67 @@ $(() => {
     chart.render();
 
 
+    let update_tag_restraint = function(e) {
+      num_tag = $(manageProductTagList).find(".chosen-badge").length;
+      $(manageProductTagCount).find("span").text(num_tag);
+      if(num_tag >= max_tag_length) {
+          $(manageProductTagSearch).prop("disabled", true);
+          $(manageProductTagSearchLabel).addClass("disabled");
+      } else {
+          $(manageProductTagSearch).prop("disabled", false);
+          $(manageProductTagSearchLabel).removeClass("disabled");
+      }
+    };
+
+    jQuery.ui.autocomplete.prototype._resizeMenu = function () {
+      var ul = this.menu.element;
+      ul.outerWidth(this.element.outerWidth());
+    }
+
+    // Create a tag when an item from the autocomplete form is selected
+    $(manageProductTagSearch).autocomplete({
+      source: tags.split(" "),
+      select: function( event, ui ) {
+          event.preventDefault();
+          
+          // Prevent firing both the keyup event and the autocomplete select event
+          if(event.key !== 'Enter' || event.keyCode !== 13) {
+              let tag = $(".badge-dummy").clone(true, true);
+              $(tag).text(ui.item.value);
+              $(manageProductTagSearch).val("");
+              $(manageProductTagSearch).autocomplete("close");
+              $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+
+              update_tag_restraint();
+          }
+      }
+    });
+
+    // Create a tag when the enter key is pressed on the tag input field
+    $(manageProductTagSearch).on('keyup', function (e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            let tag = $(".badge-dummy").clone(true, true);
+            $(tag).text($(manageProductTagSearch).val());
+            $(manageProductTagSearch).val("");
+            $(manageProductTagSearch).autocomplete("close");
+            $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+
+            update_tag_restraint();
+        }
+    });
+
+    // Remove tag when one is clicked
+    $(manageProductTagList).children().click((e) => {
+        $(e.target).remove();
+
+        update_tag_restraint();
+    });
+
     manageProductUploadLogoAreaInput.addEventListener("mouseover", function(e) {
-      $(addProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
+      $(manageProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
     });
     manageProductUploadLogoAreaInput.addEventListener("mouseout", function(e) {
-        $(addProductUploadLogoAreaWrapper).css("background-color", "");
+      $(manageProductUploadLogoAreaWrapper).css("background-color", "");
     });
     manageProductUploadLogoAreaInput.addEventListener("change", function(e) {
       if (e.target.value) {
@@ -139,5 +206,18 @@ $(() => {
       $(".upload_logo").hide();
       $(".upload_logo_done").show();
       $(manageProductUploadLogoAreaPreview).attr("src", current_logo);
+    }
+
+    // Check for existing tags from attribute data-current-tags
+    if (typeof current_tags !== typeof undefined && current_tags !== false && current_tags !== "") {
+      current_tags = current_tags.split(" ");
+      for(let i = 0; i < current_tags.length; ++i) {
+        let tag = $(".badge-dummy").clone(true, true);
+        $(tag).text(current_tags[i]);
+        $(manageProductTagSearch).val("");
+        $(manageProductTagSearch).autocomplete("close");
+        $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+      }
+      update_tag_restraint();
     }
 });
