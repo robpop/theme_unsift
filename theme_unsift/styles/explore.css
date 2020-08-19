@@ -1,0 +1,15 @@
+#actionModalReviews {
+    display: none;
+}
+.max-vh-35 {
+    max-height: 35vh;
+}
+#actionModalReviewsRightPanel {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    body {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+.card-side-color {
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+.h-375-px {
+    height: 375px!important;
+}
+.font-size-18 {
+    font-size: 18px;
+}
+.font-size-14 {
+    font-size: 14px;
+}
+.danger-color-exact {
+    background-color: #ff4444;
+}
+.primary-color-exact {
+    background-color: #4285F4;
+}
+.warning-color-exact {
+    background-color: #ffbb33;
+}
+.success-color-exact {
+    background-color: #00C851;
+}
+
