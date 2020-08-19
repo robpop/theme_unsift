@@ -23,4 +23,17 @@
 .success-color-exact {
     background-color: #00C851;
 }
+.upload-area {
+    background-color: #fff;
+    -webkit-transition: background-color 250ms ease;
+    -moz-transition: background-color 250ms ease;
+    -o-transition: background-color 250ms ease;
+    transition: background-color 250ms ease;
+}
+.upload_logo_done {
+    display: none;
+}
+#manageProductUploadLogoAreaInput:hover {
+    cursor: pointer;
+}
 

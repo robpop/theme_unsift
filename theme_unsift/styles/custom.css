@@ -19,6 +19,9 @@ nav {
 textarea {
     overflow-y: scroll!important;
 }
+.z-2 {
+    z-index: 2;
+}
 .enable-pointer {
     pointer-events: all!important;
 }

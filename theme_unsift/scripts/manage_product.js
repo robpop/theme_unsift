@@ -1,5 +1,21 @@
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#manageProductUploadLogoAreaPreview')
+        .attr('src', e.target.result)
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
 $(() => {
-    
+
+    let manageProductUploadLogoAreaInput = document.getElementById("manageProductUploadLogoAreaInput");
+    let manageProductUploadLogoAreaPreview = document.getElementById("manageProductUploadLogoAreaPreview");
+    let current_logo = $(manageProductUploadLogoAreaPreview).attr('data-current-logo');
+
     /* Chart dates start X days ago from number of entries in dataSeries */
     let ts2 = Date.now()-(dataSeries.length*86400000);
     let dates_blue = [];
@@ -98,4 +114,30 @@ $(() => {
     var chart = new ApexCharts(document.querySelector("#manageProductLargeChart"), options);
       
     chart.render();
+
+
+    manageProductUploadLogoAreaInput.addEventListener("mouseover", function(e) {
+      $(addProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
+    });
+    manageProductUploadLogoAreaInput.addEventListener("mouseout", function(e) {
+        $(addProductUploadLogoAreaWrapper).css("background-color", "");
+    });
+    manageProductUploadLogoAreaInput.addEventListener("change", function(e) {
+      if (e.target.value) {
+        $(".upload_logo").hide();
+        $(".upload_logo_done").show();
+        readURL(manageProductUploadLogoAreaInput);
+      } else {
+        $(".upload_logo").show();  
+        $(".upload_logo_done").hide();
+        $(manageProductUploadLogoAreaPreview).attr("src", "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+      }
+    });
+
+    // Check for existing logo from attribute data-current-logo
+    if (typeof current_logo !== typeof undefined && current_logo !== false && current_logo !== "") {
+      $(".upload_logo").hide();
+      $(".upload_logo_done").show();
+      $(manageProductUploadLogoAreaPreview).attr("src", current_logo);
+    }
 });
