@@ -145,18 +145,105 @@
         <div class="row">
             <h1>Account Settings</h1>
             <div class="col-12">
-                <ul class="list-group-flush">
-                    <li class="list-group-item">Username / Email<div class="float-right"><span>example@email.com</span><button>Change</button></div></li>
-                    <li class="list-group-item">Password<div class="float-right"><span>&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button>Change</button></div></li>
-                    <li class="list-group-item">Profile image<div class="float-right"><img class="position-absolute img-fluid z-depth-1 rounded-circle w-50-px" src="assets/ipsum_profile0.jpg" alt="Profile image"/><button>Change</button></div></li>
-                    <li class="list-group-item">Name<div class="float-right"><span>John Doe</span><button>Change</button></div></li>
-                    <li class="list-group-item">Dark theme<div class="float-right"><button>Turn on</button></div></li>
-                    <li class="list-group-item">RTL layout<div class="float-right"><button>Turn on</button></div></li>
-                    <li class="list-group-item">NSFW content<div class="float-right"><button>Turn on</button></div></li>
-                    <li class="list-group-item">Delete account<div class="float-right"><button>Delete</button></div></li>
+                <ul class="list-group-flush" id="accountSettingsWrapper">
+                    <li class="list-group-item">Email<div class="float-right"><span>example@email.com</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountEmail">Change</button></div></li>
+                    <li class="list-group-item">Password<div class="float-right"><span>&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountPassword">Change</button></div></li>
+                    <li class="list-group-item">Profile image<div class="float-right"><img class="img-fluid z-depth-1 rounded-circle w-50-px" src="assets/ipsum_profile0.jpg" alt="Profile image"/><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountProfileImage">Change</button></div></li>
+                    <li class="list-group-item">Name<div class="float-right"><span>John Doe</span><button class="btn btn-link btn-blue-color">Change</button></div></li>
+                    <li class="list-group-item">Dark theme<div class="float-right"><button class="btn btn-link btn-green-color">Turn on</button></div></li>
+                    <li class="list-group-item">RTL layout<div class="float-right"><button class="btn btn-link btn-green-color">Turn on</button></div></li>
+                    <li class="list-group-item">NSFW content<div class="float-right"><button class="btn btn-link btn-green-color">Enable</button></div></li>
+                    <li class="list-group-item">Delete account<div class="float-right"><button class="btn btn-link btn-red-color">Delete</button></div></li>
                 </ul>
             </div>
         </div>
+    </div>
+
+    <!-- Modals for settings above -->
+    <div class="modal fade" id="accountEmail" tabindex="-1" role="dialog" aria-labelledby="accountEmailLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountEmailInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update email</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <input type="email" id="accountEmailInput" class="form-control validate">
+              <label for="accountEmailInput">Your email</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountPassword" tabindex="-1" role="dialog" aria-labelledby="accountPasswordLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountPasswordInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update password</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <input type="password" id="accountPasswordInput" class="form-control validate mb-1">
+              <label for="accountPasswordInput">New password</label>
+              <small id="accountPasswordHelpBlock" class="form-text text-muted mb-4">
+                At least 14 characters, 1 number, and 1 symbol
+              </small>     
+            </div>
+            <div class="md-form mb-4">
+              <input type="password" id="accountPasswordRetypeInput" class="form-control validate">
+              <label for="accountPasswordRetypeInput">Retype password</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountProfileImage" tabindex="-1" role="dialog" aria-labelledby="accountProfileImageLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountProfileImageInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update profile image</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <div class="position-relative p-3 w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+
+                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-image-fill z-2 upload_logo mb-2" fill="#9e9e9e" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                </svg>
+                <label for="manageProductUploadLogoAreaInput" class="z-2 grey-text upload_logo">Drag and drop a file or click here</label>
+
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Product logo upload" class="upload_logo_done w-100 z-2" id="manageProductUploadLogoAreaPreview" data-current-logo="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&w=1000&q=80"/>
+
+
+                <div class="input-group enable-pointer position-absolute top-left-0 w-100 h-100 upload-area" id="manageProductUploadLogoAreaWrapper">
+                  <input type="file" accept="image/*" class="custom-file-input w-100 h-100" id="manageProductUploadLogoAreaInput">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
     </div>
 
    

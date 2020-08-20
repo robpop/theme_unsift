@@ -1,3 +1,28 @@
 .w-50-px {
     width: 50px;
 }
+#accountSettingsWrapper .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#accountSettingsWrapper .list-group-item .btn-blue-color {
+    color: #4285F4;
+}
+#accountSettingsWrapper .list-group-item .btn-green-color {
+    color: #00C851;
+}
+#accountSettingsWrapper .list-group-item .btn-red-color {
+    color: #ff4444;
+}
+@media (min-width: 576px) {
+    #accountEmailInner.modal-sm {
+        max-width: 345px;
+    }
+    #accountPasswordInner.modal-sm {
+        max-width: 345px;
+    }
+    #accountProfileImageInner.modal-sm {
+        max-width: 345px;
+    }
+}
