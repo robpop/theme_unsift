@@ -23,6 +23,13 @@ $(() => {
     let manageProductTagCount = document.getElementById("manageProductTagCount");
     let current_tags = $(manageProductTagList).attr("data-current-tags");
 
+    let manageProductTitle = document.getElementById("manageProductTitle");
+    let manageProductTitleLabel = document.getElementById("manageProductTitleLabel");
+    let current_name = $(manageProductTitle).attr("data-current-name");
+    let manageProductDesc = document.getElementById("manageProductDesc");
+    let manageProductDescLabel = document.getElementById("manageProductDescLabel");
+    let current_desc = $(manageProductDesc).attr("data-current-desc");
+
     let tags = $(manageProductTagSearch).attr("data-tags");
     let max_tag_length = 3;
     let num_tag = 0;
@@ -219,5 +226,16 @@ $(() => {
         $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
       }
       update_tag_restraint();
+    }
+
+    // Check for existing name and description from data-current-name and data-current-desc
+    if (typeof current_name !== typeof undefined && current_name !== false && current_name !== "") {
+      $(manageProductTitle).attr("placeholder", current_name);
+      $(manageProductTitleLabel).addClass("active");
+    }
+
+    if (typeof current_desc !== typeof undefined && current_desc !== false && current_desc !== "") {
+      $(manageProductDesc).attr("placeholder", current_desc);
+      $(manageProductDescLabel).addClass("active");
     }
 });

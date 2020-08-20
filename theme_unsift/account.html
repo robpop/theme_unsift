@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sign In - LogoIpsum</title>
+    <title>Account - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -20,10 +20,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/signin.css" rel="stylesheet">
+    <link href="styles/account.css" rel="stylesheet">
     <link href="styles/custom.css" rel="stylesheet">
   </head>
 
@@ -142,49 +140,24 @@
 
     <!-- --------------------------------- -->
 
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-        <!-- Sign in form -->
-        <form class="text-center p-5 w-35 card-shadow" action="#">
-            <p class="h4 mb-4">Sign in</p>
-            <!-- Email -->
-            <div class="md-form">
-              <input type="email" id="signInEmail" class="form-control mb-4">
-              <label for="signInEmail">E-mail</label>
+    <!-- Change username/email, password, NSFW setting, Delete account, Dark theme, RTL, profile image, name -->
+    <div class="container-fluid w-75 my-buffer-px">
+        <div class="row">
+            <h1>Account Settings</h1>
+            <div class="col-12">
+                <ul class="list-group-flush">
+                    <li class="list-group-item">Username / Email<div class="float-right"><span>example@email.com</span><button>Change</button></div></li>
+                    <li class="list-group-item">Password<div class="float-right"><span>&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button>Change</button></div></li>
+                    <li class="list-group-item">Profile image<div class="float-right"><img class="position-absolute img-fluid z-depth-1 rounded-circle w-50-px" src="assets/ipsum_profile0.jpg" alt="Profile image"/><button>Change</button></div></li>
+                    <li class="list-group-item">Name<div class="float-right"><span>John Doe</span><button>Change</button></div></li>
+                    <li class="list-group-item">Dark theme<div class="float-right"><button>Turn on</button></div></li>
+                    <li class="list-group-item">RTL layout<div class="float-right"><button>Turn on</button></div></li>
+                    <li class="list-group-item">NSFW content<div class="float-right"><button>Turn on</button></div></li>
+                    <li class="list-group-item">Delete account<div class="float-right"><button>Delete</button></div></li>
+                </ul>
             </div>
-            <!-- Password -->
-            <div class="md-form">
-              <input type="password" id="signInPassword" class="form-control mb-4">
-              <label for="signInPassword">Password</label>
-            </div>
-            <div class="d-flex justify-content-around">
-                <div>
-                    <!-- Remember me -->
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="signInRemember">
-                        <label class="custom-control-label" for="signInRemember">Remember me</label>
-                    </div>
-                </div>
-                <div>
-                    <!-- Forgot password -->
-                    <a href="#" title="Forgot password">Forgot password?</a>
-                </div>
-            </div>
-            <!-- Sign in button -->
-            <button class="btn blue-gradient white-text btn-block my-4" type="submit">Sign in</button>
-            <!-- Register -->
-            <p>Need an account?
-                <a href="signup.html" title="Sign up">Sign up</a>
-            </p>
-            <!-- Social login -->
-            <p>or sign in with:</p>
-            <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
-        </form>
-        <!-- Default form login -->
+        </div>
     </div>
-    
 
    
     <!-- Footer -->
@@ -218,6 +191,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
+    <script type="text/javascript" src="scripts/account.js"></script>
     <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
   </body>
 </html>
