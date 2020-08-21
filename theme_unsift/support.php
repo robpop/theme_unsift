@@ -1,3 +1,57 @@
+<?php
+
+//Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'server/PHPMailer-master/src/Exception.php';
+require 'server/PHPMailer-master/src/PHPMailer.php';
+require 'server/PHPMailer-master/src/SMTP.php';
+
+$sent = NULL;
+//Don't run this unless we're handling a form submission
+if (array_key_exists('email', $_POST)) {
+    date_default_timezone_set('Etc/UTC');
+
+    //Create a new PHPMailer instance
+    $mail = new PHPMailer;
+    //Tell PHPMailer to use SMTP - requires a local mail server
+    //Faster and safer than using mail()
+    $mail->isSMTP();                                      // Send using SMTP
+    $mail->Host       = 'smtp.server.here';               // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                             // Enable SMTP authentication
+    $mail->Username   = 'username';                       // SMTP username
+    $mail->Password   = 'password';                       // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption
+    $mail->Port       = 25;                               // TCP port to connect to
+    $mail->CharSet    = 'UTF-8';
+
+    //Use a fixed address in your own domain as the from address
+    //**DO NOT** use the submitter's address here as it will be forgery
+    //and will cause your messages to fail SPF checks
+    $mail->setFrom('your-form@example.com', 'Contact Form');
+    //Send the message to yourself, or whoever should receive contact for submissions
+    $mail->addAddress('your-inbox@example.com', 'Your Name');
+    //Put the submitter's address in a reply-to header
+    //This will fail if the address provided is invalid,
+    //in which case we should ignore the whole request
+    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+        $mail->Subject = "Support form: ".$_POST['subject'];
+        //Don't use HTML
+        $mail->isHTML(false);
+        //Message body
+        $mail->Body = $_POST['message'];
+        //Send the message, check for errors
+        if (!$mail->send()) {
+            $sent = 1;
+        } else {
+            $sent = 0;
+        }
+    } else {
+        $sent = 2;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -108,7 +162,7 @@
           </svg>
           Account settings
         </a>
-        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="support.html" title="Support">
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="support.php" title="Support">
           <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-question-circle-fill mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.57 6.033H5.25C5.22 4.147 6.68 3.5 8.006 3.5c1.397 0 2.673.73 2.673 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.355H7.117l-.007-.463c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.901 0-1.358.603-1.358 1.384zm1.251 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
           </svg>
@@ -143,16 +197,31 @@
     <!-- --------------------------------- -->
 
     <div class="container-fluid my-buffer-px w-75">
-        <h1>Contact us</h1>
-        <p>Phasellus vitae velit eu erat pellentesque rhoncus vel ut velit.</p>
+
+        <?php if($sent === 0) : ?>
+        <div class="alert alert-success" role="alert">
+          Your message was sent successfully!
+        </div>
+        <?php elseif($sent === 1) : ?>
+        <div class="alert alert-danger" role="alert">
+          Something went wrong, your message could not be sent.
+        </div>
+        <?php elseif($sent === 2) : ?>
+        <div class="alert alert-danger" role="alert">
+          Your email address is invalid, please try again.
+        </div>
+        <?php endif; ?>
+
+        <h1 class="text-center">Contact us</h1>
+        <p class="text-center">Phasellus vitae velit eu erat pellentesque rhoncus vel ut velit.</p>
 
         <section class="mb-4">
 
-            <div class="row">
+            <div class="row justify-content-center">
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="contact.php" method="POST">
+                    <form id="contact-form" name="contact-form" action="" method="POST">
 
                         <!--Grid row-->
                         <div class="row">
@@ -196,7 +265,7 @@
                             <div class="col-md-12">
 
                                 <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea min-vh-30"></textarea>
                                     <label for="message">Your message</label>
                                 </div>
 
@@ -204,12 +273,26 @@
                         </div>
                         <!--Grid row-->
 
+                        <div class="text-center text-md-center">
+                          <!-- 
+
+                            ### Google reCAPTCHA integration ###
+                            The reCAPTCHA script is already imported at the bottom of this document along with the
+                            necessary javascript below that. Register with Google and get a site key to finish the integration.
+                            See: https://developers.google.com/recaptcha/docs/v3
+
+                            Once you have your site key, do the following:
+                            1. add "g-recaptcha" to the input's class list below
+                            2. copy and paste the following in between value="Send" and > on the input below: data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'
+                            3. replace "reCAPTCHA_site_key" with your site key
+
+                          -->
+                          <input class="btn btn-primary" type="submit" value="Send" >
+
+                        </div>
                     </form>
 
-                    <div class="text-center text-md-left">
-                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                    </div>
-                    <div class="status"></div>
+                    
                 </div>
                 <!--Grid column-->
 
@@ -251,6 +334,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
 
     <script type="text/javascript" src="scripts/support.js"></script>
     <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
