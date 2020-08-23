@@ -12,6 +12,20 @@ $(() => {
     // Toggle the sidebar nav when the hamburger icon is clicked with animate.css
     navHamburger.addEventListener("click", function(e){
         $(sideBarNav).css("display") == "none" ? $(sideBarNav).show() : 0;
-        $(sideBarNav).hasClass("slideInRight") ? $(sideBarNav).removeClass("slideInRight").addClass("slideOutRight") : $(sideBarNav).removeClass("slideOutRight").addClass("slideInRight");
+        if( $(sideBarNav).hasClass("slideInRight") ) {
+            $(sideBarNav).removeClass("slideInRight").addClass("slideOutRight");
+            $(".-non-mobile").css("display") == "none" ? $("body").css("overflow-y", "visible") : 0;
+        } else {
+            $(sideBarNav).removeClass("slideOutRight").addClass("slideInRight");
+            $(".-non-mobile").css("display") == "none" ? $("body").css("overflow-y", "hidden") : 0;
+        }
+    });
+
+    $(window).resize(() => {
+        if ( $(sideBarNav).hasClass("slideInRight") && $(".-non-mobile").css("display") == "none" ) {
+            $("body").css("overflow-y", "hidden");
+        } else {
+            $("body").css("overflow-y", "visible");
+        }
     });
 });

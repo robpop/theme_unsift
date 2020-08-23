@@ -1,8 +1,23 @@
+<!--
+
+  added -non-mobile to custom.css and:
+  nav bar sign up
+  nav bar sign in
+  nav bar explore
+
+  floated logo to the left
+
+  enlarged logo and hamburger
+
+  include mobile-logic.js
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Website slogan - LogoIpsum</title>
 
@@ -33,7 +48,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-justify-center custom-navbar primary-color position-fixed fixed-top font-weight-400">
       <div>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav -non-mobile">
           <li class="nav-item active">
             <a class="nav-link white-text" href="index.html">Explore</a>
           </li>
@@ -44,10 +59,10 @@
       </a>
       <div>
         <ul class="navbar-nav custom-navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item active -non-mobile">
             <a class="nav-link white-text" href="signin.html">Sign in</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item active -non-mobile">
             <a class="nav-link white-text" href="signup.html">Sign up</a>
           </li>
           <li class="nav-item active">
@@ -61,7 +76,7 @@
       </div>
     </nav>
 
-    <div class="container w-20 p-0 scrollable shadow min-vh-100 position-fixed animated quick primary-color" id="sideBarNav">
+    <div class="container p-0 scrollable shadow min-vh-100 position-fixed animated quick primary-color" id="sideBarNav">
       <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
 
         <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
@@ -143,7 +158,7 @@
     <!-- --------------------------------- -->
 
     <div class="container-fluid w-100 my-buffer-px">
-      <div class="row d-flex justify-content-around align-items-center">
+      <div class="row d-flex justify-content-around align-items-center" id="homeContentWrapper">
         <div class="col-5 pl-5 z-2">
           <h1 class="font-weight-bold">Lorem ipsum dolor</h1>
           <p>Vestibulum auctor volutpat nunc, et venenatis mi sollicitudin in. Phasellus molestie leo arcu, vitae blandit mi pellentesque quis. Aliquam sagittis lacinia dolor, nec interdum justo condimentum sit amet.</p>
@@ -153,9 +168,9 @@
           </div>
         </div>
         <div class="col-7 d-flex justify-content-center align-items-center flex-column">
-          <img src="assets/splash-backdrop.svg" alt="Placeholder backdrop" class="position-fixed right-top-0 w-100 min-vh-100"/>
+          <img src="assets/splash-backdrop.svg" alt="Placeholder backdrop" class="position-fixed right-top-0 w-100 min-vh-100 rot-size-w"/>
           <img src="assets/chat-5000695.svg" alt="Placeholder splash image" class="h-100vh-105 z-2"/>
-          <p class="text-center z-2">Image by <a href="https://pixabay.com/users/Megan_Rexazin-6742250/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Megan Rexazin</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Pixabay</a></p>
+          <p class="text-center z-2" id="homeIconCredit">Image by <a href="https://pixabay.com/users/Megan_Rexazin-6742250/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Megan Rexazin</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Pixabay</a></p>
         </div>
       </div>
     </div>
