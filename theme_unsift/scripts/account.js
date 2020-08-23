@@ -78,14 +78,14 @@ $(() => {
 
     // Disable and enable update password button when password is long enough and if it matches retype password
     $(accountPasswordInput).keyup((e) => {
-        if ($(e.target).val().length >= 14 && $(e.target).val() === $(accountPasswordRetypeInput).val()) {
+        if ( $(e.target).val().length >= 14 && $(e.target).val() === $(accountPasswordRetypeInput).val() && /\d/.test($(e.target).val()) && /([<>@!#$%^&*()_+[\]{}?:;|'\"\\,./~`\-=])+/g.test($(e.target).val()) ) {
             $(accountPasswordButton).removeClass("disabled");
         } else {
             $(accountPasswordButton).addClass("disabled");
         }
     });
     $(accountPasswordRetypeInput).keyup((e) => {
-        if ($(e.target).val() === $(accountPasswordInput).val()) {
+        if ( $(accountPasswordInput).val().length >= 14 && $(e.target).val() === $(accountPasswordInput).val() && /\d/.test($(accountPasswordInput).val()) && /([<>@!#$%^&*()_+[\]{}?:;|'\"\\,./~`\-=])+/g.test($(accountPasswordInput).val()) ) {
             $(accountPasswordButton).removeClass("disabled");
         } else {
             $(accountPasswordButton).addClass("disabled");

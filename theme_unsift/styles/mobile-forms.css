@@ -1,0 +1,19 @@
+/*
+
+CSS for mobile layouts of sign in and sign up forms
+
+*/
+
+.w-full-mobile {
+    width: 40%;       
+}
+
+@media screen and (max-width: 991px) {
+    .w-full-mobile {
+        width: 100%;
+        box-shadow: none!important;
+        -webkit-box-shadow: none!important;
+        -moz-box-shadow: none!important;
+        -o-box-shadow: none!important;
+    }
+}
