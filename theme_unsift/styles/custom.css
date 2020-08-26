@@ -5,6 +5,9 @@ Adds additional functionality to Bootstrap and overrides certain styles
 
 */
 
+.-mobile {
+    display: none!important;
+}
 body {
     font-family: 'Quicksand';
 }
@@ -130,11 +133,6 @@ textarea {
     -webkit-animation-duration: 250ms;
     animation-duration: 250ms;
 }
-#sideBar hr {
-    width: 50%;
-    background-color: #eeeeee;
-    pointer-events: none;
-}
 #sideBarNav {
     top: 0;
     right: 0;
@@ -169,6 +167,9 @@ textarea {
 
 @media screen and (max-width: 991px) {
     /* mobile conversion */
+    .-mobile {
+        display: initial!important;
+    }
     .-non-mobile {
         display: none!important;
     }
@@ -181,18 +182,18 @@ textarea {
         margin-bottom: 0;
     }
     nav {
-        height: 11vh;
+        height: 9vh;
     }
     .navbar-brand {
         position: absolute;
     }
     .navbar-brand img {
-        width: 26vh;
+        width: 22vh;
     }
     #sideBarNav {
         width: 100vw;
         max-width: 100vw!important;
-        top: 11vh;
+        top: 9vh;
         left: 0!important;
         right: 0!important;
         margin: 0;
@@ -207,8 +208,8 @@ textarea {
         padding: calc(.7rem + 2.0vw) calc(1.25rem + 1.5vw);
     }
     #navHamburger svg {
-        width: calc(1.5em + 2.5vh);
-        height: calc(1.5em + 2.5vh);
+        width: calc(1.5em + 1.8vh);
+        height: calc(1.5em + 1.8vh);
     }
     footer {
         position: relative!important;

@@ -10,9 +10,91 @@
 .font-size-1rem {
     font-size: 1rem!important;
 }
+#sideBar {
+    width: 20%;
+}
+#sideBar hr {
+    width: 50%;
+    background-color: #eeeeee;
+    pointer-events: none;
+}
 
 @media screen and (max-width: 991px) {
-    body {
+    body.noscroll {
+        overflow-y: hidden!important;
+    }
+    .card-columns {
+        column-count: 2;
+    }
+    .container-fluid.mt-6 {
+        margin-top: 10vh;
+    }
+    .list-group-item.mt-7 {
+        margin-top: 0;
+    }
+    #sideBar {
+        width: 10%; /* slide out to 100% when arrow tapped */
+        z-index: 2;
+        overflow-y: hidden;
+        transition: width 250ms ease;
+        -webkit-transition: width 250ms ease;
+        -moz-transition: width 250ms ease;
+        -o-transition: width 250ms ease;
+    }
+    #sideBar hr {
         display: none;
+    }
+    #sideBar .col-lg-12 {
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        transition: blur 250ms ease;
+        -webkit-transition: blur 250ms ease;
+        -moz-transition: blur 250ms ease;
+        -o-transition: blur 250ms ease;
+    }
+    #sideBar .list-group-item {
+        pointer-events: none;
+    }
+    #sideBar.show {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    #sideBar .col-lg-12.show {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+    #sideBar .list-group-item.show {
+        pointer-events: auto;
+    }
+    .fixed-top-left-sidebar {
+        top: 9vh!important;
+    }
+    .list-group-item.mb-5 {
+        margin-bottom: 9vh!important;
+    }
+    #exploreMobileExpandSideBar {
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        top: 50%; 
+        left: 11%; 
+        -ms-transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%); 
+        -webkit-transform: translate(-50%, -50%); 
+        -moz-transform: translate(-50%, -50%); 
+        width: auto;
+    }
+    #exploreMobileExpandSideBar.close {
+        left: unset;
+        right: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .card-columns {
+        column-count: 1;
     }
 }
