@@ -33,6 +33,28 @@
     margin-right: -10px;
     margin-left: -20px;
 }
+
+@media screen and (max-width: 991px) {
+    #libraryTabHub.nav {
+        flex-flow: wrap-reverse;
+    }
+    #libraryFoldersEditor.position-absolute {
+        position: relative!important;
+    }
+    #libraryProductsEditor.position-absolute {
+        position: relative!important;
+    }
+    #libraryFoldersEditor, #libraryProductsEditor {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: 4vh;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
 @media (min-width: 576px) {
     #modalCreateNewFolderInner.modal-sm {
         max-width: 345px;
