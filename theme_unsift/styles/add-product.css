@@ -49,3 +49,30 @@
 .font-size-075rem {
     font-size: 0.75rem!important;
 }
+
+@media screen and (max-width: 991px) {
+    .container-fluid svg {
+        width: 17vw!important;
+        height: 17vw!important;
+        max-width: 110px;
+        max-height: 110px;
+    }
+    .container-fluid label {
+        font-size: calc(1rem + 0.4vw);
+    }
+    .container-fluid.w-75 {
+        width: 95%!important;
+    }
+    #addProductThreeCards {
+        flex-direction: column;
+    }
+    #addProductThreeCards .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 1.5rem!important;
+    }
+    #addProductThreeCards .col-4:first-child {
+        margin-top: 0!important;
+    }
+}
