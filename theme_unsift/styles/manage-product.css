@@ -67,6 +67,10 @@
     .container-fluid .card-deck {
         flex-direction: column;
     }
+    .container-fluid .card {
+        margin-top: 1.5rem!important;
+        margin-bottom: 0!important;
+    }
     .container-fluid .card-deck .card {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -79,14 +83,29 @@
     }
     #manageProductThreeCards {
         flex-direction: column;
+        margin-top: 0;
+        padding-top: 0!important;
     }
     #manageProductThreeCards .col-4 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
-        margin-top: 1rem!important;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0!important;
+        padding-right: 0!important;
     }
-    #manageProductThreeCards .col-4:first-child {
-        margin-top: 0;
+    #manageProductReviewsFeed {
+        font-size: calc(0.9rem + 0.2vw);
+    }
+    #manageProductReviewsFeed .col-2 {
+        padding-left: .25rem!important;
+        padding-right: .25rem!important;
+    }
+    .apexcharts-toolbar {
+        display: none!important;
+    }
+    #manageProductsKeyData {
+        margin-top: 0!important;
     }
 }
