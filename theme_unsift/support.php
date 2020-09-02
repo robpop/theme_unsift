@@ -87,7 +87,7 @@ if (array_key_exists('email', $_POST)) {
 
     <nav class="navbar navbar-expand-lg navbar-justify-center custom-navbar primary-color position-fixed fixed-top font-weight-400">
       <div>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav -non-mobile">
           <li class="nav-item active">
             <a class="nav-link white-text" href="index.html">Explore</a>
           </li>
@@ -98,10 +98,10 @@ if (array_key_exists('email', $_POST)) {
       </a>
       <div>
         <ul class="navbar-nav custom-navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item active -non-mobile">
             <a class="nav-link white-text" href="signin.html">Sign in</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item active -non-mobile">
             <a class="nav-link white-text" href="signup.html">Sign up</a>
           </li>
           <li class="nav-item active">
@@ -115,7 +115,7 @@ if (array_key_exists('email', $_POST)) {
       </div>
     </nav>
 
-    <div class="container w-20 p-0 scrollable shadow min-vh-100 position-fixed animated quick primary-color" id="sideBarNav">
+    <div class="container p-0 scrollable shadow min-vh-100 position-fixed animated quick primary-color" id="sideBarNav">
       <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
 
         <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
@@ -213,7 +213,7 @@ if (array_key_exists('email', $_POST)) {
         <?php endif; ?>
 
         <h1 class="text-center">Contact us</h1>
-        <p class="text-center">Phasellus vitae velit eu erat pellentesque rhoncus vel ut velit.</p>
+        <p class="text-center subheader-display">Phasellus vitae velit eu erat pellentesque rhoncus vel ut velit.</p>
 
         <section class="mb-4">
 

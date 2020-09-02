@@ -177,6 +177,12 @@ textarea {
         overflow-x: hidden;
         font-size: calc(1rem + 0.8vw);
     }
+    h1 {
+        font-size: calc(2rem + 0.5vw);
+    }
+    .subheader-display {
+        font-size: calc(1rem + 0.5vw);
+    }
     .my-buffer-px {
         margin-top: 11vh;
         margin-bottom: 0;

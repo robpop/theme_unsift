@@ -11,6 +11,7 @@ CSS for mobile layouts of sign in and sign up forms
 @media screen and (max-width: 991px) {
     .w-full-mobile {
         width: 100%;
+        padding: 1.5rem!important;
         box-shadow: none!important;
         -webkit-box-shadow: none!important;
         -moz-box-shadow: none!important;

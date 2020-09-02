@@ -34,6 +34,37 @@
 #accountNSFWVerifyLabel:hover {
     cursor: pointer!important;
 }
+.compact-display {
+    display: initial;
+}
+
+@media screen and (max-width: 991px) {
+    .container-fluid.w-75 {
+        width: 90%!important;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container-fluid h1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #accountSettingsWrapper {
+        padding: 0;
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    #accountSettingsWrapper .float-right button {
+        font-size: calc(0.7rem + 0.5vw);
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .compact-display {
+        display: none;
+    }
+}
+
 @media (min-width: 576px) {
     #accountEmailInner.modal-sm {
         max-width: 345px;
