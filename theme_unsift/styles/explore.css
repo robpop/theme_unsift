@@ -45,12 +45,10 @@
         display: none;
     }
     #sideBar .col-lg-12 {
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
-        transition: blur 250ms ease;
-        -webkit-transition: blur 250ms ease;
-        -moz-transition: blur 250ms ease;
-        -o-transition: blur 250ms ease;
+        display: none;
+    }
+    #sideBar .col-lg-12.show {
+        display: block;
     }
     #sideBar .list-group-item {
         pointer-events: none;
@@ -58,10 +56,7 @@
     #sideBar.show {
         width: 100%;
         overflow-y: scroll;
-    }
-    #sideBar .col-lg-12.show {
-        filter: blur(0);
-        -webkit-filter: blur(0);
+        max-width: 100vw!important;
     }
     #sideBar .list-group-item.show {
         pointer-events: auto;
@@ -79,12 +74,13 @@
         background-color: transparent;
         border: none;
         top: 50%; 
-        left: 11%; 
+        left: 5%; 
         -ms-transform: translate(-50%, -50%); 
         transform: translate(-50%, -50%); 
         -webkit-transform: translate(-50%, -50%); 
         -moz-transform: translate(-50%, -50%); 
-        width: auto;
+        width: 10%;
+        padding: 0;
     }
     #exploreMobileExpandSideBar.close {
         left: unset;
