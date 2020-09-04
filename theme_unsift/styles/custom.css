@@ -20,6 +20,12 @@ footer a:hover {
 nav {
     z-index: 5!important;
 }
+nav li {
+    background-color: #4285F4;
+}
+nav ul {
+    background-color: #4285F4;
+}
 textarea {
     overflow-y: scroll!important;
 }
