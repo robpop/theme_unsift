@@ -35,6 +35,8 @@ $(() => {
     let accountNSFWVerify = document.getElementById("accountNSFWVerify");
     let accountNSFWButton = document.getElementById("accountNSFWButton");
 
+    let accountSettingsDarkTheme = document.getElementById("accountSettingsDarkTheme");
+
     accountUploadLogoAreaInput.addEventListener("mouseover", function(e) {
         $(accountUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
     });
@@ -97,4 +99,24 @@ $(() => {
     $(accountNSFWVerify).change((e) => {
         e.target.checked ? $(accountNSFWButton).removeClass("disabled") : $(accountNSFWButton).addClass("disabled");
     });
+
+    $(accountSettingsDarkTheme).click(() => {
+        let dark_theme = (document.cookie.match(/^(?:.*;)?\s*major_platform_darktheme\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
+        if(!parseInt(dark_theme)) {
+            document.cookie = "major_platform_darktheme=1";
+        } else {
+            document.cookie = "major_platform_darktheme=0";
+        }
+        window.location.reload();
+    });
+
+    // check status of dark theme cookie initially
+    let dark_theme = (document.cookie.match(/^(?:.*;)?\s*major_platform_darktheme\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
+    if(!parseInt(dark_theme)) {
+        $(accountSettingsDarkTheme).text("Turn On");
+        $(accountSettingsDarkTheme).removeClass("enabled");
+    } else {
+        $(accountSettingsDarkTheme).text("Turn Off");
+        $(accountSettingsDarkTheme).addClass("enabled");
+    }
 });

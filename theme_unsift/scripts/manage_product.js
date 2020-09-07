@@ -78,6 +78,17 @@ $(() => {
           autoScaleYaxis: true
         },
         toolbar: {
+          offsetY: -5,
+          tools: {
+            download: true,
+            selection: true,
+            zoom: true,
+            zoomin: true,
+            zoomout: true,
+            pan: false,
+            reset: true,
+            customIcons: []
+          },
           autoSelected: 'zoom'
         }
       },
@@ -86,26 +97,6 @@ $(() => {
       },
       markers: {
         size: 5,
-      },
-      title: {
-        text: "Product Analytics",
-        align: 'left',
-        style: {
-            fontSize:  '18px',
-            fontWeight:  'bold',
-            fontFamily:  'Quicksand',
-            color: '#212529'
-        },
-      },
-      subtitle: {
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
-        align: 'left',
-        style: {
-            fontSize:  '14px',
-            fontWeight:  'normal',
-            fontFamily:  'Quicksand',
-            color: '#9e9e9e'
-        },
       },
       colors: ['#4285F4', "#ff4444", "#ffbb33", "#00C851"],
       xaxis: {
@@ -122,9 +113,10 @@ $(() => {
           fontSize: '13px',
           fontFamily: 'Quicksand',
           offsetY: 10,
+          position: 'bottom',
           itemMargin: {
-            horizontal: 10,
-            vertical: 10
+            horizontal: 7,
+            vertical: 5
           },
       },
       };
@@ -190,12 +182,12 @@ $(() => {
         update_tag_restraint();
     });
 
-    manageProductUploadLogoAreaInput.addEventListener("mouseover", function(e) {
-      $(manageProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
-    });
-    manageProductUploadLogoAreaInput.addEventListener("mouseout", function(e) {
-      $(manageProductUploadLogoAreaWrapper).css("background-color", "");
-    });
+    //manageProductUploadLogoAreaInput.addEventListener("mouseover", function(e) {
+    //  $(manageProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
+    //});
+    //manageProductUploadLogoAreaInput.addEventListener("mouseout", function(e) {
+    //  $(manageProductUploadLogoAreaWrapper).css("background-color", "");
+    //});
     manageProductUploadLogoAreaInput.addEventListener("change", function(e) {
       if (e.target.value) {
         $(".upload_logo").hide();

@@ -29,6 +29,16 @@ nav ul {
 textarea {
     overflow-y: scroll!important;
 }
+.upload-area {
+    background-color: #fff;
+    -webkit-transition: background-color 250ms ease;
+    -moz-transition: background-color 250ms ease;
+    -o-transition: background-color 250ms ease;
+    transition: background-color 250ms ease;
+}
+.upload-area:hover {
+    background-color: #f5f5f5;
+}
 .z-2 {
     z-index: 2;
 }

@@ -37,6 +37,9 @@
 .compact-display {
     display: initial;
 }
+#accountSettingsDarkTheme.enabled {
+    color: #ff4444!important;
+}
 
 @media screen and (max-width: 991px) {
     .container-fluid.w-75 {
