@@ -10,4 +10,6 @@ $(() => {
         link.media = 'all';
         head.appendChild(link);
     }
+    // show the body once dark-theme styles are added successfully
+    $("body").show();
 });

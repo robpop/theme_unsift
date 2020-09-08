@@ -18,6 +18,13 @@
     background-color: #eeeeee;
     pointer-events: none;
 }
+#actionModalReviewsFeed hr {
+    width: 50%;
+    background-color: #eeeeee;
+}
+div.lazy {
+    display: inline-block;
+}
 
 @media screen and (max-width: 991px) {
     body.noscroll {
