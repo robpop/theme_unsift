@@ -21,11 +21,11 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <link href="styles/account.css" rel="stylesheet">
-    <link href="styles/custom.css" rel="stylesheet">
+    <link href="styles/rtl-account.css" rel="stylesheet">
+    <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body dir="rtl">
 
     <!-- Top navbar and expandable sidebar -->
 
@@ -146,14 +146,14 @@
             <h1>Account Settings</h1>
             <div class="col-12">
                 <ul class="list-group-flush" id="accountSettingsWrapper">
-                    <li class="list-group-item">E-mail<div class="float-right"><span class="compact-display">example@email.com</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountEmail">Change</button></div></li>
-                    <li class="list-group-item">Password<div class="float-right"><span class="compact-display">&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountPassword">Change</button></div></li>
-                    <li class="list-group-item">Profile image<div class="float-right"><img class="img-fluid z-depth-1 rounded-circle w-50-px compact-display" src="assets/ipsum_profile0.jpg" alt="Profile image"/><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountProfileImage">Change</button></div></li>
-                    <li class="list-group-item">Name<div class="float-right"><span class="compact-display">John Doe</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountName">Change</button></div></li>
-                    <li class="list-group-item">Dark theme<div class="float-right"><button class="btn btn-link btn-green-color" id="accountSettingsDarkTheme">Turn on</button></div></li>
-                    <li class="list-group-item">RTL layout<div class="float-right"><button class="btn btn-link btn-green-color">Turn on</button></div></li>
-                    <li class="list-group-item">NSFW content<div class="float-right"><button class="btn btn-link btn-green-color" data-toggle="modal" data-target="#accountNSFW">Enable</button></div></li>
-                    <li class="list-group-item">Delete account<div class="float-right"><button class="btn btn-link btn-red-color" data-toggle="modal" data-target="#accountDelete">Delete</button></div></li>
+                    <li class="list-group-item">E-mail<div class="float-left"><span class="compact-display">example@email.com</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountEmail">Change</button></div></li>
+                    <li class="list-group-item">Password<div class="float-left"><span class="compact-display">&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountPassword">Change</button></div></li>
+                    <li class="list-group-item">Profile image<div class="float-left"><img class="img-fluid z-depth-1 rounded-circle w-50-px compact-display" src="assets/ipsum_profile0.jpg" alt="Profile image"/><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountProfileImage">Change</button></div></li>
+                    <li class="list-group-item">Name<div class="float-left"><span class="compact-display">John Doe</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountName">Change</button></div></li>
+                    <li class="list-group-item">Dark theme<div class="float-left"><button class="btn btn-link btn-green-color" id="accountSettingsDarkTheme">Turn on</button></div></li>
+                    <li class="list-group-item">RTL layout<div class="float-left"><a class="btn btn-link btn-red-color" href="../account.html" title="Turn off RTL">Turn off</a></div></li>
+                    <li class="list-group-item">NSFW content<div class="float-left"><button class="btn btn-link btn-green-color" data-toggle="modal" data-target="#accountNSFW">Enable</button></div></li>
+                    <li class="list-group-item">Delete account<div class="float-left"><button class="btn btn-link btn-red-color" data-toggle="modal" data-target="#accountDelete">Delete</button></div></li>
                 </ul>
             </div>
         </div>
@@ -352,8 +352,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script type="text/javascript" src="scripts/dark_theme.js"></script>
-    <script type="text/javascript" src="scripts/account.js"></script>
-    <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
+    <script type="text/javascript" src="../scripts/dark_theme.js"></script>
+    <script type="text/javascript" src="../scripts/account.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar_nav.js"></script>
   </body>
 </html>

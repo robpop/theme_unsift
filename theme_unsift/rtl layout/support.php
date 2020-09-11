@@ -81,7 +81,7 @@ if (array_key_exists('email', $_POST)) {
     <link href="styles/custom.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body dir="rtl">
 
     <!-- Top navbar and expandable sidebar -->
 
