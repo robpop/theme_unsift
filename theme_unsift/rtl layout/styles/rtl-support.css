@@ -1,6 +1,9 @@
 .min-vh-30 {
     min-height: 30vh!important;
 }
+.alert {
+    text-align: right;
+}
 
 @media screen and (max-width: 991px) {
     .container-fluid.w-75 {

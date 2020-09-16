@@ -30,6 +30,18 @@ nav ul {
 textarea {
     overflow-y: scroll!important;
 }
+h1, h2, h3, h4, h5, h6 {
+    text-align: right;
+}
+p {
+    text-align: right;
+}
+.list-group-flush>.list-group-item {
+    text-align: right;
+}
+.dropdown-item {
+    text-align: right;
+}
 #majorPlatformLoaderOverlay {
     position: fixed;
     top: 0;

@@ -4,9 +4,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'server/PHPMailer-master/src/Exception.php';
-require 'server/PHPMailer-master/src/PHPMailer.php';
-require 'server/PHPMailer-master/src/SMTP.php';
+require '../server/PHPMailer-master/src/Exception.php';
+require '../server/PHPMailer-master/src/PHPMailer.php';
+require '../server/PHPMailer-master/src/SMTP.php';
 
 $sent = NULL;
 //Don't run this unless we're handling a form submission
@@ -60,10 +60,10 @@ if (array_key_exists('email', $_POST)) {
 
     <title>Contact support - LogoIpsum</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -77,8 +77,8 @@ if (array_key_exists('email', $_POST)) {
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/support.css" rel="stylesheet">
-    <link href="styles/custom.css" rel="stylesheet">
+    <link href="styles/rtl-support.css" rel="stylesheet">
+    <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
   <body dir="rtl">
@@ -94,7 +94,7 @@ if (array_key_exists('email', $_POST)) {
         </ul>
       </div>
       <a class="navbar-brand mx-0" href="index.html" title="Explore">
-        <img src="assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
+        <img src="../assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
       </a>
       <div>
         <ul class="navbar-nav custom-navbar-nav">
@@ -119,7 +119,7 @@ if (array_key_exists('email', $_POST)) {
       <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
 
         <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
-          <img src="assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
+          <img src="../assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
           <p class="text-center mt-3">Signed in as John Doe</p>
         </li>
 
@@ -230,7 +230,7 @@ if (array_key_exists('email', $_POST)) {
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Your name</label>
+                                    <label for="name" style="right: 0;left: unset">Your name</label>
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -239,7 +239,7 @@ if (array_key_exists('email', $_POST)) {
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Your email</label>
+                                    <label for="email" style="right: 0;left: unset">Your email</label>
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -252,7 +252,7 @@ if (array_key_exists('email', $_POST)) {
                             <div class="col-md-12">
                                 <div class="md-form mb-0">
                                     <input type="text" id="subject" name="subject" class="form-control">
-                                    <label for="subject" class="">Subject</label>
+                                    <label for="subject" style="right: 0;left: unset">Subject</label>
                                 </div>
                             </div>
                         </div>
@@ -266,7 +266,7 @@ if (array_key_exists('email', $_POST)) {
 
                                 <div class="md-form">
                                     <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea min-vh-30"></textarea>
-                                    <label for="message">Your message</label>
+                                    <label for="message" style="right: 0;left: unset">Your message</label>
                                 </div>
 
                             </div>
@@ -343,8 +343,8 @@ if (array_key_exists('email', $_POST)) {
       }
     </script>
 
-    <script type="text/javascript" src="scripts/dark_theme.js"></script>
-    <script type="text/javascript" src="scripts/support.js"></script>
-    <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
+    <script type="text/javascript" src="../scripts/dark_theme.js"></script>
+    <script type="text/javascript" src="../scripts/support.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar_nav.js"></script>
   </body>
 </html>

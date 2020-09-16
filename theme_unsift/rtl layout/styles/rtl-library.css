@@ -24,7 +24,7 @@
 .productSelected .card-body h4 {
     color: #4285F4!important;
 }
-.position-absolute.right-0 {
+.position-absolute.left-0 {
     left: 0;
     bottom: 0;
 }
@@ -32,6 +32,9 @@
     width: 80px;
     margin-left: -10px;
     margin-right: -20px;
+}
+.list-group-item {
+    text-align: right;
 }
 
 @media screen and (max-width: 991px) {

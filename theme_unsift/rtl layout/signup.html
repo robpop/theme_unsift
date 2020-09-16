@@ -23,9 +23,9 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/mobile-forms.css" rel="stylesheet">
-    <link href="styles/signup.css" rel="stylesheet">
-    <link href="styles/custom.css" rel="stylesheet">
+    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
+    <link href="styles/rtl-signup.css" rel="stylesheet">
+    <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
   <body dir="rtl">
@@ -41,7 +41,7 @@
         </ul>
       </div>
       <a class="navbar-brand mx-0" href="index.html" title="Explore">
-        <img src="assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
+        <img src="../assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
       </a>
       <div>
         <ul class="navbar-nav custom-navbar-nav">
@@ -66,7 +66,7 @@
       <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
 
         <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
-          <img src="assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
+          <img src="../assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
           <p class="text-center mt-3">Signed in as John Doe</p>
         </li>
 
@@ -154,14 +154,14 @@
                     <!-- First name -->
                     <div class="md-form">
                         <input type="text" id="signUpFirstName" class="form-control">
-                        <label for="signUpFirstName">First name</label>
+                        <label for="signUpFirstName" style="right: 0;left: unset">First name</label>
                     </div>
                 </div>
                 <div class="col">
                     <!-- Last name -->
                     <div class="md-form">
                         <input type="text" id="signUpLastName" class="form-control">
-                        <label for="signUpLastName">Last name</label>
+                        <label for="signUpLastName" style="right: 0;left: unset">Last name</label>
                     </div>
                 </div>
             </div>
@@ -169,13 +169,13 @@
             <!-- E-mail -->
             <div class="md-form mt-0">
                 <input type="email" id="signUpEmail" class="form-control mb-4">
-                <label for="signUpEmail">E-mail</label>
+                <label for="signUpEmail" style="right: 0;left: unset">E-mail</label>
             </div>
 
             <!-- Password -->
             <div class="md-form mt-0 mb-1">
                 <input type="password" id="signUpPassword" class="form-control" aria-describedby="signUpPasswordHelpBlock">
-                <label for="signUpPassword">Password</label>
+                <label for="signUpPassword" style="right: 0;left: unset">Password</label>
             </div>
             <small id="signUpPasswordHelpBlock" class="form-text text-muted mb-4">
                 At least 14 characters, 1 number, and 1 symbol
@@ -235,8 +235,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script type="text/javascript" src="scripts/dark_theme.js"></script>
-    <script type="text/javascript" src="scripts/signup.js"></script>
-    <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
+    <script type="text/javascript" src="../scripts/dark_theme.js"></script>
+    <script type="text/javascript" src="../scripts/signup.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar_nav.js"></script>
   </body>
 </html>

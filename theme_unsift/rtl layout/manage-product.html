@@ -6,10 +6,10 @@
 
     <title>Manage your products - LogoIpsum</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -23,8 +23,8 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/manage-product.css" rel="stylesheet">
-    <link href="styles/custom.css" rel="stylesheet">
+    <link href="styles/rtl-manage-product.css" rel="stylesheet">
+    <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
   <body dir="rtl">
@@ -40,7 +40,7 @@
         </ul>
       </div>
       <a class="navbar-brand mx-0" href="index.html" title="Explore">
-        <img src="assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
+        <img src="../assets/logo-8.svg" width="150px" height="auto" alt="Your Logo" loading="lazy">
       </a>
       <div>
         <ul class="navbar-nav custom-navbar-nav">
@@ -65,7 +65,7 @@
       <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
 
         <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
-          <img src="assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
+          <img src="../assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
           <p class="text-center mt-3">Signed in as John Doe</p>
         </li>
 
@@ -263,7 +263,7 @@
                                 <!-- This is a review -->
                                 <div class="row">
                                     <div class="col-2 pl-2 pr-2">
-                                        <img src="assets/ipsum_profile1.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                                        <img src="../assets/ipsum_profile1.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
                                     </div>
                                     <div class="col-10">
                                         <p class="font-weight-bold mb-0">FirstName LastName</p>
@@ -286,7 +286,7 @@
                                 <!-- This is a review -->
                                 <div class="row">
                                     <div class="col-2 pl-2 pr-2">
-                                        <img src="assets/ipsum_profile2.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                                        <img src="../assets/ipsum_profile2.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
                                     </div>
                                     <div class="col-10">
                                         <p class="font-weight-bold mb-0">FirstName LastName</p>
@@ -309,7 +309,7 @@
                                 <!-- This is a review -->
                                 <div class="row">
                                     <div class="col-2 pl-2 pr-2">
-                                        <img src="assets/ipsum_profile3.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                                        <img src="../assets/ipsum_profile3.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
                                     </div>
                                     <div class="col-10">
                                         <p class="font-weight-bold mb-0">FirstName LastName</p>
@@ -383,7 +383,7 @@
                   <!-- Autocomplete tags are loaded in space-separated into data-tags -->
                   <div class="enable-pointer md-form">
                     <input type="text" class="form-control" id="manageProductTagSearch" data-tags="Lorem Ipsum Dolor Habitasse Donec Convallis Tincidunt Magna Vitae Aliquam Egestas" maxlength="24">
-                    <label for="manageProductTagSearch" id="manageProductTagSearchLabel">Add tags</label>
+                    <label for="manageProductTagSearch" id="manageProductTagSearchLabel" style="right: 0;left: unset">Add tags</label>
                   </div>
                   <div class="enable-pointer d-flex flex-row flex-wrap" id="manageProductTagList" data-current-tags="Habitasse Lorem">
                     <span class="badge-dummy badge badge-pill badge-primary m-1 badge-click-to-remove"></span>
@@ -406,11 +406,11 @@
                   
                   <div class="enable-pointer md-form">
                       <input type="text" class="form-control" id="manageProductTitle" data-current-name="Vivamus dignissim"> 
-                      <label for="manageProductTitle" id="manageProductTitleLabel">Product name</label>
+                      <label for="manageProductTitle" id="manageProductTitleLabel" style="right: 0;left: unset">Product name</label>
                   </div>
                   <div class="enable-pointer md-form">
                       <textarea class="md-textarea form-control" id="manageProductDesc" rows="5" maxlength="180" data-current-desc="Nunc suscipit placerat sagittis. Donec ultricies enim ac leo semper tempor."></textarea>
-                      <label for="manageProductDesc" id="manageProductDescLabel">Product description</label>
+                      <label for="manageProductDesc" id="manageProductDescLabel" style="right: 0;left: unset">Product description</label>
                   </div>
                 </div>
               </div>
@@ -462,9 +462,9 @@
     <!-- JQuery UI for autocomplete functionality -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="scripts/dark_theme.js"></script>
-    <script type="text/javascript" src="scripts/manage_product_data.js"></script>
-    <script type="text/javascript" src="scripts/manage_product.js"></script>
-    <script type="text/javascript" src="scripts/sidebar_nav.js"></script>
+    <script type="text/javascript" src="../scripts/dark_theme.js"></script>
+    <script type="text/javascript" src="../scripts/manage_product_data.js"></script>
+    <script type="text/javascript" src="../scripts/manage_product.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar_nav.js"></script>
   </body>
 </html>
