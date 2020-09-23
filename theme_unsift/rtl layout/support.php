@@ -345,6 +345,6 @@ if (array_key_exists('email', $_POST)) {
 
     <script type="text/javascript" src="../scripts/dark_theme.js"></script>
     <script type="text/javascript" src="../scripts/support.js"></script>
-    <script type="text/javascript" src="../scripts/sidebar_nav.js"></script>
+    <script type="text/javascript" src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

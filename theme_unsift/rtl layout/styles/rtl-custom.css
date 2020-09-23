@@ -27,6 +27,9 @@ nav li {
 nav ul {
     background-color: #4285F4;
 }
+form .h4 {
+    text-align: center;
+}
 textarea {
     overflow-y: scroll!important;
 }
@@ -79,6 +82,9 @@ p {
     height: 80%;
     transform-origin:center center;
     animation: majorPlatformLoaderAnimInner 0.4s linear infinite;
+}
+#sideBarNavList svg.mr-2 {
+    margin-left: .5rem!important;
 }
 @keyframes majorPlatformLoaderAnim {
     0% {
