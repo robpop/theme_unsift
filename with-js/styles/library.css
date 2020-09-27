@@ -1,0 +1,74 @@
+.small-font-size {
+    font-size: 0.9rem;
+    color: #616161;
+}
+#libraryFolderArray h4 {
+    color: #616161;
+}
+#libraryFolderArray .card:hover {
+    cursor: pointer;
+}
+#libraryProductArray .card:hover {
+    cursor: pointer;
+}
+#modalMoveToFolder .modal-body ul {
+    max-height: 35vh;
+    overflow-y: scroll;
+}
+.folderSelected .card-body h4 {
+    color: #4285F4!important;
+}
+.folderSelected .card-body h4 svg {
+    fill: #4285F4!important;
+}
+.productSelected .card-body h4 {
+    color: #4285F4!important;
+}
+.position-absolute.right-0 {
+    right: 0;
+    bottom: 0;
+}
+#libraryProductArray .card-product img {
+    width: 80px;
+    margin-right: -10px;
+    margin-left: -20px;
+}
+
+@media screen and (max-width: 991px) {
+    #libraryTabHub.nav {
+        flex-flow: wrap-reverse;
+    }
+    #libraryFoldersEditor.position-absolute {
+        position: relative!important;
+    }
+    #libraryProductsEditor.position-absolute {
+        position: relative!important;
+    }
+    #libraryFoldersEditor, #libraryProductsEditor {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: 4vh;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 576px) {
+    #modalCreateNewFolderInner.modal-sm {
+        max-width: 345px;
+    }
+    #modalRenameFolderInner.modal-sm {
+        max-width: 345px;
+    }
+    #modalRemoveFolderInner.modal-sm {
+        max-width: 345px;
+    }
+    #modalRemoveProductInner.modal-sm {
+        max-width: 345px;
+    }
+    #modalMoveToFolderInner.modal-sm {
+        max-width: 345px;
+    }
+}
