@@ -1,10 +1,25 @@
+<!--
+
+  added -non-mobile to custom.css and:
+  nav bar sign up
+  nav bar sign in
+  nav bar explore
+
+  floated logo to the left
+
+  enlarged logo and hamburger
+
+  include mobile-logic.js
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Reset password - LogoIpsum</title>
+    <title>Website slogan - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
@@ -23,7 +38,7 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
+    <link href="styles/rtl-home.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -140,31 +155,25 @@
 
     </div>
 
-   
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-      <!-- Sign in form -->
-      <form class="text-center p-5 card-shadow w-full-mobile" action="#">
-        <p class="h4 mb-4">Reset your password</p>
-        <!-- New password -->
-        <div class="md-form mt-0 mb-1">
-          <input type="password" id="resetPasswordNew" class="form-control">
-          <label for="resetPasswordNew">Password</label>
-        </div>
-        <small id="resetPasswordNewRetypeHelpBlock" class="form-text text-muted mb-4">
-          At least 14 characters, 1 number, and 1 symbol
-        </small>
 
-        <div class="md-form">
-          <input type="password" id="resetPasswordNewRetype" class="form-control mb-4">
-          <label for="resetPasswordNewRetype">Retype Password</label>
+    <div class="container-fluid w-100 my-buffer-px">
+      <div class="row d-flex justify-content-around align-items-center" id="homeContentWrapper">
+        <div class="col-5 pl-5 z-2">
+          <h1 class="font-weight-bold">Lorem ipsum dolor</h1>
+          <p class="subheader-display">Vestibulum auctor volutpat nunc, et venenatis mi sollicitudin in. Phasellus molestie leo arcu, vitae blandit mi pellentesque quis. Aliquam sagittis lacinia dolor, nec interdum justo condimentum sit amet.</p>
+          <div class="float-right">
+            <a href="index.html" title="Explore" class="btn btn-primary mr-0">Explore</a>
+            <a href="add-product.html" title="Add a product" class="btn btn-link">Add a product</a>
+          </div>
         </div>
-
-        <!-- Sign in button -->
-        <button class="btn blue-gradient white-text btn-block my-4 disabled" type="submit" id="resetPasswordSubmit">Send reset instructions</button>
-        
-      </form>
-      <!-- Default form login -->
+        <div class="col-7 d-flex justify-content-center align-items-center flex-column">
+          <img src="../assets/splash-backdrop.svg" alt="Placeholder backdrop" class="position-fixed right-top-0 w-100 min-vh-100 rot-size-w"/>
+          <img src="../assets/chat-5000695.svg" alt="Placeholder splash image" class="h-100vh-105 z-2"/>
+          <p class="text-center z-2" id="homeIconCredit">Image by <a href="https://pixabay.com/users/Megan_Rexazin-6742250/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Megan Rexazin</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5000695">Pixabay</a></p>
+        </div>
+      </div>
     </div>
+    
 
    
     <!-- Footer -->
@@ -198,8 +207,6 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../scripts/dark_theme.js"></script>
-    <script src="../scripts/reset_password.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

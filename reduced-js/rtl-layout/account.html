@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>403 - LogoIpsum</title>
+    <title>Account - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
@@ -21,7 +21,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <link href="styles/rtl-error.css" rel="stylesheet">
+    <link href="styles/rtl-account.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -139,27 +139,185 @@
     </div>
 
 
-    <div class="container-fluid d-relative">
-        <!-- Card -->
-        <div class="card">
-
-            <!-- Card content -->
-            <div class="card-body">
-        
-            <!-- Title -->
-            <h4 class="card-title">403</h4>
-            <!-- Text -->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tortor enim.</p>
-            <!-- Button -->
-            <a href="javascript:history.back()" class="btn btn-link pl-0 ml-0" title="Go back">Go back</a>
-        
+    <!-- Change username/email, password, NSFW setting, Delete account, Dark theme, RTL, profile image, name -->
+    <div class="container-fluid w-75 my-buffer-px">
+        <div class="row">
+            <h1>Account Settings</h1>
+            <div class="col-12">
+                <ul class="list-group-flush" id="accountSettingsWrapper">
+                    <li class="list-group-item">E-mail<div class="float-left"><span class="compact-display">example@email.com</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountEmail">Change</button></div></li>
+                    <li class="list-group-item">Password<div class="float-left"><span class="compact-display">&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	&#8226;	</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountPassword">Change</button></div></li>
+                    <li class="list-group-item">Profile image<div class="float-left"><img class="img-fluid z-depth-1 rounded-circle w-50-px compact-display" src="../assets/ipsum_profile0.jpg" alt="Profile image"/><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountProfileImage">Change</button></div></li>
+                    <li class="list-group-item">Name<div class="float-left"><span class="compact-display">John Doe</span><button class="btn btn-link btn-blue-color" data-toggle="modal" data-target="#accountName">Change</button></div></li>
+                    <li class="list-group-item">Dark theme<div class="float-left"><button class="btn btn-link btn-green-color" id="accountSettingsDarkTheme">Turn on</button></div></li>
+                    <li class="list-group-item">RTL layout<div class="float-left"><a class="btn btn-link btn-red-color" href="../account.html" title="Turn off RTL">Turn off</a></div></li>
+                    <li class="list-group-item">NSFW content<div class="float-left"><button class="btn btn-link btn-green-color" data-toggle="modal" data-target="#accountNSFW">Enable</button></div></li>
+                    <li class="list-group-item">Delete account<div class="float-left"><button class="btn btn-link btn-red-color" data-toggle="modal" data-target="#accountDelete">Delete</button></div></li>
+                </ul>
             </div>
-        
         </div>
-        <!-- Card -->
-
     </div>
-    
+
+    <!-- Modals for settings above -->
+    <div class="modal fade" id="accountEmail" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountEmailInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update email</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <input type="email" id="accountEmailInput" class="form-control validate" data-current-email="example@email.com">
+              <label for="accountEmailInput" id="accountEmailInputLabel" style="right: 0;left: unset">Your email</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountPassword" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountPasswordInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update password</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <input type="password" id="accountPasswordInput" class="form-control validate mb-1">
+              <label for="accountPasswordInput" style="right: 0;left: unset">New password</label>
+              <small id="accountPasswordHelpBlock" class="form-text text-muted mb-4">
+                At least 14 characters, 1 number, and 1 symbol
+              </small>
+            </div>
+            <div class="md-form mb-4">
+              <input type="password" id="accountPasswordRetypeInput" class="form-control validate">
+              <label for="accountPasswordRetypeInput" style="right: 0;left: unset">Retype password</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary" id="accountPasswordButton">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountProfileImage" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountProfileImageInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update profile image</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <div class="position-relative p-3 w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+
+                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-image-fill z-2 upload_logo mb-2" fill="#9e9e9e" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                </svg>
+                <label for="accountUploadLogoAreaInput" class="z-2 grey-text upload_logo" id="accountUploadLogoAreaInputLabel">Drag and drop a file or click here</label>
+
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Profile image upload" class="upload_logo_done w-100 z-2" id="accountUploadLogoAreaPreview" data-current-logo="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&w=1000&q=80"/>
+
+
+                <div class="input-group enable-pointer position-absolute top-left-0 w-100 h-100 upload-area" id="accountUploadLogoAreaWrapper">
+                  <input type="file" accept="image/*" class="custom-file-input w-100 h-100" id="accountUploadLogoAreaInput">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountName" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountNameInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update name</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4">
+              <input type="email" id="accountNameFirstInput" class="form-control validate" data-current-fname="John">
+              <label for="accountNameFirstInput" id="accountNameFirstInputLabel" style="right: 0;left: unset">Your first name</label>
+            </div>
+            <div class="md-form mb-4">
+              <input type="email" id="accountNameLastInput" class="form-control validate" data-current-lname="Doe">
+              <label for="accountNameLastInput" id="accountNameLastInputLabel" style="right: 0;left: unset">Your last name</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountNSFW" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountNSFWInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Enable NSFW</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <div class="md-form mb-4 d-flex flex-column align-items-center justify-content-center">
+              <p class="text-center mb-1">Sed eu malesuada enim. Etiam posuere turpis ac nulla accumsan congue.</p>
+              <div class="custom-control custom-checkbox mb-3">
+                <label class="custom-control-label position-static" for="accountNSFWVerify" id="accountNSFWVerifyLabel">Morbi blandit leo</label>
+                <input type="checkbox" class="custom-control-input" id="accountNSFWVerify">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-primary" id="accountNSFWButton">Enable</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="accountDelete" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="accountDeleteInner">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Delete account</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3 py-0">
+            <p class="mt-4 text-center">Mauris scelerisque velit eu nunc tincidunt bibendum.</p>
+            <div class="md-form mb-4 mt-0">
+              <input type="password" id="accountDeleteInput" class="form-control validate mb-1">
+              <label for="accountDeleteInput" style="right: 0;left: unset">Your password</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center border-top-0 pt-0">
+            <button class="btn btn-danger" id="accountDeleteButton">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
    
     <!-- Footer -->
@@ -193,7 +351,7 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../scripts/dark_theme.js"></script>
+    <script src="../scripts/account.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

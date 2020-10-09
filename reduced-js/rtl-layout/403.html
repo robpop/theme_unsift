@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sign Up - LogoIpsum</title>
+    <title>403 - LogoIpsum</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -20,11 +20,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
-    <link href="styles/rtl-signup.css" rel="stylesheet">
+    <link href="styles/rtl-error.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -142,65 +139,27 @@
     </div>
 
 
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-        <!-- Sign up form -->
-        <form class="text-center p-4 card-shadow h-max-580 scrollable w-full-mobile" action="#">
+    <div class="container-fluid d-relative">
+        <!-- Card -->
+        <div class="card">
 
-            <p class="h4 mb-4">Sign up</p>
-
-            <div class="form-row">
-                <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">
-                        <input type="text" id="signUpFirstName" class="form-control">
-                        <label for="signUpFirstName" style="right: 0;left: unset">First name</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <!-- Last name -->
-                    <div class="md-form">
-                        <input type="text" id="signUpLastName" class="form-control">
-                        <label for="signUpLastName" style="right: 0;left: unset">Last name</label>
-                    </div>
-                </div>
+            <!-- Card content -->
+            <div class="card-body">
+        
+            <!-- Title -->
+            <h4 class="card-title">403</h4>
+            <!-- Text -->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tortor enim.</p>
+            <!-- Button -->
+            <a href="javascript:history.back()" class="btn btn-link pl-0 ml-0" title="Go back">Go back</a>
+        
             </div>
+        
+        </div>
+        <!-- Card -->
 
-            <!-- E-mail -->
-            <div class="md-form mt-0">
-                <input type="email" id="signUpEmail" class="form-control mb-4">
-                <label for="signUpEmail" style="right: 0;left: unset">E-mail</label>
-            </div>
-
-            <!-- Password -->
-            <div class="md-form mt-0 mb-1">
-                <input type="password" id="signUpPassword" class="form-control" aria-describedby="signUpPasswordHelpBlock">
-                <label for="signUpPassword" style="right: 0;left: unset">Password</label>
-            </div>
-            <small id="signUpPasswordHelpBlock" class="form-text text-muted mb-4">
-                At least 14 characters, 1 number, and 1 symbol
-            </small>            
-
-            <!-- Sign up button -->
-            <button class="btn btn-info my-4 btn-block disabled blue-gradient" type="submit" id="signUpSubmit">Sign up</button>
-
-            <!-- Social register -->
-            <p>or sign up with:</p>
-            <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
-
-            <hr>
-
-            <!-- Terms of service -->
-            <p>By clicking
-            <em>Sign up</em> you agree to our
-            <a href="#" target="_blank" title="Terms of Service">Terms of Service</a>
-
-        </form>
-        <!-- Sign up form -->
     </div>
-   
+    
 
    
     <!-- Footer -->
@@ -234,8 +193,6 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../scripts/dark_theme.js"></script>
-    <script src="../scripts/signup.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

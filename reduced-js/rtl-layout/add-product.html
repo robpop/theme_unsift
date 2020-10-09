@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sign In - LogoIpsum</title>
+    <title>Add a product - LogoIpsum</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -23,7 +23,7 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
+    <link href="styles/rtl-add-product.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -140,48 +140,145 @@
 
     </div>
 
+    
+    <div class="container-fluid w-75 my-buffer-px">
+        <div class="row">
+            <div class="col-12">
+                <!-- Card -->
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                        <!-- Title -->
+                        <h4 class="card-title">Upload product file</h4>
+                        <!-- Text -->
+                        <p class="card-text">This is the content that will be served to users when they open/install your product on the explore page</p>
+                        <hr />
+                        <!-- Upload area -->
+                        <div id="addProductUploadFileArea" class="w-100" style="height: 200px">
+                            <div class="position-relative w-100 h-100 d-flex justify-content-center align-items-center flex-column">
 
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-        <!-- Sign in form -->
-        <form class="text-center p-5 card-shadow w-full-mobile" action="#">
-            <p class="h4 mb-4">Sign in</p>
-            <!-- Email -->
-            <div class="md-form">
-              <input type="email" id="signInEmail" class="form-control mb-4">
-              <label for="signInEmail" style="right: 0;left: unset">E-mail</label>
-            </div>
-            <!-- Password -->
-            <div class="md-form">
-              <input type="password" id="signInPassword" class="form-control mb-4">
-              <label for="signInPassword" style="right: 0;left: unset">Password</label>
-            </div>
-            <div class="d-flex justify-content-around" id="signInRememberForgot">
-                <div>
-                    <!-- Remember me -->
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="signInRemember">
-                        <label class="custom-control-label" for="signInRemember">Remember me</label>
+                                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-cloud-upload-fill z-2 upload_file mb-2" fill="#9e9e9e" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.5 14.5V11h1v3.5a.5.5 0 0 1-1 0z"/>
+                                </svg>
+                                <label for="addProductUploadFileAreaInput" class="z-2 grey-text upload_file">Drag and drop a file or click here</label>
+
+                                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-file-earmark-check z-2 upload_file_done mb-2" fill="#4285F4" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5v-1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h5v2.5A1.5 1.5 0 0 0 10.5 6H13v2h1V6L9 1z"/>
+                                    <path fill-rule="evenodd" d="M15.854 10.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708l1.146 1.147 2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                                <p class="z-2 upload_file_done font-weight-bold" id="addProductUploadFileName"></p>
+
+                                <div class="input-group enable-pointer position-absolute top-left-0 w-100 h-100 upload-area" id="addProductUploadFileAreaWrapper">
+                                    <input type="file" class="custom-file-input w-100 h-100" id="addProductUploadFileAreaInput">
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                
                 </div>
-                <div>
-                    <!-- Forgot password -->
-                    <a href="forgot-password.html" title="Forgot password">Forgot password?</a>
-                </div>
+                <!-- Card -->
             </div>
-            <!-- Sign in button -->
-            <button class="btn blue-gradient white-text btn-block my-4" type="submit">Sign in</button>
-            <!-- Register -->
-            <p>Need an account?
-                <a href="signup.html" title="Sign up">Sign up</a>
-            </p>
-            <!-- Social login -->
-            <p>or sign in with:</p>
-            <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
-        </form>
-        <!-- Default form login -->
+        </div>
+        <div class="row mt-4" id="addProductThreeCards">
+            <div class="col-4">
+                <!-- Card -->
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                        <!-- Title -->
+                        <h4 class="card-title">Product logo</h4>
+                        <!-- Text -->
+                        <p class="card-text">This is the logo associated with your product</p>
+                        <hr />
+                        <!-- Upload area -->
+                        <div class="position-relative p-3 w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+
+                          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-image-fill z-2 upload_logo mb-2" fill="#9e9e9e" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                          <label for="addProductUploadFileAreaInput" class="z-2 grey-text upload_logo">Drag and drop a file or click here</label>
+
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Product logo upload" class="upload_logo_done w-100 z-2" id="addProductUploadLogoAreaPreview"/>
+
+
+                          <div class="input-group enable-pointer position-absolute top-left-0 w-100 h-100 upload-area" id="addProductUploadLogoAreaWrapper">
+                            <input type="file" accept="image/*" class="custom-file-input w-100 h-100" id="addProductUploadLogoAreaInput">
+                          </div>
+
+                        </div>
+                        
+                    </div>
+                
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-4">
+                <!-- Card -->
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                        <!-- Title -->
+                        <h4 class="card-title">Product tags</h4>
+                        <!-- Text -->
+                        <p class="card-text">These are descriptive words that relate to your product</p>
+                        <!-- Upload area -->
+                        <!-- Autocomplete tags are loaded in space-separated into data-tags -->
+                        <div class="enable-pointer md-form">
+                          <input type="text" class="form-control" id="addProductTagSearch" data-tags="Lorem Ipsum Dolor Habitasse Donec Convallis Tincidunt Magna Vitae Aliquam Egestas" maxlength="24">
+                          <label for="addProductTagSearch" id="addProductTagSearchLabel" style="right: 0;left: unset">Add tags</label>
+                        </div>
+                        <div class="enable-pointer d-flex flex-row flex-wrap" id="addProductTagList">
+                          <span class="badge-dummy badge badge-pill badge-primary m-1 badge-click-to-remove"></span>
+                        </div>
+                        <p class="mt-3 mb-0" id="addProductTagCount"><span>0</span>/3 tags</p>
+                    </div>
+                
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-4">
+                <!-- Card -->
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                        <!-- Title -->
+                        <h4 class="card-title">Product name and description</h4>
+                        <!-- Text -->
+                        <p class="card-text">Provide the title and a description for your product</p>
+                        
+                        <div class="enable-pointer md-form">
+                            <input type="text" class="form-control" id="addProductTitle"> 
+                            <label for="addProductTitle" style="right: 0;left: unset">Product name</label>
+                        </div>
+                        <div class="enable-pointer md-form">
+                            <textarea class="md-textarea form-control" id="addProductDesc" rows="5" maxlength="180"></textarea>
+                            <label for="addProductDesc" style="right: 0;left: unset">Product description</label>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center my-3">
+                <button class="btn btn-primary white-text">Submit</button>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="font-size-075rem text-center">By creating a product, you agree to (company name)'s <a href="#" title="Terms of Service">Terms of Service</a> and <a href="privacy.html" title="Privacy Policy">Privacy Policy</a></p>
+          </div>
+        </div>
     </div>
     
 
@@ -217,7 +314,10 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../scripts/dark_theme.js"></script>
+    <!-- JQuery UI for autocomplete functionality -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="../scripts/add_product.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

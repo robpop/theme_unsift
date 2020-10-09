@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>400 - LogoIpsum</title>
+    <title>Sign In - LogoIpsum</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -20,8 +20,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/rtl-error.css" rel="stylesheet">
+    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -139,25 +141,47 @@
     </div>
 
 
-    <div class="container-fluid d-relative">
-        <!-- Card -->
-        <div class="card">
-
-            <!-- Card content -->
-            <div class="card-body">
-        
-            <!-- Title -->
-            <h4 class="card-title">400</h4>
-            <!-- Text -->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tortor enim.</p>
-            <!-- Button -->
-            <a href="javascript:history.back()" class="btn btn-link pl-0 ml-0" title="Go back">Go back</a>
-        
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
+        <!-- Sign in form -->
+        <form class="text-center p-5 card-shadow w-full-mobile" action="#">
+            <p class="h4 mb-4">Sign in</p>
+            <!-- Email -->
+            <div class="md-form">
+              <input type="email" id="signInEmail" class="form-control mb-4">
+              <label for="signInEmail" style="right: 0;left: unset">E-mail</label>
             </div>
-        
-        </div>
-        <!-- Card -->
-
+            <!-- Password -->
+            <div class="md-form">
+              <input type="password" id="signInPassword" class="form-control mb-4">
+              <label for="signInPassword" style="right: 0;left: unset">Password</label>
+            </div>
+            <div class="d-flex justify-content-around" id="signInRememberForgot">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="signInRemember">
+                        <label class="custom-control-label" for="signInRemember">Remember me</label>
+                    </div>
+                </div>
+                <div>
+                    <!-- Forgot password -->
+                    <a href="forgot-password.html" title="Forgot password">Forgot password?</a>
+                </div>
+            </div>
+            <!-- Sign in button -->
+            <button class="btn blue-gradient white-text btn-block my-4" type="submit">Sign in</button>
+            <!-- Register -->
+            <p>Need an account?
+                <a href="signup.html" title="Sign up">Sign up</a>
+            </p>
+            <!-- Social login -->
+            <p>or sign in with:</p>
+            <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
+        </form>
+        <!-- Default form login -->
     </div>
     
 
@@ -193,7 +217,6 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../script/dark_theme.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>

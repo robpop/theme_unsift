@@ -10,7 +10,6 @@ Adds additional functionality to Bootstrap and overrides certain styles
 }
 body {
     font-family: 'Quicksand';
-    display: none; /* hide body until dark theme style is loaded */
 }
 footer {
     z-index: 3!important;
@@ -53,6 +52,7 @@ p {
     height: 100vh;
     background-color: #fafafa;
     z-index: 999999;
+    display: none;
 }
 #majorPlatformLoader {
     display: block;

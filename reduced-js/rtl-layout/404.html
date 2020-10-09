@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Forgot password - LogoIpsum</title>
+    <title>404 - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
@@ -20,10 +20,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
-    <link href="styles/rtl-mobile-forms.css" rel="stylesheet">
+    <link href="styles/rtl-error.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
   </head>
 
@@ -140,24 +138,28 @@
 
     </div>
 
-   
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-      <!-- Sign in form -->
-      <form class="text-center p-5 card-shadow w-full-mobile" action="#">
-        <p class="h4 mb-4">Forgot password</p>
-        <p>Suspendisse elementum neque vitae enim gravida dapibus. Mauris convallis nibh euismod est imperdiet, at porta lacus laoreet.</p>
-        <!-- Email -->
-        <div class="md-form">
-          <input type="email" id="forgotPasswordEmail" class="form-control mb-4">
-          <label for="forgotPasswordEmail">E-mail</label>
-        </div>
 
-        <!-- Sign in button -->
-        <button class="btn blue-gradient white-text btn-block my-4" type="submit">Send reset instructions</button>
+    <div class="container-fluid d-relative">
+        <!-- Card -->
+        <div class="card">
+
+            <!-- Card content -->
+            <div class="card-body">
         
-      </form>
-      <!-- Default form login -->
+            <!-- Title -->
+            <h4 class="card-title">404</h4>
+            <!-- Text -->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tortor enim.</p>
+            <!-- Button -->
+            <a href="javascript:history.back()" class="btn btn-link pl-0 ml-0" title="Go back">Go back</a>
+        
+            </div>
+        
+        </div>
+        <!-- Card -->
+
     </div>
+    
 
    
     <!-- Footer -->
@@ -191,7 +193,6 @@
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
-    <script src="../scripts/dark_theme.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
   </body>
 </html>
