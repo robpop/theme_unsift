@@ -37,6 +37,7 @@ textarea {
     height: 100vh;
     background-color: #fafafa;
     z-index: 999999;
+    display: none; /* hide loading page and leave logic up to developer for reduced JS version */
 }
 #majorPlatformLoader {
     display: block;
