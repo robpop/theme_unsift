@@ -3,8 +3,7 @@ function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        $('#addProductUploadLogoAreaPreview')
-          .attr('src', e.target.result)
+        $('#addProductUploadLogoAreaPreview').attr('src', e.target.result);
       };
       reader.readAsDataURL(input.files[0]);
     }
@@ -28,12 +27,6 @@ $(() => {
     let max_tag_length = 3;
     let num_tag = 0;
 
-    //addProductUploadFileAreaInput.addEventListener("mouseover", function(e) {
-    //    $(addProductUploadFileAreaWrapper).css("background-color", "#f5f5f5");
-    //});
-    //addProductUploadFileAreaInput.addEventListener("mouseout", function(e) {
-    //    $(addProductUploadFileAreaWrapper).css("background-color", "");
-    //});
     addProductUploadFileAreaInput.addEventListener("change", function(e) {
         if (e.target.value) {
             addProductUploadFileName.innerText = e.target.value.replace("C:\\fakepath\\", "");
@@ -46,13 +39,6 @@ $(() => {
         }
     });
 
-
-    //addProductUploadLogoAreaInput.addEventListener("mouseover", function(e) {
-    //    $(addProductUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
-    //});
-    //addProductUploadLogoAreaInput.addEventListener("mouseout", function(e) {
-    //    $(addProductUploadLogoAreaWrapper).css("background-color", "");
-    //});
     addProductUploadLogoAreaInput.addEventListener("change", function(e) {
         if (e.target.value) {
             $(".upload_logo").hide();

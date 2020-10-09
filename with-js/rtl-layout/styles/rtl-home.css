@@ -16,13 +16,13 @@
     }
     #homeContentWrapper div.col-5 {
         text-align: center;
-        flex: 0 0 100%!important;
         -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%!important;
         max-width: 100%!important;
     }
     #homeContentWrapper div.col-7 {
-        flex: 0 0 100%!important;
         -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%!important;
         max-width: 100%!important;
     }
     #homeContentWrapper div.pl-5 {
@@ -41,6 +41,5 @@
         top: 0;
         left: 0;
         transform: rotate(90deg);
-        min-height: auto!important;
     }
 }

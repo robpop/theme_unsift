@@ -231,12 +231,14 @@ textarea {
 .card-shadow {
     font-weight: 400;
     border: 0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     position: relative;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
+    -webkit-background-clip: border-box;
     background-clip: border-box;
     border-radius: .25rem;
 }
