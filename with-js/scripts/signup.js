@@ -6,7 +6,7 @@ Perform some front-end validation on the password field
 - should contain at least 1 symbol
 
 */
-
+"use strict";
 $(() => {
     let signUpPassword = document.getElementById("signUpPassword");
     let signUpSubmit = document.getElementById("signUpSubmit");

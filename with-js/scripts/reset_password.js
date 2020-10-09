@@ -1,3 +1,4 @@
+"use strict";
 $(() => {
     let resetPasswordSubmit = document.getElementById("resetPasswordSubmit");
     let resetPasswordNew = document.getElementById("resetPasswordNew");

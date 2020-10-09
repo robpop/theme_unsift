@@ -1,3 +1,4 @@
+"use strict";
 $(() => {
     let modalCreateNewFolder = document.getElementById("modalCreateNewFolder");
     let modalCreateNewFolderName = document.getElementById("modalCreateNewFolderName");

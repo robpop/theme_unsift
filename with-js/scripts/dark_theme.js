@@ -1,3 +1,4 @@
+"use strict";
 $(() => {
     // check is dark theme cookie is set and change out dark theme CSS appropriately
     let dark_theme = (document.cookie.match(/^(?:.*;)?\s*major_platform_darktheme\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];

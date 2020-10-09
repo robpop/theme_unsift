@@ -3,7 +3,7 @@
 Show a loading screen when grabbing product data
 
 */
-
+"use strict";
 $(window).on("load", () => {
     let majorPlatformLoaderOverlay = document.getElementById("majorPlatformLoaderOverlay");
     

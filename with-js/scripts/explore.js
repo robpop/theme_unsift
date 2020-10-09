@@ -4,7 +4,7 @@ Pull the product information from the card and
 display it in the modal when the modal is clicked
 
 */
-
+"use strict";
 $(() => {
     let cards = document.getElementsByClassName("card");
     let action_modal = document.getElementById("actionModal");

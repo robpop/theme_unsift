@@ -4,7 +4,7 @@ Hide and show the sidebar navigation
 when the hamburger is clicked
 
 */
-
+"use strict";
 $(() => {
     let sideBarNav = document.getElementById("sideBarNav");
     let navHamburger = document.getElementById("navHamburger");
