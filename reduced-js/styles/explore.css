@@ -39,6 +39,42 @@ div.lazy {
     .list-group-item.mt-7 {
         margin-top: 0;
     }
+    #exploreModalWrapper {
+        flex-direction: column;
+    }
+    #exploreModalWrapper .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #exploreModalWrapper .col-8 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #actionModalMain {
+        text-align: center;
+    }
+    #actionModalBodyTags {
+        justify-content: center!important;
+    }
+    #actionModalShowReviews {
+        margin-top: .5rem!important;
+        margin-bottom: .5rem!important;
+    }
+    #actionModalReviews .row {
+        flex-direction: column;
+    }
+    #actionModalReviewsLeftPanel {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #actionModalReviewsRightPanel {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     #sideBar {
         width: 10%; /* slide out to 100% when arrow tapped */
         z-index: 2;
