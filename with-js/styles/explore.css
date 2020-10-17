@@ -42,6 +42,9 @@ div.lazy {
     #exploreModalWrapper {
         flex-direction: column;
     }
+    #exploreSection.w-80 {
+        width: 90%!important;
+    }
     #exploreModalWrapper .col-4 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -105,7 +108,7 @@ div.lazy {
         pointer-events: auto;
     }
     .fixed-top-left-sidebar {
-        top: 9vh!important;
+        top: 64px!important;
     }
     .list-group-item.mb-5 {
         margin-bottom: 9vh!important;
