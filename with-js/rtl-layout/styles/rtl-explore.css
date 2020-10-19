@@ -34,7 +34,7 @@ div.lazy {
         column-count: 2;
     }
     .container-fluid.mt-6 {
-        margin-top: 10vh;
+        margin-top: 64px;
     }
     .list-group-item.mt-7 {
         margin-top: 0;
@@ -98,6 +98,17 @@ div.lazy {
     }
     #sideBar .list-group-item {
         pointer-events: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+    }
+    #sideBar .list-group-item:last-child {
+        padding-bottom: 9vh;
+    }
+    .list-group-item.mb-5 {
+        padding-bottom: 6vh;
     }
     #sideBar.show {
         width: 100%;
@@ -109,9 +120,6 @@ div.lazy {
     }
     .fixed-top-left-sidebar {
         top: 64px!important;
-    }
-    .list-group-item.mb-5 {
-        margin-bottom: 9vh!important;
     }
     #exploreMobileExpandSideBar {
         position: fixed;

@@ -277,7 +277,7 @@ textarea {
     #sideBarNav {
         width: 100vw;
         max-width: 100vw!important;
-        top: 9vh;
+        top: 64px;
         left: 0!important;
         right: 0!important;
         margin: 0;
@@ -290,10 +290,6 @@ textarea {
     }
     #sideBarNav a.list-group-item {
         padding: calc(.7rem + 2.0vw) calc(1.25rem + 1.5vw);
-    }
-    #navHamburger svg {
-        width: 100%;
-        height: 100%;
     }
     footer {
         position: relative!important;
