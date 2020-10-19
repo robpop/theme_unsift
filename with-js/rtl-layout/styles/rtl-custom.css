@@ -280,7 +280,7 @@ p {
         font-size: calc(1rem + 0.5vw);
     }
     .my-buffer-px {
-        margin-top: 11vh;
+        margin-top: 80px;
         margin-bottom: 0;
     }
     nav {
@@ -291,6 +291,9 @@ p {
     }
     .navbar-brand img {
         width: 22vh;
+    }
+    #sideBarNavProfileImage {
+        width: 25%!important;
     }
     #sideBarNav {
         width: 100vw;
