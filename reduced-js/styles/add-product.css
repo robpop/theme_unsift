@@ -47,8 +47,8 @@
     .container-fluid svg {
         width: 17vw!important;
         height: 17vw!important;
-        max-width: 110px;
-        max-height: 110px;
+        max-width: 80px;
+        max-height: 80px;
     }
     .container-fluid label {
         font-size: calc(1rem + 0.4vw);

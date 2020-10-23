@@ -78,6 +78,9 @@ div.lazy {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    #actionModalReviewsLeftPanel form {
+        margin: 0.25rem!important;
+    }
     #sideBar {
         width: 10%; /* slide out to 100% when arrow tapped */
         z-index: 2;

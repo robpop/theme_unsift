@@ -54,7 +54,7 @@ input {
 }
 textarea {
     color: #fafafa!important;
-    background-color: #263238!important;
+    background-color: transparent;
 }
 form {
     background-color: #263238!important;
