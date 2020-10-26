@@ -12,6 +12,8 @@
 }
 #sideBar {
     width: 20%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 #sideBar hr {
     width: 50%;
