@@ -58,6 +58,9 @@ if (array_key_exists('email', $_POST)) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Description of the page less than 150 characters">
 
     <title>Contact support - LogoIpsum</title>
 
