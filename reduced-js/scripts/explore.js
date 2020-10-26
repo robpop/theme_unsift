@@ -53,7 +53,11 @@ $(() => {
         hammertime_body = new Hammer(body);
         hammertime_body.on('swiperight', function(ev) {
             // open sideBar
-            $(sideBar).addClass("show")
+            $("body").css({
+                "position":"fixed",
+                "overflow":"hidden"
+            });
+            $(sideBar).addClass("show");
             $(sideBar).find(".col-lg-12").addClass("show");
             $(sideBar).find(".list-group-item").addClass("show");
             $(exploreMobileExpandSideBar).children().eq(0).addClass("d-none");
@@ -65,7 +69,11 @@ $(() => {
         hammertime_sideBar = new Hammer(sideBar);
         hammertime_sideBar.on('swipeleft', function(ev) {
             // close sideBar
-            $(sideBar).removeClass("show")
+            $("body").css({
+                "position":"",
+                "overflow":""
+            });
+            $(sideBar).removeClass("show");
             $(sideBar).find(".col-lg-12").removeClass("show");
             $(sideBar).find(".list-group-item").removeClass("show");
             $(exploreMobileExpandSideBar).children().eq(1).addClass("d-none");
@@ -77,7 +85,11 @@ $(() => {
 
         $(exploreMobileExpandSideBar).click(() => {
             if (sideBarOpen) {
-                $(sideBar).removeClass("show")
+                $("body").css({
+                    "position":"",
+                    "overflow":""
+                });
+                $(sideBar).removeClass("show");
                 $(sideBar).find(".col-lg-12").removeClass("show");
                 $(sideBar).find(".list-group-item").removeClass("show");
                 $(exploreMobileExpandSideBar).children().eq(1).addClass("d-none");
@@ -86,7 +98,11 @@ $(() => {
                 $(body).removeClass("noscroll");
                 sideBarOpen = false;
             } else {
-                $(sideBar).addClass("show")
+                $("body").css({
+                    "position":"fixed",
+                    "overflow":"hidden"
+                });
+                $(sideBar).addClass("show");
                 $(sideBar).find(".col-lg-12").addClass("show");
                 $(sideBar).find(".list-group-item").addClass("show");
                 $(exploreMobileExpandSideBar).children().eq(0).addClass("d-none");

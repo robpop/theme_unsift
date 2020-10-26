@@ -21,6 +21,7 @@
         max-width: 100%!important;
     }
     #homeContentWrapper div.col-7 {
+        overflow: hidden;
         -ms-flex: 0 0 100%!important;
         flex: 0 0 100%!important;
         max-width: 100%!important;

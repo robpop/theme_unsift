@@ -79,7 +79,7 @@ div.lazy {
         max-width: 100%;
     }
     #actionModalReviewsLeftPanel form {
-        margin: 0.25rem!important;
+        margin: 0.75rem!important;
     }
     #sideBar {
         width: 10%; /* slide out to 100% when arrow tapped */
@@ -108,7 +108,7 @@ div.lazy {
         padding-bottom: 2.5vh;
     }
     #sideBar .list-group-item:last-child {
-        padding-bottom: 9vh;
+        padding-bottom: calc(9vh + 88px)!important;
     }
     .list-group-item.mb-5 {
         padding-bottom: 6vh;
@@ -130,7 +130,7 @@ div.lazy {
         right: 0;
         background-color: transparent;
         border: none;
-        top: 50%; 
+        top: calc(50% + 16px); 
         left: 5%; 
         -ms-transform: translate(-50%, -50%); 
         -webkit-transform: translate(-50%, -50%); 
