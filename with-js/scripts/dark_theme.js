@@ -1,3 +1,6 @@
+// see https://codyhouse.co/blog/post/dark-light-switch-css-javascript
+// for potentially better approach
+
 "use strict";
 $(() => {
     // check is dark theme cookie is set and change out dark theme CSS appropriately
