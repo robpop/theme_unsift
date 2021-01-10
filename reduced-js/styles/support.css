@@ -1,9 +1,0 @@
-.min-vh-30 {
-    min-height: 30vh!important;
-}
-
-@media screen and (max-width: 991px) {
-    .container-fluid.w-75 {
-        width: 90%!important;
-    }
-}

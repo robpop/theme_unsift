@@ -83,6 +83,8 @@ if (array_key_exists('email', $_POST)) {
 
     <link href="styles/rtl-support.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
+
+    <link href="styles/rtl-dark-theme.css" rel="stylesheet">
   </head>
 
   <body dir="rtl">
@@ -224,7 +226,7 @@ if (array_key_exists('email', $_POST)) {
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="" method="POST">
+                    <form id="contact-form" class="dark" name="contact-form" action="" method="POST">
 
                         <!--Grid row-->
                         <div class="row">

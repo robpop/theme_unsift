@@ -100,23 +100,30 @@ $(() => {
         e.target.checked ? $(accountNSFWButton).removeClass("disabled") : $(accountNSFWButton).addClass("disabled");
     });
 
+
+    // Handle when dark theme toggle switch is clicked
     $(accountSettingsDarkTheme).click(() => {
-        let dark_theme = (document.cookie.match(/^(?:.*;)?\s*major_platform_darktheme\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
-        if(!parseInt(dark_theme)) {
-            document.cookie = "major_platform_darktheme=1";
+
+        if((localStorage.getItem('darkTheme') !== null && localStorage.getItem('darkTheme') === 'dark')) { // dark theme has been selected
+            document.body.removeAttribute('data-theme');
+            localStorage.removeItem('darkTheme'); // reset theme selection 
+            $(accountSettingsDarkTheme).text("Turn On");
+            $(accountSettingsDarkTheme).removeClass("enabled");
         } else {
-            document.cookie = "major_platform_darktheme=0";
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('darkTheme', 'dark'); // save theme selection 
+            $(accountSettingsDarkTheme).text("Turn Off");
+            $(accountSettingsDarkTheme).addClass("enabled");
         }
-        window.location.reload();
+
     });
 
-    // check status of dark theme cookie initially
-    let dark_theme = (document.cookie.match(/^(?:.*;)?\s*major_platform_darktheme\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
-    if(!parseInt(dark_theme)) {
-        $(accountSettingsDarkTheme).text("Turn On");
-        $(accountSettingsDarkTheme).removeClass("enabled");
-    } else {
+    // update toggle switch
+    if((localStorage.getItem('darkTheme') !== null && localStorage.getItem('darkTheme') === 'dark')) {
         $(accountSettingsDarkTheme).text("Turn Off");
         $(accountSettingsDarkTheme).addClass("enabled");
+    } else {
+        $(accountSettingsDarkTheme).text("Turn On");
+        $(accountSettingsDarkTheme).removeClass("enabled");
     }
 });

@@ -29,14 +29,11 @@
 
     <link href="styles/rtl-explore.css" rel="stylesheet">
     <link href="styles/rtl-custom.css" rel="stylesheet">
+
+    <link href="styles/rtl-dark-theme.css" rel="stylesheet">
   </head>
 
   <body dir="rtl">
-    <!-- page loader -->
-    <div class="animated faster" id="majorPlatformLoaderOverlay">
-      <div id="majorPlatformLoader"><div id="majorPlatformLoaderOuter"><div id="majorPlatformLoaderInner"></div></div></div>
-    </div>
-
     <!-- Top navbar and expandable sidebar -->
 
     <nav class="navbar navbar-expand-lg navbar-justify-center custom-navbar primary-color position-fixed fixed-top font-weight-400">
@@ -358,7 +355,7 @@
                 </svg>
                 Back
               </button>
-              <form class="md-form ml-3" action="#">
+              <form class="md-form mr-3 dark" action="#">
                 
                 <!-- Max length of comment is set to a default of 1024 characters -->
                 <textarea id="actionModalReviewsDraft" class="md-textarea form-control max-vh-35" rows="9" maxlength="1024"></textarea>
@@ -472,7 +469,5 @@
     <!-- Use on all pages that require lazy loading -->
     <script src="../scripts/lazy-loading.js"></script>
 
-    <!-- Page loader overlay -->
-    <script src="../scripts/page-loader.js"></script>
   </body>
 </html>
