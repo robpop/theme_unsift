@@ -1,0 +1,116 @@
+.card-side-color {
+	border-bottom-left-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+.h-425-px {
+	height: 425px !important;
+}
+.font-size-18 {
+	font-size: 18px;
+}
+.font-size-14 {
+	font-size: 14px;
+}
+.danger-color-exact {
+	background-color: #ff4444;
+}
+.primary-color-exact {
+	background-color: #4285F4;
+}
+.warning-color-exact {
+	background-color: #ffbb33;
+}
+.success-color-exact {
+	background-color: #00C851;
+}
+.upload-area {
+	background-color: #fff;
+	-webkit-transition: background-color 250ms ease;
+	-moz-transition: background-color 250ms ease;
+	-o-transition: background-color 250ms ease;
+	transition: background-color 250ms ease;
+}
+.ui-autocomplete {
+	background-color: #fff;
+	list-style: none;
+	padding-left: 0;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.ui-menu-item {
+	padding: 0.5rem 1rem;
+	&:hover {
+		background-color: #e0e0e0;
+		cursor: pointer;
+	}
+}
+.upload_logo_done {
+	display: none;
+}
+.badge-dummy {
+	display: none;
+}
+.badge-click-to-remove {
+	&:hover {
+		cursor: pointer;
+		opacity: 0.75;
+	}
+}
+#manageProductUploadLogoAreaInput {
+	&:hover {
+		cursor: pointer;
+	}
+}
+#manageProductTagCount {
+	font-size: 0.8rem;
+	color: #9e9e9e;
+}
+@media screen and (max-width: 991px) {
+	.container-fluid {
+		.card-deck {
+			flex-direction: column;
+			.card {
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+				&:nth-child(2) {
+					margin-top: 1.5rem !important;
+				}
+			}
+		}
+		.card {
+			margin-top: 1.5rem !important;
+			margin-bottom: 0 !important;
+		}
+	}
+	#manageProductThreeCards {
+		flex-direction: column;
+		margin-top: 0;
+		padding-top: 0 !important;
+		.col-4 {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
+	#manageProductReviewsFeed {
+		font-size: calc(0.9rem + 0.2vw);
+		.col-2 {
+			padding-left: .25rem !important;
+			padding-right: .25rem !important;
+		}
+	}
+	.apexcharts-toolbar {
+		display: none !important;
+	}
+	#manageProductsKeyData {
+		margin-top: 0 !important;
+	}
+}

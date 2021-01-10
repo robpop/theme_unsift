@@ -1,0 +1,28 @@
+.w-full-mobile {
+	width: 40%;
+}
+@media screen and (max-width: 991px) {
+	.w-full-mobile {
+		width: 100%;
+		padding: 0.5rem !important;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		-o-box-shadow: none !important;
+		box-shadow: none !important;
+	}
+	#signInRememberForgot {
+		align-items: center;
+		flex-direction: column;
+		div {
+			margin: 0.4em auto;
+		}
+		.custom-control-label {
+			&::before {
+				margin-top: 0.5vw;
+			}
+			&::after {
+				margin-top: 0.5vw;
+			}
+		}
+	}
+}
