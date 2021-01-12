@@ -320,130 +320,130 @@
 
     <!-- Modal -->
     <div class="modal fade" id="actionModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div id="actionModalMain">
-          <div class="modal-header primary-color modal-no-flex">
-            <h5 class="modal-title white-text font-weight-500 text-center" id="actionModalTitle">Null</h5>
-          </div>
-          <div class="modal-body">
-            <div class="row align-items-center" id="exploreModalWrapper">
-              <div class="col-4 d-flex flex-column">
-                <img class="card-img-top" width="235" height="235" id="actionModalLogo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Card image cap">
-                <div class="d-flex align-items-center justify-content-center" id="actionModalRating"></div>
-                <button type="button" class="btn btn-link mx-auto my-0 d-flex justify-content-center" id="actionModalShowReviews">See all reviews</button>
-              </div>
-              <div class="col-8">
-                <p class="mb-4" id="actionModalBody"></p>
-                <div class="d-flex align-items-center justify-content-start mb-4" id="actionModalBodyTags">
-                  <span class="badge badge-pill badge-primary mr-3"></span>
-                  <span class="badge badge-pill badge-primary mr-3"></span>
-                  <span class="badge badge-pill badge-primary mr-3"></span>
-                </div>
-                <button class="btn btn-outline-primary waves-effect mr-0 z-depth-1 float-right">Add to Library</button>
-              </div>
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="actionModalMain">
+            <div class="modal-header primary-color modal-no-flex">
+              <h5 class="modal-title white-text font-weight-500 text-center" id="actionModalTitle">Null</h5>
             </div>
-          </div>
-        </div>
-        <div id="actionModalReviews">
-          <div class="row">
-            <div class="col-5" id="actionModalReviewsLeftPanel">
-              <button class="btn btn-link d-flex justify-content-center align-items-center" id="actionModalShowMain">
-                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M7.854 4.646a.5.5 0 0 1 0 .708L5.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
-                  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h6.5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-                Back
-              </button>
-              <form class="md-form mr-3 dark" action="#">
-                
-                <!-- Max length of comment is set to a default of 1024 characters -->
-                <textarea id="actionModalReviewsDraft" class="md-textarea form-control max-vh-35" rows="9" maxlength="1024"></textarea>
-                <label for="actionModalReviewsDraft">Leave a review...</label>
-                <div class="d-flex justify-content-center align-items-center">
-                  <input type="reset" class="btn btn-link" value="Clear">
-                  <input type="submit" class="btn btn-primary primary-color" value="Submit">
+            <div class="modal-body">
+              <div class="row align-items-center" id="exploreModalWrapper">
+                <div class="col-4 d-flex flex-column">
+                  <img class="card-img-top" width="235" height="235" id="actionModalLogo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Card image cap">
+                  <div class="d-flex align-items-center justify-content-center" id="actionModalRating"></div>
+                  <button type="button" class="btn btn-link mx-auto my-0 d-flex justify-content-center" id="actionModalShowReviews">See all reviews</button>
                 </div>
-
-              </form>
-            </div>
-            <div class="col-7 scrollable" id="actionModalReviewsRightPanel">
-              <div class="m-3" id="actionModalReviewsFeed">
-
-                <!-- This is a review -->
-                <div class="actionModalReviewsComment row">
-                  <div class="col-2 pl-2 pr-2">
-                    <img src="../assets/ipsum_profile1.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                <div class="col-8">
+                  <p class="mb-4" id="actionModalBody"></p>
+                  <div class="d-flex align-items-center justify-content-start mb-4" id="actionModalBodyTags">
+                    <span class="badge badge-pill badge-primary mr-3"></span>
+                    <span class="badge badge-pill badge-primary mr-3"></span>
+                    <span class="badge badge-pill badge-primary mr-3"></span>
                   </div>
-                  <div class="col-10">
-                    <p class="font-weight-bold mb-0">FirstName LastName</p>
-                    <div class="d-flex align-items-center">
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star m-1' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z'/></svg>
-                      <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
-                    </div>
-                    <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
-                  </div>
+                  <button class="btn btn-outline-primary waves-effect mr-0 z-depth-1 float-right">Add to Library</button>
                 </div>
-                <!-- ///////////////// -->
-
-                <!-- This is a review -->
-                <div class="actionModalReviewsComment row">
-                  <div class="col-2 pl-2 pr-2">
-                    <img src="../assets/ipsum_profile2.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
-                  </div>
-                  <div class="col-10">
-                    <p class="font-weight-bold mb-0">FirstName LastName</p>
-                    <div class="d-flex align-items-center">
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-half m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M5.354 5.119L7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.519.519 0 0 1-.146.05c-.341.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.171-.403.59.59 0 0 1 .084-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027c.08 0 .16.018.232.056l3.686 1.894-.694-3.957a.564.564 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.002 2.223 8 2.226v9.8z'/></svg>
-                      <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
-                    </div>
-                    <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
-                  </div>
-                </div>
-                <!-- ///////////////// -->
-
-                <!-- This is a review -->
-                <div class="actionModalReviewsComment row">
-                  <div class="col-2 pl-2 pr-2">
-                    <img src="../assets/ipsum_profile3.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
-                  </div>
-                  <div class="col-10">
-                    <p class="font-weight-bold mb-0">FirstName LastName</p>
-                    <div class="d-flex align-items-center">
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-half m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M5.354 5.119L7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.519.519 0 0 1-.146.05c-.341.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.171-.403.59.59 0 0 1 .084-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027c.08 0 .16.018.232.056l3.686 1.894-.694-3.957a.564.564 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.002 2.223 8 2.226v9.8z'/></svg>
-                      <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star m-1' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z'/></svg>
-                      <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
-                    </div>
-                    <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
-                  </div>
-                </div>
-                <!-- ///////////////// -->
-
-                <hr />
-                <button class="btn btn-link d-block m-auto">Load more reviews</button>
-
               </div>
             </div>
           </div>
+          <div id="actionModalReviews">
+            <div class="row">
+              <div class="col-5" id="actionModalReviewsLeftPanel">
+                <button class="btn btn-link d-flex justify-content-center align-items-center" id="actionModalShowMain">
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.854 4.646a.5.5 0 0 1 0 .708L5.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
+                    <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h6.5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+                  Back
+                </button>
+                <form class="md-form mr-3 dark" action="#">
+                  
+                  <!-- Max length of comment is set to a default of 1024 characters -->
+                  <textarea id="actionModalReviewsDraft" class="md-textarea form-control max-vh-35" rows="9" maxlength="1024"></textarea>
+                  <label for="actionModalReviewsDraft">Leave a review...</label>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <input type="reset" class="btn btn-link" value="Clear">
+                    <input type="submit" class="btn btn-primary primary-color" value="Submit">
+                  </div>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary primary-color">Open / Install</button>
+                </form>
+              </div>
+              <div class="col-7 scrollable" id="actionModalReviewsRightPanel">
+                <div class="m-3" id="actionModalReviewsFeed">
+
+                  <!-- This is a review -->
+                  <div class="actionModalReviewsComment row">
+                    <div class="col-2 pl-2 pr-2">
+                      <img src="../assets/ipsum_profile1.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                    </div>
+                    <div class="col-10">
+                      <p class="font-weight-bold mb-0">FirstName LastName</p>
+                      <div class="d-flex align-items-center">
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star m-1' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z'/></svg>
+                        <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
+                      </div>
+                      <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
+                    </div>
+                  </div>
+                  <!-- ///////////////// -->
+
+                  <!-- This is a review -->
+                  <div class="actionModalReviewsComment row">
+                    <div class="col-2 pl-2 pr-2">
+                      <img src="../assets/ipsum_profile2.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                    </div>
+                    <div class="col-10">
+                      <p class="font-weight-bold mb-0">FirstName LastName</p>
+                      <div class="d-flex align-items-center">
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-half m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M5.354 5.119L7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.519.519 0 0 1-.146.05c-.341.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.171-.403.59.59 0 0 1 .084-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027c.08 0 .16.018.232.056l3.686 1.894-.694-3.957a.564.564 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.002 2.223 8 2.226v9.8z'/></svg>
+                        <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
+                      </div>
+                      <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
+                    </div>
+                  </div>
+                  <!-- ///////////////// -->
+
+                  <!-- This is a review -->
+                  <div class="actionModalReviewsComment row">
+                    <div class="col-2 pl-2 pr-2">
+                      <img src="../assets/ipsum_profile3.jpg" alt="User's profile image" class="img-fluid z-depth-1 rounded-circle w-100 mt-1">
+                    </div>
+                    <div class="col-10">
+                      <p class="font-weight-bold mb-0">FirstName LastName</p>
+                      <div class="d-flex align-items-center">
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-fill m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star-half m-05' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M5.354 5.119L7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.519.519 0 0 1-.146.05c-.341.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.171-.403.59.59 0 0 1 .084-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027c.08 0 .16.018.232.056l3.686 1.894-.694-3.957a.564.564 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.002 2.223 8 2.226v9.8z'/></svg>
+                        <svg width='0.9em' height='0.9em' viewBox='0 0 16 16' class='bi bi-star m-1' fill='#4285F4' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z'/></svg>
+                        <p class="d-inline font-weight-400 mb-0 ml-2">January 1, 2020</p>
+                      </div>
+                      <p class="font-weight-300 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum laoreet purus, quis viverra ante tempor et. Proin nec nisl convallis, elementum libero eget, porttitor lacus. Maecenas arcu ipsum, malesuada euismod elit id, pellentesque mollis ex.</p>
+                    </div>
+                  </div>
+                  <!-- ///////////////// -->
+
+                  <hr />
+                  <button class="btn btn-link d-block m-auto">Load more reviews</button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary primary-color">Open / Install</button>
+          </div>
         </div>
       </div>
-    </div>
     </div>
 
 
@@ -462,12 +462,6 @@
     <script src="../scripts/dark_theme.js"></script>
     <script src="scripts/rtl-sidebar_nav.js"></script>
     <script src="../scripts/explore.js"></script>
-
-    <!-- jQuery Lazy -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-    <!-- Use on all pages that require lazy loading -->
-    <script src="../scripts/lazy-loading.js"></script>
 
   </body>
 </html>
