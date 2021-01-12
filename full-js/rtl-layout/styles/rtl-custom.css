@@ -55,6 +55,19 @@ p {
 .dropdown-item {
     text-align: right;
 }
+.rtl-center-text {
+    text-align: center;
+}
+.md-form label {
+    right: 0;
+    left: unset;
+}
+.md-form label.active {
+    transform: translateY(-14px) translateX(20px) scale(0.8);
+}
+small {
+    text-align: right;
+}
 #majorPlatformLoaderWrapper {
     width: 100%;
     display: flex;
