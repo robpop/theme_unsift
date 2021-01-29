@@ -39,6 +39,16 @@
     font-size: 0.8rem;
     color: #9e9e9e;
 }
+#addProductEnterBtn {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    background: transparent;
+    border: none;
+}
+#addProductEnterBtn i {
+    opacity: 0.55;
+}
 .font-size-075rem {
     font-size: 0.75rem!important;
 }

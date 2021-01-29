@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Description of the page less than 150 characters">
+
+    <title>Pages & Elements - LogoIpsum</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="lib/MDBootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="lib/MDBootstrap/mdb.min.css" rel="stylesheet">
+
+    <link href="styles/global.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Top navbar and expandable sidebar -->
+
+    <nav class="navbar navbar-expand-lg navbar-justify-center custom-navbar primary-color position-fixed fixed-top font-weight-400">
+      <div>
+        <ul class="navbar-nav -non-mobile">
+          <li class="nav-item active">
+            <a class="nav-link white-text" href="index.html">Explore</a>
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand mx-0" href="index.html" title="Explore">
+        <img src="assets/logo-8.svg" width="150" alt="Your Logo" loading="lazy">
+      </a>
+      <div>
+        <ul class="navbar-nav custom-navbar-nav">
+          <li class="nav-item active -non-mobile">
+            <a class="nav-link white-text" href="signin.html">Sign in</a>
+          </li>
+          <li class="nav-item active -non-mobile">
+            <a class="nav-link white-text" href="signup.html">Sign up</a>
+          </li>
+          <li class="nav-item active">
+            <button class="button-clear-default" id="navHamburger" aria-label="Menu">
+              <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-list" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container p-0 scrollable shadow min-vh-100 position-fixed animated quick primary-color" id="sideBarNav">
+      <div class="list-group list-group-flush custom-list_sidebar" id="sideBarNavList">
+
+        <li class="list-group-item primary-color white-text mt-8 d-flex flex-column justify-content-center align-items-center">
+          <img src="assets/ipsum_profile0.jpg" class="img-fluid z-depth-1 rounded-circle w-35" alt="Your profile image" id="sideBarNavProfileImage">
+          <p class="text-center mt-3">Signed in as John Doe</p>
+        </li>
+
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="home.html" title="Home">
+          <i class="fas fa-home mr-2"></i>
+          Home
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="index.html" title="Explore">
+          <i class="fas fa-search mr-2"></i>
+          Explore
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="library.html" title="Library">
+          <i class="fas fa-bookmark mr-2"></i>
+          Library
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="add-product.html" title="Add a product">
+          <i class="fas fa-cloud-upload-alt mr-2"></i>
+          Add a product
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="manage-product.html" title="Manage your products">
+          <i class="fas fa-tools mr-2"></i>
+          Manage your products
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="advertise.html" title="Advertise with us">
+          <i class="fas fa-ad mr-2"></i>
+          Advertise with us
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="account.html" title="Account settings">
+          <i class="fas fa-cog mr-2"></i>
+          Account settings
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="support.php" title="Support">
+          <i class="fas fa-question-circle mr-2"></i>
+          Support
+        </a>
+        <hr />
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="signin.html" title="Sign in">
+          <i class="fas fa-sign-in-alt mr-2"></i>
+          Sign in
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center" href="signup.html" title="Sign up">
+          <i class="fas fa-edit mr-2"></i>
+          Sign up
+        </a>
+        <a class="list-group-item list-group-item-action primary-color white-text d-flex align-items-center mb-5" href="#" title="Sign out">
+          <i class="fas fa-sign-out-alt mr-2"></i>
+          Sign out
+        </a>
+      </div>
+
+    </div>
+
+    
+    <div class="container-fluid my-buffer-px">
+
+        <div class="jumbotron">
+            <h2 class="display-4">Pages</h2>
+            <p class="lead">An exhaustive list of pages that are included in this HTML template</p>
+            <hr class="my-4">
+            
+            <div class="d-flex align-items-center flex-wrap" style="justify-content: space-evenly;">
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="home.html" title="Home" class="btn btn-info">Home</a>
+                    <a href="rtl-layout/home.html" title="RLT Home" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="index.html" title="Explore 1" class="btn btn-info">Explore 1</a>
+                    <a href="rtl-layout/index.html" title="RLT Explore 1" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="explore2.html" title="Explore 2" class="btn btn-info">Explore 2</a>
+                    <a href="rtl-layout/explore2.html" title="RLT Explore 2" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="library.html" title="Library" class="btn btn-info">Library</a>
+                    <a href="rtl-layout/library.html" title="RLT Library" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="library-folder.html" title="Library Folder" class="btn btn-info">Library Folder</a>
+                    <a href="rtl-layout/library-folder.html" title="RLT Library Folder" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="add-product.html" title="Add Product" class="btn btn-info">Add Product</a>
+                    <a href="rtl-layout/add-product.html" title="RLT Add Product" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="manage-product.html" title="Manage Product" class="btn btn-info">Manage Product</a>
+                    <a href="rtl-layout/manage-product.html" title="RLT Manage Product" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="advertise.html" title="Advertise" class="btn btn-info">Advertise</a>
+                    <a href="rtl-layout/advertise.html" title="RLT Advertise" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="account.html" title="Account Settings" class="btn btn-info">Account Settings</a>
+                    <a href="rtl-layout/account.html" title="RLT Account Settings" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="support.php" title="Contact Support" class="btn btn-info">Contact Support</a>
+                    <a href="rtl-layout/support.php" title="RLT Contact Support" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="signin.html" title="Sign In" class="btn btn-info">Sign In</a>
+                    <a href="rtl-layout/signin.html" title="RLT Sign In" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="signup.html" title="Sign Up" class="btn btn-info">Sign Up</a>
+                    <a href="rtl-layout/signup.html" title="RLT Sign Up" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="400.html" title="Error 400" class="btn btn-info">Error 400</a>
+                    <a href="rtl-layout/400.html" title="RLT Error 400" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="403.html" title="Error 403" class="btn btn-info">Error 403</a>
+                    <a href="rtl-layout/403.html" title="RLT Error 403" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="404.html" title="Error 404" class="btn btn-info">Error 404</a>
+                    <a href="rtl-layout/404.html" title="RLT Error 404" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="error.html" title="General Error" class="btn btn-info">General Error</a>
+                    <a href="rtl-layout/error.html" title="RLT General Error" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="forgot-password.html" title="Forgot Password" class="btn btn-info">Forgot Password</a>
+                    <a href="rtl-layout/forgot-password.html" title="RLT Forgot Password" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="forgot-password-reset.html" title="Password Reset" class="btn btn-info">Password Reset</a>
+                    <a href="rtl-layout/forgot-password-reset.html" title="RLT Password Reset" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+                    <a href="legal.html" title="Legal" class="btn btn-info">Legal</a>
+                    <a href="rtl-layout/legal.html" title="RLT Legal" class="btn btn-sm btn-link">RTL version</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="jumbotron">
+            <h2 class="display-4">Elements</h2>
+            <p class="lead">All of the custom elements that are specifically designed for this HTML template</p>
+            <hr class="my-4">
+
+            <!-- custom loader -->
+            <h2 class="text-center mb-4">Loader</h2>
+            <div class="animated faster" id="majorPlatformLoaderWrapper">
+                <div id="majorPlatformLoader"><div id="majorPlatformLoaderOuter"><div id="majorPlatformLoaderInner"></div></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    
+   
+    <!-- Footer -->
+    <footer class="page-footer font-small fixed-bottom border-top">
+
+      <div class="text-left">
+          <li class="list-group list-group-horizontal list-group-flush d-flex align-items-center">
+
+              <!-- Copyright -->
+              <p class="list-group-item border-0 mb-0">© 2020 Copyright: Your Company</p>
+              <!-- Copyright -->
+
+              <a href="#" title="Terms of Service" class="list-group-item border-0">Terms of Service</a>
+              <a href="#" title="Privacy Policy" class="list-group-item border-0">Privacy Policy</a>
+              <a href="#" title="Cookies" class="list-group-item border-0">Cookies</a>
+              <a href="#" title="DMCA" class="list-group-item border-0">DMCA</a>
+          </li>
+      </div>
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <!-- JQuery -->
+    <script src="lib/MDBootstrap/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="lib/MDBootstrap/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="lib/MDBootstrap/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="lib/MDBootstrap/mdb.min.js"></script>
+
+    <script src="scripts/sidebar_nav.js"></script>
+  </body>
+</html>

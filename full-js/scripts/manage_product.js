@@ -4,7 +4,7 @@ function readURL(input) {
     var reader = new FileReader();
     reader.onload = function (e) {
       $('#manageProductUploadLogoAreaPreview')
-        .attr('src', e.target.result)
+        .attr('src', e.target.result);
     };
     reader.readAsDataURL(input.files[0]);
   }
@@ -140,10 +140,11 @@ $(() => {
       }
     };
 
+    // Don't remove this - resizes autocomplete box to fit width of search bar
     jQuery.ui.autocomplete.prototype._resizeMenu = function () {
       var ul = this.menu.element;
       ul.outerWidth(this.element.outerWidth());
-    }
+    };
 
     // Create a tag when an item from the autocomplete form is selected
     $(manageProductTagSearch).autocomplete({

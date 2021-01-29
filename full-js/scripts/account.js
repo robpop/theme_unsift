@@ -37,12 +37,12 @@ $(() => {
 
     let accountSettingsDarkTheme = document.getElementById("accountSettingsDarkTheme");
 
-    accountUploadLogoAreaInput.addEventListener("mouseover", function(e) {
+    /*accountUploadLogoAreaInput.addEventListener("mouseover", function(e) {
         $(accountUploadLogoAreaWrapper).css("background-color", "#f5f5f5");
     });
     accountUploadLogoAreaInput.addEventListener("mouseout", function(e) {
         $(accountUploadLogoAreaWrapper).css("background-color", "");
-    });
+    });*/
 
     accountUploadLogoAreaInput.addEventListener("change", function(e) {
         if (e.target.value) {

@@ -28,7 +28,6 @@ $(() => {
         $(".productSelected").removeClass("productSelected");
         $(e.target).addClass("productSelected");
         $(libraryProductsEditor).removeClass("d-none");
-        console.log("click product");
     };
     
     for (let i = 0; i < folders.length; ++i) {
