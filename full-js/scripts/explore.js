@@ -13,6 +13,7 @@ function sanitize_search(term) {
 // Fill product modal with corresponding information from clicked card
 let update_modal_information = function(e) {
     let modal_logo = document.getElementById("actionModalLogo");
+    let modal_preview_image = document.getElementById("actionModalPreviewImage");
     let modal_tags = document.getElementById("actionModalBodyTags").getElementsByTagName("span");
     let modal_rating = document.getElementById("actionModalRating");
 
@@ -35,6 +36,12 @@ let update_modal_information = function(e) {
     let logo = e.target.getAttribute("data-logo");
     $(modal_logo).attr("src", logo);
 
+    // If using a preview image with Lightbox - set the Lightbox image as well
+    if ($(modal_preview_image).length) {
+        $(modal_preview_image).attr("href", logo);
+        refreshFsLightbox();
+    }
+
     // Set star rating associated with product
     $(modal_rating).empty();
     let rating = e.target.getAttribute("data-rating");
@@ -51,9 +58,11 @@ function LoadMoreContent(contentLoadingZoneLoader) {
 
     // Replace this placeholder code with your own loading logic i.e. Ajax + API calls
     /////////// YOUR LOADING LOGIC HERE ///////////
-    let children = $("#exploreSection").find(".grid").children().slice(1,15).clone(true, true);
-    for (let i = 0; i < children.length; ++i)
+    let children = $("#exploreSection").find(".grid").children().slice(0,17).clone(true, true);
+    console.log(children);
+    for (let i = 0; i < children.length; ++i) {
         children[i].addEventListener('click', update_modal_information, false);
+    }
     $("#exploreSection").find(".grid").append(children).masonry('appended', children);
     ///////////////////////////////////////////////
     

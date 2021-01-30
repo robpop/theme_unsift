@@ -76,6 +76,13 @@
     width: 30px;
     height: 30px;
 }
+#actionModalPreviewImage {
+    width: 235px;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (min-width: 3440px) {
     .grid-sizer, .grid-item {
