@@ -7,6 +7,14 @@ h2 {
     margin-bottom: 5rem;
 }
 
+.w-255px {
+    width: 255px;
+}
+
+.w-975px {
+    width: 975px;
+}
+
 .icon-sizing {
     font-size: 7rem;
 }
