@@ -42,26 +42,46 @@ h2 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     flex: 1;
-    height: 1px;
+    height: 6px;
     width: 100%;
     margin-right: .5rem;
     content: "";
     background-color: rgba(0,0,0,.1);
 }
 
+.advertiseStepItem:first-child .advertiseStepWrapper:after {
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+}
+
 .advertiseStepItem:not(:last-child) .advertiseStepWrapper:after {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     flex: 1;
-    height: 1px;
+    height: 6px;
     width: 100%;
     margin-left: .5rem;
     content: "";
     background-color: rgba(0,0,0,.1);
 }
 
+.advertiseStepItem:last-child .advertiseStepWrapper:before {
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+}
+
+.advertiseStepItem:nth-child(2) .advertiseStepWrapper:before {
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+}
+
+.advertiseStepItem:nth-child(2) .advertiseStepWrapper:after {
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+}
+
 .advertiseStepNumber {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 99px;
 }
