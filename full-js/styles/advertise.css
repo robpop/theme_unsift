@@ -11,6 +11,22 @@ h2 {
     width: 255px;
 }
 
+.delay-150ms {
+    -webkit-animation-delay: 150ms;
+    -moz-animation-delay: 150ms;
+    animation-delay: 150ms;
+}
+
+input[type=range]::-webkit-slider-thumb, input[type=range]::-webkit-slider-thumb:active {
+    background: #3C6CC4;
+}
+input[type=range]::-moz-range-thumb, input[type=range]::-moz-range-thumb:active {
+    background: #3C6CC4;
+}
+input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
+    background: #3C6CC4;
+}
+
 .w-975px {
     width: 975px;
 }

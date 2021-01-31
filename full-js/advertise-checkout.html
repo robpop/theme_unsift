@@ -199,12 +199,13 @@
             <div class="w-975px mx-auto d-flex justify-content-around align-items-center">
               <div class="d-flex justify-content-center align-items-start flex-column">
 
-                <p>Decide on a budget for your ad space</p>
+                <p class="mb-1">Decide on a budget for your ad space</p>
+                <small>Get 15 clicks for every $1 spent</small>
                 <div class="d-flex align-items-center">
 
                   <div>
                     <label for="advertiseBudgetSlider">Ad Budget</label>
-                    <input type="range" class="custom-range" min="1" max="1000" value="100" step="1" id="advertiseBudgetSlider">
+                    <input type="range" class="custom-range" min="0" max="5000" value="100" step="100" id="advertiseBudgetSlider">
                   </div>
                   
                   <div class="md-form ml-4">
@@ -218,8 +219,8 @@
               </div>
               <div class="d-flex justify-content-center align-items-center flex-column">
 
-                <p id="advertiseTotalClicks">clicks</p>
-                <span>$<p id="advertiseTotalCost">100</p></span>
+                <span class="d-flex align-items-center animated faster font-weight-700 font-size-large custom-text-primary font-family-roboto"><p id="advertiseTotalClicks" class="m-0">1,500</p>&nbsp;clicks</span>
+                <span class="d-flex align-items-center animated faster font-weight-400">budget&nbsp;$<p id="advertiseTotalCost" class="m-0">100</p></span>
 
               </div>
             </div>
@@ -277,6 +278,9 @@
     <script src="lib/MDBootstrap/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script src="lib/MDBootstrap/mdb.min.js"></script>
+
+    <!-- Numeral.js for number formatting -->
+    <script src="lib/NumeralJS/numeral.min.js"></script>
 
     <script src="scripts/dark_theme.js"></script>
     <script src="scripts/cookie_notice.js"></script>

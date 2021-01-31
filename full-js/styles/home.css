@@ -5,6 +5,10 @@
     top: 0;
     right: 0;
 }
+.home-placeholder-image-position {
+    position: relative;
+    top: -32px;
+}
 
 @media screen and (max-width: 991px) {
     /* mobile conversion */
