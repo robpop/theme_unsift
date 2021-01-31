@@ -333,6 +333,9 @@ if (array_key_exists('email', $_POST)) {
       }
     </script>
 
+    <!-- Stripe integration for ad space purchasing and fraud detection functionality -->
+    <script src="https://js.stripe.com/v3/"></script>
+
     <script src="scripts/dark_theme.js"></script>
     <script src="scripts/cookie_notice.js"></script>
     <script src="scripts/sidebar_nav.js"></script>
