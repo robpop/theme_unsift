@@ -11,6 +11,18 @@ h2 {
     width: 255px;
 }
 
+small {
+    display: block;
+}
+
+.font-size-1_7 {
+    font-size: 1.7rem;
+}
+
+.max-width-450px {
+    max-width: 450px;
+}
+
 .delay-150ms {
     -webkit-animation-delay: 150ms;
     -moz-animation-delay: 150ms;
@@ -108,4 +120,8 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
     width: 28px;
     height: 28px;
     border-radius: 99px;
+}
+
+#advertiseOrderSummary {
+    font-size: 1.1rem;
 }

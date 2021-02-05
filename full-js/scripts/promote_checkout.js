@@ -7,6 +7,10 @@ $(() => {
     let advertiseTotalCost = $("#advertiseTotalCost");
     let advertiseTotalClicks = $("#advertiseTotalClicks");
 
+    let advertiseStep1 = $("#advertiseStep1");
+    let advertiseStep2 = $("#advertiseStep2");
+    let advertiseStep3 = $("#advertiseStep3");
+
     // These currency denominations are supported by default
     // You can add any denomination you need for your platform to the map below
     // Once you add the denomination to this map, modify the attribute data-denomination for the input element advertiseBudgetInput to change the currency symbol shown

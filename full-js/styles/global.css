@@ -152,6 +152,9 @@ textarea {
 .font-size-medium {
     font-size: 3rem;
 }
+.font-size-small {
+    font-size: 1.5rem
+}
 .font-family-roboto {
     font-family: "Roboto";
 }
