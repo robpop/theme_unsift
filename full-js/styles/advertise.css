@@ -83,6 +83,9 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
     margin-right: .5rem;
     content: "";
     background-color: rgba(0,0,0,.1);
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    transition: background-color 250ms;
 }
 
 .advertiseStepItem:first-child .advertiseStepWrapper:after {
@@ -99,6 +102,9 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
     margin-left: .5rem;
     content: "";
     background-color: rgba(0,0,0,.1);
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    transition: background-color 250ms;
 }
 
 .advertiseStepItem:last-child .advertiseStepWrapper:before {
@@ -114,6 +120,10 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 .advertiseStepItem:nth-child(2) .advertiseStepWrapper:after {
     border-top-left-radius: 99px;
     border-bottom-left-radius: 99px;
+}
+
+.advertiseStepItem:not(:first-child) .advertiseStepWrapper.active:before,  .advertiseStepItem:not(:last-child) .advertiseStepWrapper.active:after{
+    background-color: #3C6CC4;
 }
 
 .advertiseStepNumber {

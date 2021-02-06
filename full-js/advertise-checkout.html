@@ -126,7 +126,7 @@
         <div id="advertiseProgressStepper" class="w-75 mx-auto">
             <ul class="list-unstyled d-flex justify-content-between">
                 <li class="advertiseStepItem">
-                    <div class="advertiseStepWrapper">
+                    <div id="advertiseStepWrapper0" class="advertiseStepWrapper">
                         <div class="d-flex justify-content-center align-items-center">
                             <span class="advertiseStepNumber font-weight-500 custom-btn-primary d-flex align-items-center justify-content-center mr-2">1</span>
                             <span class="advertiseStepText font-weight-400">Select a product</span>
@@ -135,7 +135,7 @@
                 </li>
 
                 <li class="advertiseStepItem">
-                    <div class="advertiseStepWrapper">
+                    <div id="advertiseStepWrapper1" class="advertiseStepWrapper">
                         <div class="d-flex justify-content-center align-items-center">
                             <span class="advertiseStepNumber font-weight-500 custom-btn-primary d-flex align-items-center justify-content-center mr-2">2</span>
                             <span class="advertiseStepText font-weight-400">Set your budget</span>
@@ -144,7 +144,7 @@
                 </li>
 
                 <li class="advertiseStepItem">
-                    <div class="advertiseStepWrapper">
+                    <div id="advertiseStepWrapper2" class="advertiseStepWrapper">
                         <div class="d-flex justify-content-center align-items-center">
                             <span class="advertiseStepNumber font-weight-500 custom-btn-primary d-flex align-items-center justify-content-center mr-2">3</span>
                             <span class="advertiseStepText font-weight-400">Checkout</span>
@@ -165,7 +165,7 @@
                 <p>Select one of your products to promote</p>
                 <div>
                   <button class="btn btn-link dropdown-toggle m-0 p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product 1</button>
-                  <button class="btn btn-link ml-4 m-0 p-0">Next
+                  <button class="btn btn-link ml-4 m-0 p-0 next_step">Next
                     <i class="fas fa-long-arrow-alt-right"></i>
                   </button>
                   
@@ -195,7 +195,7 @@
           </div>
 
 
-          <div id="advertiseStep2" class="d-none">
+          <div id="advertiseStep2" class="invisible">
             <div class="w-975px mx-auto d-flex justify-content-around align-items-center">
               <div class="d-flex justify-content-center align-items-start flex-column">
 
@@ -217,11 +217,11 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-link ml-0 m-0 p-0">
+                  <button class="btn btn-link ml-0 m-0 p-0 back_step">
                     <i class="fas fa-long-arrow-alt-left"></i>
                     Back
                   </button>
-                  <button class="btn btn-link ml-4 m-0 p-0">Next
+                  <button class="btn btn-link ml-4 m-0 p-0 next_step">Next
                     <i class="fas fa-long-arrow-alt-right"></i>
                   </button>
                 </div>
@@ -238,7 +238,7 @@
           </div>
 
 
-          <div id="advertiseStep3" class="d-none">
+          <div id="advertiseStep3" class="invisible">
             <div class="w-975px mx-auto d-flex justify-content-around align-items-center">
               <div class="d-flex justify-content-center align-items-start flex-column">
 
@@ -280,7 +280,7 @@
                         </div>
                         <div class="d-flex justify-content-start align-items-center flex-row mt-4">
                           <button type="submit" class="btn custom-btn-primary ml-0" data-tid="elements_examples.form.pay_button">Checkout</button>
-                          <button class="btn btn-link ml-4 m-0 p-0" type="button">
+                          <button class="btn btn-link ml-4 m-0 p-0 back_step" type="button">
                             <i class="fas fa-long-arrow-alt-left"></i>
                             Back
                           </button>
@@ -319,7 +319,7 @@
                   <div id="advertiseOrderSummary">
                     <p>Product to promote:&nbsp;<span id="advertiseOrderSummaryProduct">A</span></p>
                     <p><span id="advertiseOrderSummaryClicks">X</span>&nbsp;clicks</p>
-                    <p class="font-family-roboto">Total cost:&nbsp;<span id="advertiseOrderSummaryTotal">$Y</span></p>
+                    <p class="font-family-roboto">Total cost:&nbsp;$<span id="advertiseOrderSummaryTotal">Y</span></p>
                   </div>
                 </div>
 

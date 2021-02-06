@@ -11,6 +11,22 @@ $(() => {
     let advertiseStep2 = $("#advertiseStep2");
     let advertiseStep3 = $("#advertiseStep3");
 
+    let advertiseStepWrapper0 = $("#advertiseStepWrapper0");
+    let advertiseStepWrapper1 = $("#advertiseStepWrapper1");
+    let advertiseStepWrapper2 = $("#advertiseStepWrapper2");
+
+    // This indicates the current step the user is on when purchasing ad space for their product
+    // Step 0: pick a product to advertise
+    // Step 1: select a budget
+    // Step 2: Stripe checkout
+    let current_step = 0;
+
+    let next_btns = $(".next_step");
+    let back_btns = $(".back_step");
+
+    let advertiseOrderSummaryClicks = $("#advertiseOrderSummaryClicks");
+    let advertiseOrderSummaryTotal = $("#advertiseOrderSummaryTotal");
+
     // These currency denominations are supported by default
     // You can add any denomination you need for your platform to the map below
     // Once you add the denomination to this map, modify the attribute data-denomination for the input element advertiseBudgetInput to change the currency symbol shown
@@ -47,6 +63,12 @@ $(() => {
     }
 
 
+    let update_checkout_price = function(clicks, price) {
+        advertiseOrderSummaryClicks.text(clicks);
+        advertiseOrderSummaryTotal.text(price);
+    }
+
+
     let sync_input_slider = function(is_slider) {
         if (is_slider) {
             // sync input
@@ -55,6 +77,8 @@ $(() => {
             // sync slider
             advertiseBudgetSlider.val(advertiseBudgetInput.val().substr(1));
         }
+
+        update_checkout_price(numeral(parseInt(advertiseBudgetInput.val().substr(1))*clicks_unit_multiplier).format('0,0'), numeral(parseInt(advertiseBudgetInput.val().substr(1))).format('0,0'));
 
         window.clearTimeout(update_cost_clicks);
         update_cost_clicks = setTimeout(() => {
@@ -79,7 +103,7 @@ $(() => {
             advertiseBudgetSlider.val(minimum_budget);
             sync_input_slider(true);
         }
-    }
+    };
 
     $(document).on("input", "#advertiseBudgetSlider", () => {
         format_budget_input();
@@ -108,5 +132,51 @@ $(() => {
 
 
     advertiseBudgetInput.val(selected_denomination+advertiseBudgetInput.val());
+
+
+    // Move forward or backward in the checkout process
+    let stepper = function(step) {
+        console.log(step);
+        switch (step) {
+            case 0:
+                advertiseStep3.addClass("invisible position-absolute");
+                advertiseStep2.addClass("invisible position-absolute");
+                advertiseStep1.removeClass("invisible position-absolute");
+
+                advertiseStepWrapper2.removeClass("active");
+                advertiseStepWrapper1.removeClass("active");
+                advertiseStepWrapper0.removeClass("active");
+                break;
+
+            case 1:
+                advertiseStep3.addClass("invisible position-absolute");
+                advertiseStep1.addClass("invisible position-absolute");
+                advertiseStep2.removeClass("invisible position-absolute");
+
+                advertiseStepWrapper2.removeClass("active");
+                advertiseStepWrapper1.addClass("active");
+                advertiseStepWrapper0.addClass("active");
+                break;
+
+            case 2:
+                advertiseStep2.addClass("invisible position-absolute");
+                advertiseStep1.addClass("invisible position-absolute");
+                advertiseStep3.removeClass("invisible position-absolute");
+
+                advertiseStepWrapper2.addClass("active");
+                advertiseStepWrapper1.addClass("active");
+                advertiseStepWrapper0.addClass("active");
+
+        }
+    };
+
+
+    next_btns.click(() => {
+        current_step < 2 ? stepper(++current_step) : 0;
+    });
+
+    back_btns.click(() => {
+        current_step > 0 ? stepper(--current_step) : 0;
+    });
 
 });
