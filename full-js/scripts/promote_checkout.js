@@ -2,6 +2,9 @@
 
 $(() => {
     
+    let advertiseProductSelected = $("#advertiseProductSelected");
+    let advertiseProductSelection = $("#advertiseProductSelection");
+
     let advertiseBudgetInput = $("#advertiseBudgetInput");
     let advertiseBudgetSlider = $("#advertiseBudgetSlider");
     let advertiseTotalCost = $("#advertiseTotalCost");
@@ -24,6 +27,7 @@ $(() => {
     let next_btns = $(".next_step");
     let back_btns = $(".back_step");
 
+    let advertiseOrderSummaryProduct = $("#advertiseOrderSummaryProduct");
     let advertiseOrderSummaryClicks = $("#advertiseOrderSummaryClicks");
     let advertiseOrderSummaryTotal = $("#advertiseOrderSummaryTotal");
 
@@ -133,6 +137,9 @@ $(() => {
 
     advertiseBudgetInput.val(selected_denomination+advertiseBudgetInput.val());
 
+    advertiseStep3.addClass("invisible position-absolute");
+    advertiseStep2.addClass("invisible position-absolute");
+    advertiseStep1.removeClass("invisible position-absolute");
 
     // Move forward or backward in the checkout process
     let stepper = function(step) {
@@ -143,9 +150,9 @@ $(() => {
                 advertiseStep2.addClass("invisible position-absolute");
                 advertiseStep1.removeClass("invisible position-absolute");
 
-                advertiseStepWrapper2.removeClass("active");
-                advertiseStepWrapper1.removeClass("active");
-                advertiseStepWrapper0.removeClass("active");
+                advertiseStepWrapper2.removeClass("active_before active_after");
+                advertiseStepWrapper1.removeClass("active_before active_after");
+                advertiseStepWrapper0.removeClass("active_before active_after");
                 break;
 
             case 1:
@@ -153,9 +160,10 @@ $(() => {
                 advertiseStep1.addClass("invisible position-absolute");
                 advertiseStep2.removeClass("invisible position-absolute");
 
-                advertiseStepWrapper2.removeClass("active");
-                advertiseStepWrapper1.addClass("active");
-                advertiseStepWrapper0.addClass("active");
+                advertiseStepWrapper2.removeClass("active_before active_after");
+                advertiseStepWrapper1.removeClass("active_after");
+                advertiseStepWrapper1.addClass("active_before");
+                advertiseStepWrapper0.addClass("active_after");
                 break;
 
             case 2:
@@ -163,12 +171,21 @@ $(() => {
                 advertiseStep1.addClass("invisible position-absolute");
                 advertiseStep3.removeClass("invisible position-absolute");
 
-                advertiseStepWrapper2.addClass("active");
-                advertiseStepWrapper1.addClass("active");
-                advertiseStepWrapper0.addClass("active");
+                advertiseStepWrapper2.addClass("active_before");
+                advertiseStepWrapper1.addClass("active_before active_after");
+                advertiseStepWrapper0.addClass("active_after");
 
         }
     };
+
+
+    advertiseProductSelection.children().click((e) => {
+        advertiseProductSelection.children().attr("data-selected-product", false);
+        $(e.target).attr("data-selected-product", true);
+
+        advertiseOrderSummaryProduct.text($(e.target).text());
+        advertiseProductSelected.text($(e.target).text());
+    });
 
 
     next_btns.click(() => {
@@ -179,4 +196,7 @@ $(() => {
         current_step > 0 ? stepper(--current_step) : 0;
     });
 
+    // Set checkout order summary to default values
+    update_checkout_price(numeral(parseInt(advertiseBudgetInput.val().substr(1))*clicks_unit_multiplier).format('0,0'), numeral(parseInt(advertiseBudgetInput.val().substr(1))).format('0,0'));
+    advertiseOrderSummaryProduct.text(advertiseProductSelected.text());
 });

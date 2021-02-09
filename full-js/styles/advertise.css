@@ -19,10 +19,6 @@ small {
     font-size: 1.7rem;
 }
 
-.max-width-450px {
-    max-width: 450px;
-}
-
 .delay-150ms {
     -webkit-animation-delay: 150ms;
     -moz-animation-delay: 150ms;
@@ -61,6 +57,14 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 
 .p-width-355 {
     width: 355px;
+}
+
+#advertiseProgressContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 145px);
 }
 
 .advertiseStepItem {
@@ -122,7 +126,7 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
     border-bottom-left-radius: 99px;
 }
 
-.advertiseStepItem:not(:first-child) .advertiseStepWrapper.active:before,  .advertiseStepItem:not(:last-child) .advertiseStepWrapper.active:after{
+.advertiseStepItem:not(:first-child) .advertiseStepWrapper.active_before:before,  .advertiseStepItem:not(:last-child) .advertiseStepWrapper.active_after:after{
     background-color: #3C6CC4;
 }
 

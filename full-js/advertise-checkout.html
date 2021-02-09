@@ -155,7 +155,7 @@
         </div>
 
 
-        <div id="advertiseProgressContent" class="my-5">
+        <div id="advertiseProgressContent">
 
 
           <div id="advertiseStep1" class="">
@@ -164,12 +164,13 @@
 
                 <p>Select one of your products to promote</p>
                 <div>
-                  <button class="btn btn-link dropdown-toggle m-0 p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product 1</button>
+                  <button id="advertiseProductSelected" class="btn btn-link dropdown-toggle m-0 p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product 1</button>
                   <button class="btn btn-link ml-4 m-0 p-0 next_step">Next
                     <i class="fas fa-long-arrow-alt-right"></i>
                   </button>
                   
-                  <div class="dropdown-menu">
+                  <div id="advertiseProductSelection" class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Product 1</a>
                     <a class="dropdown-item" href="#">Product 2</a>
                     <a class="dropdown-item" href="#">Product 3</a>
                     <a class="dropdown-item" href="#">Product 4</a>
@@ -242,7 +243,7 @@
             <div class="w-975px mx-auto d-flex justify-content-around align-items-center">
               <div class="d-flex justify-content-center align-items-start flex-column">
 
-                <div class="card max-width-450px">
+                <div class="card">
                   <div class="card-body">
                     <p class="mb-1">Checkout and push your product to the top of search results</p>
                     <small>Note to buyer: This integration uses <a href="https://stripe.com/docs/js" title="Stripe JS docs">Stripe</a></small>
