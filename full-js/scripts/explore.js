@@ -29,6 +29,11 @@ let update_modal_information = function(e) {
     let tags = e.target.getAttribute("data-tags").split(" ");
     let tags_length = tags.length;
     for (let i = 0; i < tags_length; ++i) {
+        console.log(tags[i]);
+        if (tags[i].indexOf('_') !== -1) {
+            let temp_tag = tags[i].split("_");
+            tags[i] = temp_tag.join(" ");
+        }
         $(modal_tags[i]).text(tags[i]);
     }
 
