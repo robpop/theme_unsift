@@ -93,7 +93,7 @@ $(() => {
     let body = document.getElementsByTagName("body")[0];
     let exploreMobileExpandSideBar = document.getElementById("exploreMobileExpandSideBar");
     let hammertime_body = null;
-    let hammertime_sideBar = null
+    let hammertime_sideBar = null;
     let sideBarOpen = null;
 
     let contentLoadingZone = document.getElementById("contentLoadingZone");
