@@ -78,10 +78,12 @@ if (array_key_exists('email', $_POST)) {
     <!-- Animate.css -->
     <link rel="stylesheet" href="lib/AnimateCSS/animate.min.css">
 
+    <!-- Custom CSS -->
     <link href="styles/support.css" rel="stylesheet">
     <link href="styles/global.css" rel="stylesheet">
 
     <link href="styles/dark-theme.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -336,8 +338,10 @@ if (array_key_exists('email', $_POST)) {
     <!-- Stripe integration for ad space purchasing and fraud detection functionality -->
     <script src="https://js.stripe.com/v3/"></script>
 
+    <!-- Custom JS -->
     <script src="scripts/dark_theme.js"></script>
     <script src="scripts/cookie_notice.js"></script>
     <script src="scripts/sidebar_nav.js"></script>
+
   </body>
 </html>
