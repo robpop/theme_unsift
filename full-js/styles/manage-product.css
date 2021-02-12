@@ -52,6 +52,7 @@
     border-radius: 3px;
     text-align: center;
     margin: 5px;
+    position: static;
 }
 
 @media screen and (max-width: 991px) {

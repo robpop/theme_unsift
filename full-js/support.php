@@ -79,8 +79,8 @@ if (array_key_exists('email', $_POST)) {
     <link rel="stylesheet" href="lib/AnimateCSS/animate.min.css">
 
     <!-- Custom CSS -->
-    <link href="styles/support.css" rel="stylesheet">
     <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/support.css" rel="stylesheet">
 
     <link href="styles/dark-theme.css" rel="stylesheet">
 
