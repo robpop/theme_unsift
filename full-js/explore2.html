@@ -26,6 +26,7 @@
 
     <!-- Custom CSS -->
     <link href="styles/explore.css" rel="stylesheet">
+    <link href="styles/explore2.css" rel="stylesheet">
     <link href="styles/global.css" rel="stylesheet">
 
     <link href="styles/dark-theme.css" rel="stylesheet">
@@ -125,9 +126,63 @@
     <div class="container-fluid float-right p-4 w-100 mt-6" id="exploreSection">
       <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" id="exploreSearchBar">
         <i class="fas fa-search" aria-hidden="true"></i>
-        <input class="form-control form-control-sm ml-3 w-75 font-size-1rem" type="text" placeholder="Search"
+        <input class="form-control form-control-sm ml-3 w-75 font-size-1rem" type="text" id="exploreSearchBar" placeholder="Search"
           aria-label="Search">
-        <div id="exploreCategoryDropdown" class="w-75 ml-3 d-relative">
+
+        <!-- autocomplete search bar loader -->
+        <div class="exploreSearchLoader animated faster" id="majorPlatformLoaderWrapper">
+          <div id="majorPlatformLoader"><div id="majorPlatformLoaderOuter"><div id="majorPlatformLoaderInner"></div></div></div>
+        </div>
+
+        <div class="w-75 d-flex justify-content-start align-items-center">
+          <!-- Search filter 1 -->
+          <div class="dropdown">
+            <button class="btn btn-link btn-sm dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Search filter 1</button>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Lorem</a>
+              <a class="dropdown-item" href="#">Adipiscing</a>
+              <a class="dropdown-item" href="#">Purus</a>
+              <a class="dropdown-item" href="#">Mattis</a>
+              <a class="dropdown-item" href="#">Fringilla</a>
+              <a class="dropdown-item" href="#">Quis</a>
+            </div>
+          </div>
+          <!-- /////////////// -->
+
+          <!-- Search filter 2 -->
+          <div>
+            <button class="btn btn-link btn-sm dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Search filter 2</button>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Elit</a>
+              <a class="dropdown-item" href="#">Amet</a>
+              <a class="dropdown-item" href="#">Felis</a>
+            </div>
+          </div>
+          <!-- /////////////// -->
+
+          <!-- Search filter 3 -->
+          <div>
+            <button class="btn btn-link btn-sm dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Search filter 3</button>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Nulla</a>
+              <a class="dropdown-item" href="#">Ipsum sit</a>
+              <a class="dropdown-item" href="#">Consectetur</a>
+              <a class="dropdown-item" href="#">Feugiat</a>
+              <a class="dropdown-item" href="#">Proin non</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Ac orci dapibus</a>
+            </div>
+          </div>
+          <!-- /////////////// -->
+        </div>
+
+        <div id="exploreCategoryDropdown" class="d-relative">
             <div class="btn-group d-absolute float-right">
                 <button class="btn custom-btn-primary btn-sm dropdown-toggle mx-0" type="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -147,125 +202,156 @@
             </div>
         </div>
       </form>
-      <div class="card-columns">
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="5">
+
+
+      <!-- The product grid layout where your platform's content will go -->
+      <div class="grid">
+        <div class="grid-sizer"></div>
+
+
+        <!-- This card layout includes a logo, product title, product description, and a time last updated -->
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="5">
           <img class="card-img-top" src="assets/logo-13.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product 1</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu odio blandit, congue lectus sed, rutrum mi. Vivamus ultrices enim ut eleifend placerat.</p>
+            <h5 class="card-title mt-2">Product</h5>
+            <p class="card-text">This is a description of a product listed on your platform. This section allows your content creators to describe their product to users of your platform.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 text-center clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-15.svg" data-rating="1">
+        <!-- ---------------------------------------------------------------------------------------- -->
+
+
+        <!-- This card layout includes a product title, product description, and a time last updated -->
+        <!-- If a certain tag contains multiple words, separate the words with underscores as shown below -->
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Multi-Word_Tag" data-logo="assets/logo-15.svg" data-rating="3">
           <div class="card-body">
-            <h5 class="card-title">Product 2</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">eBook</h5>
+            <p class="card-text">The synopsis of an eBook that is hosted on your platform. This could be the summary on the back cover or on the inside cover.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-14.svg" data-rating="2.5">
-          <img class="card-img-top" src="assets/logo-14.svg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Product 3</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-15.svg" data-rating="3">
-          <div class="card-body">
-            <h5 class="card-title">Product 4</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-14.svg" data-rating="4">
+        <!-- ---------------------------------------------------------------------------------------- -->
+
+
+        <!-- This card layout includes only a logo  -->
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-15.svg" data-rating="5">
           <div class="card-body card-body-hidden">
-            <h5 class="card-title">Product 5</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-          <img class="card-img" src="assets/logo-13.svg" alt="Card image">
-        </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-15.svg" data-rating="5">
-          <div class="card-body card-body-hidden">
-            <h5 class="card-title">Product 6</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">Design</h5>
+            <p class="card-text">A description of the graphic design hosted on your platform.</p>
           </div>
           <img class="card-img" src="assets/logo-14.svg" alt="Card image">
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="1.5">
+        <!-- ---------------------------------------------------------------------------------------- -->
+
+
+        <!-- This card is a native advertisement that uses a custom ad badge to indicate to users that this product is promoted -->
+        <!-- This card layout includes a preview image instead of a logo which could be desireable for certain digital goods  -->
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/lake-5933622_1920.jpg" data-rating="2.5">
+          <div class="card-promoted">Promoted</div>
+          <img class="card-img-top" src="assets/lake-5933622_1920.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product 7</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">Website</h5>
+            <p class="card-text">This website uses a preview image instead of a logo. This could be a screenshot of the website or some other branding.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 text-center clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-15.svg" data-rating="2">
+        <!-- ---------------------------------------------------------------------------------------- -->
+
+
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Multi-Word_Tag" data-logo="assets/logo-15.svg" data-rating="1">
+          <img class="card-img-top" src="assets/logo-16.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product 8</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">App</h5>
+            <p class="card-text">A description of a mobile app hosted on your platform. The logo above could be where the content creator puts their app icon for branding.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-14.svg" data-rating="3">
-          <div class="card-body">
-            <h5 class="card-title">Product 9</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-14.svg" data-rating="4">
+          <div class="card-body card-body-hidden">
+            <h5 class="card-title mt-2">Product</h5>
+            <p class="card-text">This is a description of a product listed on your platform.</p>
           </div>
+          <img class="card-img" src="assets/logo-13.svg" alt="Card image">
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="4.5">
-          <img class="card-img-top" src="assets/logo-13.svg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Product 10</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu odio blandit, congue lectus sed, rutrum mi. Vivamus ultrices enim ut eleifend placerat.</p>
-          </div>
-        </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-15.svg" data-rating="5">
-          <div class="card-body">
-            <h5 class="card-title">Product 11</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-14.svg" data-rating="1">
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="1.5">
           <img class="card-img-top" src="assets/logo-15.svg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product 12</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">Blog</h5>
+            <p class="card-text">An overview of what kind of content this blog produces.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 1 hour ago</small></p>
           </div>
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-15.svg" data-rating="2">
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-15.svg" data-rating="2">
           <div class="card-body">
-            <h5 class="card-title">Product 13</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">Software</h5>
+            <p class="card-text">This is a description of software hosted on your platform.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 text-center clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-14.svg" data-rating="3.5">
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-14.svg" data-rating="3">
+          <div class="card-promoted">Promoted</div>
           <div class="card-body">
-            <h5 class="card-title">Product 14</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">App</h5>
+            <p class="card-text">This app is being promoted with native ad space.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-15.svg" data-rating="4">
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-15.svg" data-rating="5">
+          <div class="card-body">
+            <h5 class="card-title mt-2">3D Artwork</h5>
+            <p class="card-text">A description of the 3D artwork hosted on your platform.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/night-5884393_1920.jpg" data-rating="4.5">
+          <img class="card-img-top" src="assets/night-5884393_1920.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Photo</h5>
+            <p class="card-text">This photo uses a preview image instead of a logo.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-14.svg" data-rating="1">
+          <img class="card-img-top" src="assets/logo-15.svg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Online Course</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-15.svg" data-rating="2">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Font Bundle</h5>
+            <p class="card-text">This is a font bundle hosted on your platform.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2" data-logo="assets/logo-14.svg" data-rating="3.5">
+          <img class="card-img-top" src="assets/logo-16.svg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Article</h5>
+            <p class="card-text">This is an article hosted on your platform. This supporting text could describe what the article is about.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1" data-logo="assets/logo-15.svg" data-rating="4">
+          <div class="card-promoted">Promoted</div>
           <div class="card-body card-body-hidden">
-            <h5 class="card-title">Product 15</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">App</h5>
+            <p class="card-text">A description of a mobile app hosted on your platform.</p>
           </div>
           <img class="card-img" src="assets/logo-15.svg" alt="Card image">
         </div>
-        <div class="card my-2 clickable" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/logo-14.svg" data-rating="5">
+        <div class="grid-item card product-card" data-toggle="modal" data-target="#actionModal" data-tags="Tag1 Tag2 Tag3" data-logo="assets/icon-set-1142000_1280.png" data-rating="5">
+          <img class="card-img-top" src="assets/icon-set-1142000_1280.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product 16</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title mt-2">Icon Set</h5>
+            <p class="card-text">This is an icon bundle that is hosted on your platform. The content creator has a preview image of the icons for users to view before downloading.</p>
+            <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
       </div>
+
     </div>
 
 
@@ -408,7 +494,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer font-small fixed-bottom border-top">
+    <footer id="exploreAltFooter" class="page-footer font-small fixed-bottom border-top">
 
       <div class="text-left">
           <li class="list-group list-group-horizontal list-group-flush d-flex align-items-center">
@@ -439,9 +525,6 @@
     <!-- MDBootstrap Masonry  -->
     <script type="text/javascript" src="lib/MDBootstrap/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="lib/MDBootstrap/imagesloaded.pkgd.min.js"></script>
-
-    <!-- HammerJS -->
-    <script src="lib/HammerJS/Hammer.js"></script>
 
     <!-- JQuery UI for autocomplete functionality -->
     <script src="lib/JQueryUI/jquery-ui.min.js"></script>

@@ -1,0 +1,45 @@
+@media (min-width: 3440px) {
+    .grid-sizer, .grid-item {
+        width: calc(12% - 20px);
+    }
+}
+
+@media (min-width: 2560px) and (max-width: 3440px) {
+    .grid-sizer, .grid-item {
+        width: calc(16% - 20px);
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .grid-sizer, .grid-item {
+        width: calc(20% - 20px);
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .grid-sizer, .grid-item {
+        width: calc(33% - 20px);
+    }
+}
+
+.grid-sizer, .grid-item {
+    width: calc(20% - 20px);
+}
+
+@media screen and (max-width: 991px) {
+    #exploreAltFooter {
+        position: fixed!important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid-sizer, .grid-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .grid-sizer, .grid-item {
+        width: calc(100% - 20px);
+    }
+}

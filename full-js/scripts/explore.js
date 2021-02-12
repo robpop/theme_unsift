@@ -193,7 +193,7 @@ $(() => {
 
 
     // Enable swipe events on side bar when mobile
-    if ($(".-mobile").css("display") !== "none") {
+    if ($(".-mobile").css("display") !== "none" && $("#sideBar").length) {
         sideBarOpen = false;
         hammertime_body = new Hammer(body);
         hammertime_body.on('swiperight', function(ev) {
