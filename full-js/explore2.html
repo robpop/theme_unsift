@@ -124,7 +124,7 @@
     </div>
 
     <div class="container-fluid float-right p-4 w-100 mt-6" id="exploreSection">
-      <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" id="exploreSearchBar">
+      <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" id="exploreSearchWrapper">
         <i class="fas fa-search" aria-hidden="true"></i>
         <input class="form-control form-control-sm ml-3 w-75 font-size-1rem" type="text" id="exploreSearchBar" placeholder="Search"
           aria-label="Search">
@@ -349,6 +349,14 @@
             <p class="card-text">This is an icon bundle that is hosted on your platform. The content creator has a preview image of the icons for users to view before downloading.</p>
             <p class="card-text mb-2"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
+        </div>
+      </div>
+
+      <!-- Where loader will show when page is scrolled to the bottom -->
+      <!-- Scrolling here triggers the page to load more content -->
+      <div id="contentLoadingZone">
+        <div class="animated faster fadeInUp" id="majorPlatformLoaderWrapper">
+          <div id="majorPlatformLoader"><div id="majorPlatformLoaderOuter"><div id="majorPlatformLoaderInner"></div></div></div>
         </div>
       </div>
 
