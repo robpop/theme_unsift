@@ -350,7 +350,7 @@ textarea {
         font-size: calc(1rem + 0.5vw);
     }
     .my-buffer-px {
-        margin-top: 80px;
+        margin-top: calc(80px + 3vw);
         margin-bottom: 0;
     }
     nav {
@@ -360,7 +360,7 @@ textarea {
         position: absolute;
     }
     .navbar-brand img {
-        width: 22vh;
+        width: calc(135px + 4vw);
     }
     #sideBarNavProfileImage {
         width: 25%!important;
