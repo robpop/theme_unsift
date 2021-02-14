@@ -56,6 +56,16 @@
 }
 
 @media screen and (max-width: 991px) {
+    #manageProductsHeader {
+        flex-wrap: wrap;
+    }
+    #manageProductsHeader .card-promoted.mx-3 {
+        margin: 0!important;
+    }
+    .card-promoted-buffer {
+        flex-basis: 100%;
+        width: 0;
+    }
     .container-fluid .card-deck {
         flex-direction: column;
     }

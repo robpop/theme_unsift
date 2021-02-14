@@ -45,8 +45,7 @@
         position: relative!important;
     }
     #libraryFoldersEditor, #libraryProductsEditor {
-        border-bottom: 1px solid #eeeeee;
-        margin-bottom: 4vh;
+        margin-bottom: 0.5rem;
         width: 100%;
         display: flex;
         justify-content: flex-start;
