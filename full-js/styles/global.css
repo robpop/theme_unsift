@@ -22,6 +22,8 @@ body {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    visibility: visible;
+    opacity: 1;
 }
 
 /* CUSTOM TEMPLATE COLORS */
@@ -41,6 +43,13 @@ body {
     background-color: #3C6CC4 !important;
 }
 
+.custom-font-quicksand {
+    font-family: "Quicksand";
+}
+
+.custom-font-roboto {
+    font-family: "Roboto";
+}
 
 
 
