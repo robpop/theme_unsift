@@ -128,6 +128,11 @@ if (array_key_exists('email', $_POST)) {
           <p class="text-center mt-3">Signed in as John Doe</p>
         </li>
 
+        <!-- overview of pages & elements for developers -->
+        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="pages-elements.html" title="Pages & Elements">
+          Pages / Elements & Docs
+        </a>
+
         <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="home.html" title="Home">
           <i class="fas fa-home mr-2"></i>
           Home
@@ -195,7 +200,7 @@ if (array_key_exists('email', $_POST)) {
         <?php endif; ?>
 
         <h1 class="text-center">Contact us</h1>
-        <p class="text-center subheader-display">Please provide some details below and we'll be sure to get back to you as soon as possible.</p>
+        <p class="text-center subheader-display" style="width: 350px">Please provide some details below and we'll be sure to get back to you as soon as possible.</p>
 
         <div class="mb-4">
 
@@ -274,24 +279,19 @@ if (array_key_exists('email', $_POST)) {
                         </div>
                     </form>
 
-                    
                 </div>
                 <!--Grid column-->
-
             </div>
-
         </div>
-
     </div>
-
 
     <!-- Cookie notice (if needed) -->
     <div id="cookieNotice" class="card w-100 position-fixed fixed-bottom rounded-0 animated fadeInUp faster">
       <div class="card-body">
         <h5 class="card-title">Cookie notice</h5>
-        <p class="card-text">By using our website, you agree to our <a href="#" title="Cookie policy">cookie policy</a>.</p>
+        <p class="card-text">We use cookies to provide our services and for analytics and marketing. To find out more about our use of cookies, please see our Privacy Policy and Cookie Policy. By continuing to browse our website, you agree to our use of cookies.</p>
         <a href="#!" id="cookieNoticeAccept" class="btn custom-btn-primary">Accept & Close</a>
-        <a href="#!" class="btn btn-link">More Info</a>
+        <a href="legal.html" class="btn btn-link">More Info</a>
       </div>
     </div>
 
