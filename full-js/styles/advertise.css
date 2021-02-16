@@ -139,3 +139,26 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 #advertiseOrderSummary {
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 991px) {
+    .w-975px {
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .col-6 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%; 
+    }
+
+    .col-6.align-items-start {
+        align-items: center!important;
+    }
+}
