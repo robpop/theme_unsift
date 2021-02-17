@@ -141,6 +141,10 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 }
 
 @media screen and (max-width: 991px) {
+    h2 {
+        font-size: calc(1.8rem + 0.8vw);
+    }
+
     .w-975px {
         width: 100%;
     }
@@ -152,6 +156,30 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
         flex-direction: column;
     }
 
+    .icon-sizing {
+        font-size: calc(4rem + 3vw);
+    }
+
+    #advertiseMobileStepperText {
+        font-size: calc(1rem + 1vw);
+    }
+
+    #advertiseProgressStepper {
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 2rem;
+    }
+
+    #advertiseProgressStepper.w-75 {
+        width: 100%!important;
+    }
+
+    .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
     .col-6 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -160,5 +188,9 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 
     .col-6.align-items-start {
         align-items: center!important;
+    }
+
+    .p-width-305, .p-width-335, .p-width-355 {
+        width: auto;
     }
 }

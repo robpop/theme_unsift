@@ -16,6 +16,9 @@ Adds additional functionality to Bootstrap and overrides certain styles
 .-mobile {
     display: none!important;
 }
+.-mobile-flex {
+    display: none!important;
+}
 body {
     font-family: "Quicksand";
 
@@ -344,6 +347,9 @@ textarea {
     /* mobile conversion */
     .-mobile {
         display: initial!important;
+    }
+    .-mobile-flex {
+        display: flex!important;
     }
     .-non-mobile {
         display: none!important;

@@ -18,6 +18,9 @@ $(() => {
     let advertiseStepWrapper1 = $("#advertiseStepWrapper1");
     let advertiseStepWrapper2 = $("#advertiseStepWrapper2");
 
+    let advertiseMobileStepper = $("#advertiseMobileStepper");
+    let advertiseMobileStepperText = $("#advertiseMobileStepperText");
+
     // This indicates the current step the user is on when purchasing ad space for their product
     // Step 0: pick a product to advertise
     // Step 1: select a budget
@@ -153,6 +156,11 @@ $(() => {
                 advertiseStepWrapper2.removeClass("active_before active_after");
                 advertiseStepWrapper1.removeClass("active_before active_after");
                 advertiseStepWrapper0.removeClass("active_before active_after");
+
+                advertiseMobileStepper.attr("progress", "0");
+                advertiseMobileStepperText.children().eq(0).removeClass("d-none");
+                advertiseMobileStepperText.children().eq(1).addClass("d-none");
+                advertiseMobileStepperText.children().eq(2).addClass("d-none");
                 break;
 
             case 1:
@@ -164,6 +172,11 @@ $(() => {
                 advertiseStepWrapper1.removeClass("active_after");
                 advertiseStepWrapper1.addClass("active_before");
                 advertiseStepWrapper0.addClass("active_after");
+
+                advertiseMobileStepper.attr("progress", "50");
+                advertiseMobileStepperText.children().eq(0).addClass("d-none");
+                advertiseMobileStepperText.children().eq(1).removeClass("d-none");
+                advertiseMobileStepperText.children().eq(2).addClass("d-none");
                 break;
 
             case 2:
@@ -175,6 +188,10 @@ $(() => {
                 advertiseStepWrapper1.addClass("active_before active_after");
                 advertiseStepWrapper0.addClass("active_after");
 
+                advertiseMobileStepper.attr("progress", "100");
+                advertiseMobileStepperText.children().eq(0).addClass("d-none");
+                advertiseMobileStepperText.children().eq(1).addClass("d-none");
+                advertiseMobileStepperText.children().eq(2).removeClass("d-none");
         }
     };
 

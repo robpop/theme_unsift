@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>body{visibility: hidden;opacity:0;}</style>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -8,7 +10,7 @@
     <!-- Meta Description -->
     <meta name="description" content="Description of the page less than 150 characters">
 
-    <title>Advertise checkout - LogoIpsum</title>
+    <title>Promote checkout - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -26,7 +28,7 @@
 
     <!-- Custom CSS -->
     <link href="styles/global.css" rel="stylesheet">
-    <link href="styles/advertise.css" rel="stylesheet">
+    <link href="styles/promote.css" rel="stylesheet">
 
     <link href="styles/dark-theme.css" rel="stylesheet">
 
@@ -98,7 +100,7 @@
           <i class="fas fa-tools mr-2"></i>
           Manage your products
         </a>
-        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="advertise.html" title="Advertise your product">
+        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="promote.html" title="Advertise your product">
           <i class="fas fa-ad mr-2"></i>
           Advertise your product
         </a>
@@ -130,7 +132,7 @@
 
     <div class="container-fluid my-buffer-px">
         <div id="advertiseProgressStepper" class="w-75 mx-auto">
-            <ul class="list-unstyled d-flex justify-content-between">
+            <ul class="-non-mobile list-unstyled d-flex justify-content-between">
                 <li class="advertiseStepItem">
                     <div id="advertiseStepWrapper0" class="advertiseStepWrapper">
                         <div class="d-flex justify-content-center align-items-center">
@@ -158,6 +160,13 @@
                     </div>
                 </li>
             </ul>
+
+            <div class="-mobile-flex d-flex justify-content-center align-items-center flex-row">
+              <div>
+                <progress-ring id="advertiseMobileStepper" stroke="7" progress="0" steps="3" color="#3C6CC4"></progress-ring>
+              </div>
+              <p id="advertiseMobileStepperText" class="ml-3"><span class="">Select a product</span><span class="d-none">Set your budget</span><span class="d-none">Checkout</span></p>
+            </div>
         </div>
 
 
@@ -393,6 +402,7 @@
     <script src="scripts/sidebar_nav.js"></script>
     
     <script src="scripts/promote_checkout.js"></script>
+    <script src="scripts/progress_ring.js"></script>
     <script src="scripts/stripe_integration.js"></script>
 
   </body>

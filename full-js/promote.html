@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>body{visibility: hidden;opacity:0;}</style>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -8,7 +10,7 @@
     <!-- Meta Description -->
     <meta name="description" content="Description of the page less than 150 characters">
 
-    <title>Advertise your product - LogoIpsum</title>
+    <title>Promote your product - LogoIpsum</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -26,7 +28,7 @@
 
     <!-- Custom CSS -->
     <link href="styles/global.css" rel="stylesheet">
-    <link href="styles/advertise.css" rel="stylesheet">
+    <link href="styles/promote.css" rel="stylesheet">
 
     <link href="styles/dark-theme.css" rel="stylesheet">
 
@@ -98,7 +100,7 @@
           <i class="fas fa-tools mr-2"></i>
           Manage your products
         </a>
-        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="advertise.html" title="Advertise your product">
+        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="promote.html" title="Advertise your product">
           <i class="fas fa-ad mr-2"></i>
           Advertise your product
         </a>
@@ -132,9 +134,9 @@
         <div>
             <div class="row w-975px mx-auto">
                 <div class="col-6 d-flex justify-content-center align-items-start flex-column">
-                    <h2 class="font-weight-700 p-width-305">Promote your product with ad space</h2>
-                    <p class="p-width-335">Push your product to the top of search results along with other popular products using our native advertisements.</p>
-                    <a href="advertise-checkout.html" title="Start Now" class="btn custom-btn-primary ml-0">Start Now</a>
+                    <h2 class="font-weight-700 p-width-305 -mobile-text-width-getter">Promote your product with ad space</h2>
+                    <p class="p-width-335 -mobile-text-width-setter">Push your product to the top of search results along with other popular products using our native advertisements.</p>
+                    <a href="promote-checkout.html" title="Start Now" class="btn custom-btn-primary ml-0">Start Now</a>
                 </div>
                 <div class="w-100 -mobile"></div>
                 <div class="col-6">
@@ -749,19 +751,19 @@
                     <div class="row">
                       <div class="col-4 d-flex justify-content-center align-items-center flex-column">
                         <i class="fas fa-cart-arrow-down icon-sizing icon-color mb-4"></i>
-                        <p class="font-weight-500">SELECT A PRODUCT</p>
+                        <p class="text-center font-weight-500">SELECT A PRODUCT</p>
                         <p class="text-center">Choose one of your products that you want to promote</p>
                       </div>
                       <div class="w-100 -mobile"></div>
                       <div class="col-4 d-flex justify-content-center align-items-center flex-column">
                         <i class="fas fa-sliders-h icon-sizing icon-color mb-4"></i>
-                        <p class="font-weight-500">SET YOUR BUDGET</p>
+                        <p class="text-center font-weight-500">SET YOUR BUDGET</p>
                         <p class="text-center">Decide how many clicks you want your product to receive</p>
                       </div>
                       <div class="w-100 -mobile"></div>
                       <div class="col-4 d-flex justify-content-center align-items-center flex-column">
                         <i class="fas fa-chart-line icon-sizing icon-color mb-4"></i>
-                        <p class="font-weight-500">CHECKOUT AND GROW</p>
+                        <p class="text-center font-weight-500">CHECKOUT AND GROW</p>
                         <p class="text-center">Push your product to the top of search results and gain exposure</p>
                       </div>
                     </div>
@@ -769,8 +771,8 @@
             </div>
             <div class="row w-975px mx-auto">
                 <div class="col-6 d-flex justify-content-center align-items-start flex-column">
-                    <h2 class="font-weight-700 p-width-355">Choose a budget and gain exposure</h2>
-                    <p class="p-width-335">Decide how much you want to spend and we'll show you how many clicks you can get.</p>
+                    <h2 class="font-weight-700 p-width-355 -mobile-text-width-getter">Choose a budget and gain exposure</h2>
+                    <p class="p-width-335 -mobile-text-width-setter">Decide how much you want to spend and we'll show you how many clicks you can get.</p>
                 </div>
                 <div class="w-100 -mobile"></div>
                 <div class="col-6">
@@ -1519,6 +1521,8 @@
     <script src="scripts/dark_theme.js"></script>
     <script src="scripts/cookie_notice.js"></script>
     <script src="scripts/sidebar_nav.js"></script>
+
+    <script src="scripts/promote_start.js"></script>
     
   </body>
 </html>

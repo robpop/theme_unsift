@@ -55,6 +55,8 @@ if (array_key_exists('email', $_POST)) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>body{visibility: hidden;opacity:0;}</style>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -153,7 +155,7 @@ if (array_key_exists('email', $_POST)) {
           <i class="fas fa-tools mr-2"></i>
           Manage your products
         </a>
-        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="advertise.html" title="Advertise your product">
+        <a class="list-group-item list-group-item-action custom-primary-color white-text d-flex align-items-center" href="promote.html" title="Advertise your product">
           <i class="fas fa-ad mr-2"></i>
           Advertise your product
         </a>
