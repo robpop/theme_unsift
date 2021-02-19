@@ -34,7 +34,7 @@ body {
 /* Custom primary color for buttons is set to #3C6CC4 with a text color of #fafafa */
 /* You can easily change this by modifying the hex values for background-color and color below */
 .custom-btn-primary, .custom-btn-primary:hover {
-    background-color: #3C6CC4;
+    background-color: #3C6CC4!important;
     color: #fafafa;
 }
 

@@ -57,7 +57,7 @@
         padding: 0;
         font-size: calc(0.9rem + 0.5vw);
     }
-    #accountSettingsWrapper .float-right button {
+    #accountSettingsWrapper .float-right .btn {
         font-size: calc(0.7rem + 0.5vw);
     }
 }

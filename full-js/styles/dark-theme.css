@@ -7,12 +7,18 @@ body[data-theme="dark"] .border-top {
 body[data-theme="dark"] #homeIconCredit {
     color: #263238;
 }
+body[data-theme="dark"] svg text {
+    fill: #fafafa;
+}
 body[data-theme="dark"] input {
     background-color: #37474F;
     border-bottom: 1px solid #5E6B72!important;
     color: #fafafa!important;
 }
-body[data-theme="dark"] .upload-area, body[data-theme="dark"] #majorPlatformLoaderOverlay, body[data-theme="dark"] .ui-autocomplete, body[data-theme="dark"] .modal-body, body[data-theme="dark"] .modal-footer, body[data-theme="dark"] .modal-content {
+body[data-theme="dark"] hr {
+    border-bottom: 1px solid #5E6B72;
+}
+body[data-theme="dark"] .upload-area, body[data-theme="dark"] #majorPlatformLoaderOverlay, body[data-theme="dark"] .ui-autocomplete, body[data-theme="dark"] .modal-body, body[data-theme="dark"] .modal-footer, body[data-theme="dark"] .modal-content, body[data-theme="dark"] input[type="range"] {
     background-color: #263238;
 }
 body[data-theme="dark"] .upload-area:hover {
@@ -49,9 +55,6 @@ body[data-theme="dark"] .dropdown-item:focus, body[data-theme="dark"] .dropdown-
     background-color: #151c1e;
     color: #fafafa;
 }
-body[data-theme="dark"] #addProductEnterBtn i {
-    color: #fafafa;
-}
 body[data-theme="dark"] .ui-menu-item:hover {
     background-color: #4B515D!important;
 }
@@ -72,7 +75,7 @@ body[data-theme="dark"] .card, body[data-theme="dark"] .card-shadow {
 body[data-theme="dark"] #exploreSearchWrapper {
     background-color: #263238!important;
 }
-body[data-theme="dark"] .card-text, body[data-theme="dark"] .card .card-body .card-text, body[data-theme="dark"] #libraryFolderArray h4, body[data-theme="dark"] .card-title, body[data-theme="dark"] .list-group-item-action, body[data-theme="dark"] .btn-link, body[data-theme="dark"] .btn-link:hover, body[data-theme="dark"] .btn-link:focus, body[data-theme="dark"] .btn-link:active, body[data-theme="dark"] .close, body[data-theme="dark"] p, body[data-theme="dark"] footer a, body[data-theme="dark"] footer p, body[data-theme="dark"] .dropdown-item {
+body[data-theme="dark"] .card-text, body[data-theme="dark"] .card .card-body .card-text, body[data-theme="dark"] #libraryFolderArray h4, body[data-theme="dark"] .card-title, body[data-theme="dark"] .list-group-item-action, body[data-theme="dark"] .btn-link, body[data-theme="dark"] .btn-link:hover, body[data-theme="dark"] .btn-link:focus, body[data-theme="dark"] .btn-link:active, body[data-theme="dark"] .close, body[data-theme="dark"] p, body[data-theme="dark"] footer a, body[data-theme="dark"] footer p, body[data-theme="dark"] .dropdown-item, body[data-theme="dark"] #addProductEnterBtn i, body[data-theme="dark"] span {
     color: #fafafa;
 }
 body[data-theme="dark"] .card-title svg {
@@ -121,7 +124,7 @@ body[data-theme="dark"] .nav-tabs {
 body[data-theme="dark"] .nav-tabs .nav-link:hover {
     border-color: #5E6B72;
 }
-body[data-theme="dark"] .text-muted {
+body[data-theme="dark"] .text-muted, body[data-theme="dark"] #addProductTagCount span {
     color: #9e9e9e!important;
 }
 body[data-theme="dark"] .small-font-size {
