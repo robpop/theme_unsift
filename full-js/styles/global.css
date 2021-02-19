@@ -287,7 +287,7 @@ textarea {
     animation-duration: 250ms;
 }
 .dropdown-item {
-    font-size: .84rem;
+    font-size: 0.84rem;
 }
 #sideBarNav {
     top: 0;
@@ -361,12 +361,27 @@ textarea {
     h1 {
         font-size: calc(2rem + 0.5vw);
     }
+    .font-size-large {
+        font-size: calc(2rem + 4vw);
+    }
+    .font-size-medium {
+        font-size: calc(1.5rem + 3vw);
+    }
+    .font-size-small {
+        font-size: calc(0.75rem + 1.5vw);
+    }
     .subheader-display {
         font-size: calc(1rem + 0.5vw);
     }
     .my-buffer-px {
         margin-top: calc(80px + 3vw);
         margin-bottom: 0;
+    }
+    .btn, .dropdown-item {
+        font-size: calc(0.7rem + 0.8vw);
+    }
+    .dropdown-item {
+        padding: 1rem;
     }
     nav {
         height: 64px;

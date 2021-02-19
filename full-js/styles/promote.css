@@ -147,6 +147,29 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
 
     .w-975px {
         width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .w-975px > div {
+        margin: 1rem auto;
+    }
+
+    #advertiseProgressContent button.p-0 {
+        padding: calc(0.7rem + 0.7vw)!important;
+    }
+
+    .-mobile-center {
+        width: 100%;
+        text-align: center;
+    }
+
+    #advertiseProgressContent {
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    #advertiseCheckoutForm form > div:last-child {
+        flex-wrap: wrap;
     }
 
     .row {
