@@ -80,6 +80,7 @@ function registerElements(elements, exampleName) {
   
     // Listen on the form's 'submit' handler...
     form.addEventListener('submit', function(e) {
+      console.log("submit form");
       e.preventDefault();
   
       // Trigger HTML5 validation UI on the form if any of the inputs fail
@@ -105,14 +106,12 @@ function registerElements(elements, exampleName) {
       disableInputs();
   
       // Gather additional customer data we may have collected in our form.
-      var first_name = form.querySelector('#' + exampleName + '-firstname');
-      var last_name = form.querySelector('#' + exampleName + '-lastname');
+      var name = form.querySelector('#' + exampleName + '-name');
       var address1 = form.querySelector('#' + exampleName + '-address');
       var city = form.querySelector('#' + exampleName + '-city');
       var state = form.querySelector('#' + exampleName + '-state');
       var additionalData = {
-        first_name: first_name ? first_name.value : undefined,
-        last_name: last_name ? last_name.value : undefined,
+        name: name ? name.value : undefined,
         address_line1: address1 ? address1.value : undefined,
         address_city: city ? city.value : undefined,
         address_state: state ? state.value : undefined,
@@ -126,8 +125,11 @@ function registerElements(elements, exampleName) {
         example.classList.remove('submitting');
   
         if (result.token) {
-          // If we received a token, show the token ID.
-          example.querySelector('.token').innerText = result.token.id;
+          // If a token is received, show success message.
+          // Token id -> result.token.id
+          $("#advertiseStep3").children().eq(0).hide();
+          $("#advertiseStep3").children().eq(0).removeClass("d-flex");
+          $("#advertisePaymentSuccess").removeClass("d-none");
           example.classList.add('submitted');
         } else {
           // Otherwise, un-disable inputs.
@@ -188,9 +190,15 @@ $(() => {
         });
       });
     
+      let text_color = "#32325D";
+      let darkThemeSelected = (localStorage.getItem("darkTheme") !== null && localStorage.getItem("darkTheme") === "dark");
+      if (darkThemeSelected) {
+          text_color = "#fafafa";
+      }
+
       var elementStyles = {
         base: {
-          color: '#32325D',
+          color: text_color,
           fontWeight: 500,
           fontFamily: 'Source Code Pro, Consolas, Menlo, monospace',
           fontSize: '1.1rem',

@@ -15,6 +15,9 @@ body[data-theme="dark"] input {
     border-bottom: 1px solid #5E6B72!important;
     color: #fafafa!important;
 }
+body[data-theme="dark"] input[type="range"] {
+    border-bottom: none!important;
+}
 body[data-theme="dark"] hr {
     border-bottom: 1px solid #5E6B72;
 }
