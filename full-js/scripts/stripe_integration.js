@@ -80,8 +80,9 @@ function registerElements(elements, exampleName) {
   
     // Listen on the form's 'submit' handler...
     form.addEventListener('submit', function(e) {
-      console.log("submit form");
       e.preventDefault();
+
+      $("#majorPlatformLoaderWrapper").removeClass("d-none");
   
       // Trigger HTML5 validation UI on the form if any of the inputs fail
       // validation.
@@ -134,6 +135,7 @@ function registerElements(elements, exampleName) {
         } else {
           // Otherwise, un-disable inputs.
           enableInputs();
+          $("#majorPlatformLoaderWrapper").addClass("d-none");
         }
       });
     });

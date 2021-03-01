@@ -290,12 +290,15 @@
                           <label for="example2-card-number" data-tid="elements_examples.form.card_number_label">Card number</label>
                           <div id="example2-card-number"></div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-center flex-row mt-4">
+                        <div class="d-flex justify-content-start align-items-center flex-row mt-4 position-relative w-100">
                           <button type="submit" class="btn custom-btn-primary ml-0" data-tid="elements_examples.form.pay_button">Checkout</button>
                           <button class="btn btn-link ml-4 m-0 p-0 back_step" type="button">
                             <i class="fas fa-long-arrow-alt-left"></i>
                             Back
                           </button>
+                          <div class="animated faster d-none" id="majorPlatformLoaderWrapper">
+                            <div id="majorPlatformLoader"><div id="majorPlatformLoaderOuter"><div id="majorPlatformLoaderInner"></div></div></div>
+                          </div>
                         </div>
                       </form>
 
@@ -339,7 +342,8 @@
             </div>
 
             <div id="advertisePaymentSuccess" class="d-none animated faster fadeInUp">
-              <p>thank you</p>
+              <p class="font-size-medium text-center">Thank you for advertising with us!</p>
+              <p class="text-center mx-auto" style="width:750px">Your purchase for ad space was successful. Your promoted product can be managed from your <a href="manage-product.html" title="Manage your products">product dashboard</a></p>
             </div>
           </div>
 

@@ -140,6 +140,16 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
     font-size: 1.1rem;
 }
 
+#majorPlatformLoaderWrapper {
+    width: unset;
+    display: static;
+    position: absolute;
+    right: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
 @media screen and (max-width: 991px) {
     h2 {
         font-size: calc(1.8rem + 0.8vw);
