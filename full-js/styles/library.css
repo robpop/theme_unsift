@@ -33,6 +33,9 @@
     margin-right: -10px;
     margin-left: -20px;
 }
+.card-title {
+    word-break: break-all;
+}
 
 @media screen and (max-width: 991px) {
     #libraryTabHub.nav {
