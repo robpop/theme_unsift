@@ -131,65 +131,66 @@
 
     </div>
 
+    <main>
+      <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center sign-in-up-form">
+          <!-- Sign up form -->
+          <form class="text-center p-4 card-shadow w-full-mobile" action="#">
 
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center sign-in-up-form">
-        <!-- Sign up form -->
-        <form class="text-center p-4 card-shadow w-full-mobile" action="#">
+              <p class="h4 mb-4">Sign up</p>
 
-            <p class="h4 mb-4">Sign up</p>
+              <div class="form-row">
+                  <div class="col">
+                      <!-- First name -->
+                      <div class="md-form">
+                          <input type="text" id="signUpFirstName" class="form-control">
+                          <label for="signUpFirstName">First name</label>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <!-- Last name -->
+                      <div class="md-form">
+                          <input type="text" id="signUpLastName" class="form-control">
+                          <label for="signUpLastName">Last name</label>
+                      </div>
+                  </div>
+              </div>
 
-            <div class="form-row">
-                <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">
-                        <input type="text" id="signUpFirstName" class="form-control">
-                        <label for="signUpFirstName">First name</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <!-- Last name -->
-                    <div class="md-form">
-                        <input type="text" id="signUpLastName" class="form-control">
-                        <label for="signUpLastName">Last name</label>
-                    </div>
-                </div>
-            </div>
+              <!-- E-mail -->
+              <div class="md-form mt-0">
+                  <input type="email" id="signUpEmail" class="form-control mb-4">
+                  <label for="signUpEmail">E-mail</label>
+              </div>
 
-            <!-- E-mail -->
-            <div class="md-form mt-0">
-                <input type="email" id="signUpEmail" class="form-control mb-4">
-                <label for="signUpEmail">E-mail</label>
-            </div>
+              <!-- Password -->
+              <div class="md-form mt-0 mb-1">
+                  <input type="password" id="signUpPassword" class="form-control" aria-describedby="signUpPasswordHelpBlock">
+                  <label for="signUpPassword">Password</label>
+              </div>
+              <small id="signUpPasswordHelpBlock" class="form-text text-muted mb-4">
+                  At least 14 characters, 1 number, and 1 symbol
+              </small>            
 
-            <!-- Password -->
-            <div class="md-form mt-0 mb-1">
-                <input type="password" id="signUpPassword" class="form-control" aria-describedby="signUpPasswordHelpBlock">
-                <label for="signUpPassword">Password</label>
-            </div>
-            <small id="signUpPasswordHelpBlock" class="form-text text-muted mb-4">
-                At least 14 characters, 1 number, and 1 symbol
-            </small>            
+              <!-- Sign up button -->
+              <button class="btn btn-info my-4 btn-block disabled blue-gradient" type="submit" id="signUpSubmit">Sign up</button>
 
-            <!-- Sign up button -->
-            <button class="btn btn-info my-4 btn-block disabled blue-gradient" type="submit" id="signUpSubmit">Sign up</button>
+              <!-- Social register -->
+              <p>or sign up with:</p>
+              <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
+              <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
+              <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
+              <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
 
-            <!-- Social register -->
-            <p>or sign up with:</p>
-            <a href="#" class="mx-2" role="button" title="Facebook"><i class="fab fa-facebook-f light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Twitter"><i class="fab fa-twitter light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Google"><i class="fab fa-google light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button" title="Apple"><i class="fab fa-apple light-blue-text"></i></a>
+              <hr>
 
-            <hr>
+              <!-- Terms of service -->
+              <p>By clicking
+              <em>Sign up</em> you agree to our
+              <a href="#" target="_blank" title="Terms of Service">Terms of Service</a></p>
 
-            <!-- Terms of service -->
-            <p>By clicking
-            <em>Sign up</em> you agree to our
-            <a href="#" target="_blank" title="Terms of Service">Terms of Service</a></p>
-
-        </form>
-        <!-- Sign up form -->
-    </div>
+          </form>
+          <!-- Sign up form -->
+      </div>
+    </main>
    
     <!-- Cookie notice (if needed) -->
     <div id="cookieNotice" class="card w-100 position-fixed fixed-bottom rounded-0 animated fadeInUp faster">
