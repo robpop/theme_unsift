@@ -2,7 +2,7 @@
     font-size: 0.9rem;
     color: #616161;
 }
-#libraryFolderArray h4 {
+#libraryFolderArray p, #libraryProductArray p {
     color: #616161;
 }
 #libraryFolderArray .card:hover {
@@ -15,14 +15,14 @@
     max-height: 35vh;
     overflow-y: scroll;
 }
-.folderSelected .card-body h4 {
-    color: #4285F4!important;
+.folderSelected .card-body .card-title {
+    color: #3C6CC4!important;
 }
-.folderSelected .card-body h4 svg {
-    fill: #4285F4!important;
+.folderSelected .card-body .card-title svg {
+    fill: #3C6CC4!important;
 }
-.productSelected .card-body h4 {
-    color: #4285F4!important;
+.productSelected .card-body .card-title {
+    color: #3C6CC4!important;
 }
 .position-absolute.right-0 {
     right: 0;
