@@ -78,7 +78,7 @@ body[data-theme="dark"] .card, body[data-theme="dark"] .card-shadow {
 body[data-theme="dark"] #exploreSearchWrapper {
     background-color: #263238!important;
 }
-body[data-theme="dark"] .card-text, body[data-theme="dark"] .card .card-body .card-text, body[data-theme="dark"] #libraryFolderArray h4, body[data-theme="dark"] .card-title, body[data-theme="dark"] .list-group-item-action, body[data-theme="dark"] .btn-link, body[data-theme="dark"] .btn-link:hover, body[data-theme="dark"] .btn-link:focus, body[data-theme="dark"] .btn-link:active, body[data-theme="dark"] .close, body[data-theme="dark"] p, body[data-theme="dark"] footer a, body[data-theme="dark"] footer p, body[data-theme="dark"] .dropdown-item, body[data-theme="dark"] #addProductEnterBtn i, body[data-theme="dark"] span {
+body[data-theme="dark"] .card-text, body[data-theme="dark"] .card .card-body .card-text, body[data-theme="dark"] #libraryFolderArray h4, body[data-theme="dark"] .card-title, body[data-theme="dark"] .list-group-item-action, body[data-theme="dark"] .btn-link, body[data-theme="dark"] .btn-link:hover, body[data-theme="dark"] .btn-link:focus, body[data-theme="dark"] .btn-link:active, body[data-theme="dark"] .close, body[data-theme="dark"] p, body[data-theme="dark"] footer a, body[data-theme="dark"] footer p, body[data-theme="dark"] .dropdown-item, body[data-theme="dark"] #addProductEnterBtn i, body[data-theme="dark"] span, body[data-theme="dark"] #libraryFolderArray p, body[data-theme="dark"] #libraryProductArray p {
     color: #fafafa;
 }
 body[data-theme="dark"] .card-title svg {

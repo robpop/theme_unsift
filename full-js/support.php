@@ -81,17 +81,25 @@ if (array_key_exists('email', $_POST)) {
     <link rel="stylesheet" href="lib/AnimateCSS/animate.min.css">
 
     <!-- Custom CSS -->
-    <link href="styles/global.css" rel="stylesheet">
     <link href="styles/support.css" rel="stylesheet">
-
     <link href="styles/dark-theme.css" rel="stylesheet">
 
   </head>
 
   <body>
+    <!-- Set dark theme before loading default theme if dark theme is enabled -->
+    <script>
+      let darkThemeSelected = (localStorage.getItem("darkTheme") !== null && localStorage.getItem("darkTheme") === "dark");
+      if (darkThemeSelected) {
+          document.body.setAttribute("data-theme", "dark");
+      }  else {
+          document.body.removeAttribute("data-theme");
+      } 
+    </script>
+    <link href="styles/global.css" rel="stylesheet">
+
 
     <!-- Top navbar and expandable sidebar -->
-
     <nav class="navbar navbar-expand-lg navbar-justify-center custom-navbar custom-primary-color position-fixed fixed-top font-weight-400">
       <div>
         <ul class="navbar-nav -non-mobile">
