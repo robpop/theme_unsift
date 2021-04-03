@@ -142,3 +142,10 @@ body[data-theme="dark"] {
     visibility: visible;
     opacity: 1;
 }
+
+@media screen and (max-width: 991px) {
+    body[data-theme="dark"] #signInForm, body[data-theme="dark"] #signUpForm {
+        background-color: transparent!important;
+        box-shadow: none;
+    }
+}

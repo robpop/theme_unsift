@@ -25,6 +25,7 @@
     <link href="lib/MDBootstrap/mdb.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="styles/legal.css" rel="stylesheet">
     <link href="styles/dark-theme.css" rel="stylesheet">
 
   </head>
@@ -138,8 +139,8 @@
     
     <div class="container-fluid my-buffer-px">
 
-        <div class="row w-75">
-            <div class="col-4 position-fixed">
+        <div id="legalContent" class="row w-75">
+            <div class="col-4">
                 <ul class="list-unstyled">
                     <li>
                         <button class="btn btn-link" onclick="document.getElementById('legalTermsOfService').scrollIntoView();">Terms of Service</button>
@@ -157,7 +158,7 @@
             </div>
 
 
-            <div class="col-8 ml-33pc">
+            <div class="col-8">
                 <div id="legalTermsOfService">
                     <h1>Terms of Service</h1>
                     <small class="grey-text">Last updated: 01/01/2021</small>
@@ -231,7 +232,7 @@
                                 <textarea id="legal_dmca_written" class="md-textarea form-control my-4" rows="9" maxlength="9999"></textarea>
                                 <label for="legal_dmca_written">Nullam finibus porttitor enim non congue...</label>
                             </div>
-                            <div class="custom-control custom-checkbox mb-4">
+                            <div id="legalDMCACheckbox" class="custom-control custom-checkbox mb-4">
                                 <input type="checkbox" class="custom-control-input" id="is_copyright_holder">
                                 <label class="custom-control-label" for="is_copyright_holder">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
                             </div>

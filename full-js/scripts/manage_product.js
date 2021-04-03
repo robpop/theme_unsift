@@ -21,6 +21,7 @@ $(() => {
     let manageProductTagSearchLabel = document.getElementById("manageProductTagSearchLabel");
     let manageProductTagList = document.getElementById("manageProductTagList");
     let manageProductTagCount = document.getElementById("manageProductTagCount");
+    let manageProductEnterBtn = document.getElementById("manageProductEnterBtn");
     let current_tags = $(manageProductTagList).attr("data-current-tags");
 
     let manageProductTitle = document.getElementById("manageProductTitle");
@@ -140,6 +141,25 @@ $(() => {
       }
     };
 
+    // Helper function used to create a new tag when:
+    // ENTER key is pressed
+    // ADD button is clicked
+    // Autocomplete option is selected
+    let create_new_tag = function(value, searchBar) {
+
+        let tag = $(".badge-dummy").clone(true, true);
+        $(tag).text(value);
+        searchBar.val("");
+        searchBar.autocomplete("close");
+        $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+
+        $(manageProductEnterBtn).addClass("d-none");
+        searchBar.blur();
+
+        update_tag_restraint();
+
+    };
+
     // Don't remove this - resizes autocomplete box to fit width of search bar
     jQuery.ui.autocomplete.prototype._resizeMenu = function () {
       var ul = this.menu.element;
@@ -154,35 +174,48 @@ $(() => {
           
           // Prevent firing both the keyup event and the autocomplete select event
           if(event.key !== 'Enter' || event.keyCode !== 13) {
-              let tag = $(".badge-dummy").clone(true, true);
-              $(tag).text(ui.item.value);
-              $(manageProductTagSearch).val("");
-              $(manageProductTagSearch).autocomplete("close");
-              $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+              
+            create_new_tag(ui.item.value, $(manageProductTagSearch));
 
-              update_tag_restraint();
           }
       }
     });
 
     // Create a tag when the enter key is pressed on the tag input field
     $(manageProductTagSearch).on('keyup', function (e) {
-        if (e.key === 'Enter' || e.keyCode === 13) {
-            let tag = $(".badge-dummy").clone(true, true);
-            $(tag).text($(manageProductTagSearch).val());
-            $(manageProductTagSearch).val("");
-            $(manageProductTagSearch).autocomplete("close");
-            $(tag).removeClass("badge-dummy").addClass("chosen-badge").appendTo(manageProductTagList);
+        
+        let searchBar = $(manageProductTagSearch);
 
-            update_tag_restraint();
-        }
+          // Show the ADD button - will add tag to selection if clicked
+          if (searchBar.val().length > 0) {
+              $(manageProductEnterBtn).removeClass("d-none");
+          } else {
+              $(manageProductEnterBtn).addClass("d-none");
+          }
+
+          // Alternatively, if ENTER key is pressed - add tag to selection
+          if (e.key === 'Enter' || e.keyCode === 13) {
+              
+              create_new_tag(searchBar.val(), searchBar);
+
+          }
+
+    });
+
+    // Create a tag when the ADD button is clicked
+    $(manageProductEnterBtn).click(() => {
+
+        create_new_tag($(manageProductTagSearch).val(), $(manageProductTagSearch));
+
     });
 
     // Remove tag when one is clicked
     $(manageProductTagList).children().click((e) => {
+
         $(e.target).remove();
 
         update_tag_restraint();
+
     });
 
     manageProductUploadLogoAreaInput.addEventListener("change", function(e) {

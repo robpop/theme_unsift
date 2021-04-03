@@ -1,0 +1,18 @@
+@media screen and (max-width: 991px) {
+    #legalContent.w-75 {
+        width: 100%!important;
+    }
+    #legalContent .col-4 {
+        display: none;
+    }
+    #legalContent .col-8 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #legalDMCACheckbox {
+        left: 25px;
+        height: 65px;
+    }
+}
+

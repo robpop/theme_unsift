@@ -160,8 +160,13 @@ input[type=range]::-ms-thumb, input[type=range]::-ms-thumb:active {
         flex-direction: column-reverse;
     }
 
-    .w-975px > div {
+    /*.w-975px > div {
         margin: 1rem auto;
+    }*/
+
+    #promoteSellingPoints.my-7 {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     #advertiseProgressContent button.p-0 {

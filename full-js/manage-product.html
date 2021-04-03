@@ -156,7 +156,7 @@
 
             <div class="card-promoted-buffer -mobile"></div>
             <!-- Show this badge next to the product name if the product is promoted with ad space -->
-            <div class="card-promoted mx-3">Promoted product</div>
+            <div id="manageProductPromotedBadge" class="card-promoted mx-3">Promoted product</div>
         </div>
 
         <!-- Add Numeral.js logic to the metrics so they are formatted correctly -->
@@ -392,6 +392,7 @@
                   <!-- Upload area -->
                   <!-- Autocomplete tags are loaded in space-separated into data-tags -->
                   <div class="enable-pointer md-form">
+                    <button id="manageProductEnterBtn" class="d-none animated fadeIn faster"><i class="fas fa-plus"></i></button>
                     <input type="text" class="form-control" id="manageProductTagSearch" data-tags="Lorem Ipsum Dolor Habitasse Donec Convallis Tincidunt Magna Vitae Aliquam Egestas" maxlength="24">
                     <label for="manageProductTagSearch" id="manageProductTagSearchLabel">Add tags</label>
                   </div>

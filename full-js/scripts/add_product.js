@@ -19,7 +19,6 @@ $(() => {
     let addProductTagList = document.getElementById("addProductTagList");
     let addProductTagCount = document.getElementById("addProductTagCount");
     let addProductUploadLogoAreaInput = document.getElementById("addProductUploadLogoAreaInput");
-    let addProductUploadLogoAreaWrapper = document.getElementById("addProductUploadLogoAreaWrapper");
     let addProductUploadLogoAreaPreview = document.getElementById("addProductUploadLogoAreaPreview");
     let addProductEnterBtn = document.getElementById("addProductEnterBtn");
 
@@ -59,7 +58,6 @@ $(() => {
         }
     });
 
-
     // Helper function that updates the maximum tag limit
     let update_tag_restraint = function(e) {
 
@@ -92,7 +90,7 @@ $(() => {
 
         update_tag_restraint();
 
-    }
+    };
 
     // See: https://stackoverflow.com/questions/5643767/jquery-ui-autocomplete-width-not-set-correctly
     jQuery.ui.autocomplete.prototype._resizeMenu = function () {

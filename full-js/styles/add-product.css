@@ -78,4 +78,7 @@
     #addProductThreeCards .col-4:first-child {
         margin-top: 0!important;
     }
+    #addProductEnterBtn {
+        padding: 0 10px;
+    }
 }

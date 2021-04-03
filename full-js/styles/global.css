@@ -231,9 +231,9 @@ textarea {
 .mb-05 {
     margin-bottom: .1rem!important;
 }
-.ml-33pc {
+/*.ml-33pc {
     margin-left: 33%;
-}
+}*/
 .card-body-hidden {
     display: none!important;
 }
@@ -407,11 +407,11 @@ textarea {
         margin-top: 2rem;
     }
     #sideBarNav a.mb-5 {
-        margin-bottom: 18vh!important;
+        margin-bottom: 30vh!important;
     }
     #sideBarNav a.list-group-item {
         padding: calc(.7rem + 2.0vw) calc(1.25rem + 1.5vw);
-        font-size: calc(0.85rem + 0.8vw);
+        font-size: calc(0.9rem + 0.8vw);
     }
     footer {
         position: relative!important;
